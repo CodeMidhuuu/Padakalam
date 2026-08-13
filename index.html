@@ -28,7 +28,7 @@
         <div class="hero-icon">⚔️</div>
         <h1>PADAKKALAM</h1>
         <p>Tap anywhere to enter the battlefield</p>
-        <button class="btn start-button">🔊 Enter Game</button>
+        <!-- <button class="btn start-button">🔊 Enter Game</button> -->
       </div>
     </div>
 
@@ -59,16 +59,16 @@
         <h1>PADAKKALAM</h1>
 
         <p class="hero-description">
-          Moonu chodyangal.
+          Three Random Questions.
+          <br>
+          Correct option maathram select cheyyuka!
           <br />
-          Moonu utharangal.
-          <br />
-          Pakshe...
-          <strong> oru final answer. </strong>
+          <!-- Pakshe...
+          <strong> oru final connection answer. </strong> -->
         </p>
 
         <div class="warning-box">
-          🧠 <strong>Warning:</strong> Overthink cheythal pani paalum.
+           <strong>Warning : </strong>🧠use cheyyendi vannekam
         </div>
 
         <button class="btn start-button" onclick="startBattle()">
@@ -112,23 +112,9 @@
 
           <div id="clueText" class="clue-box d-none"></div>
 
-          <!-- Answer -->
-          <div class="answer-container">
-            <input
-              type="text"
-              id="answerInput"
-              class="form-control answer-input"
-              placeholder="Answer para mone..."
-              autocomplete="off"
-            />
-
-            <button
-              id="submitButton"
-              class="btn submit-button"
-              onclick="submitAnswer()"
-            >
-              Lock Answer 🔒
-            </button>
+          <!-- Multiple Choice Options -->
+          <div id="optionsContainer" class="options-container my-3">
+            <!-- Dynamically generated options will appear here -->
           </div>
 
           <div id="feedback"></div>

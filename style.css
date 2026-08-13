@@ -675,3 +675,33 @@ h1 span {
   color: #a0aec0;
   margin-bottom: 1.5rem;
 }
+/* MCQ Option Buttons */
+.option-btn {
+  background-color: #1a1d24;
+  color: #ffffff;
+  border: 2px solid #2d3748;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
+
+.option-btn:hover:not(:disabled) {
+  background-color: #2d3748;
+  border-color: #4a5568;
+  transform: translateY(-2px);
+}
+
+.option-btn.correct-choice {
+  background-color: #198754 !important;
+  border-color: #198754 !important;
+  color: white !important;
+}
+
+.option-btn.wrong-choice {
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+  color: white !important;
+}
