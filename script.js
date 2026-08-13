@@ -6,111 +6,88 @@ const battleConfig = {
   id: 1,
 
   /* POOL OF 9 RIDDLES */
-  riddlesPool: [
-    {
-      id: 1,
-      question:
-        'Njan vellathil jeevikkum. Vellam kudikkum. Vellathil thanne urangum. Njan aaranu?',
-      options: ['Meen 🐟', 'Tractor 🚜', 'Kappal 🚢'],
-      correctAnswer: 'Meen 🐟',
-      cleanAnswer: 'Meen',
-      clues: ['Enikku kaal illa.', 'Swimming aanu ente main talent.'],
-    },
-    {
-      id: 2,
-      question:
-        'Njan kaanilla, pakshe enne anubhavikkam. Enne pidikkan pattilla. Njan vannal marangal dance cheyyum. Njan aaranu?',
-      options: ['Kaattu 💨', 'Ghost 👻', 'Fan 🪭'],
-      correctAnswer: 'Kaattu 💨',
-      cleanAnswer: 'Kaattu',
-      clues: [
-        'Window adachillenkil njan veettil kayarum.',
-        'Marangal enne kandappol aadi nadakkum.',
-      ],
-    },
-    {
-      id: 3,
-      question:
-        'Njan raathriyil kaanum. Pakalil enne kaanilla. Enikku light undu, pakshe current bill illa. Njan aaranu?',
-      options: ['Chandran 🌙', 'Torch 🔦', 'Minnal ⚡'],
-      correctAnswer: 'Chandran 🌙',
-      cleanAnswer: 'Chandran',
-      clues: ['Njan aakashathil aanu.', 'Sooryan ente best friend alla.'],
-    },
-    {
-      id: 4,
-      question:
-        'Aakashathu ninnu veazhum, pakshe enikku chiraku illa. Mannil veannal disappearing act kaattum. Njan aaranu?',
-      options: ['Mazha 🌧️', 'Aeroplane ✈️', 'Thenga 🥥'],
-      correctAnswer: 'Mazha 🌧️',
-      cleanAnswer: 'Mazha',
-      clues: [
-        'Kuda illenkil nee nanayum.',
-        'Karutha megangal vannal njan pinnale varum.',
-      ],
-    },
-    {
-      id: 5,
-      question:
-        'Njan raavile varum, vaanaake velicham tharum. Enne sthiramaayi nokkiyal kannu pokum! Njan aaranu?',
-      options: ['Sooryan ☀️', 'Tube Light 💡', 'Laser 🔴'],
-      correctAnswer: 'Sooryan ☀️',
-      cleanAnswer: 'Sooryan',
-      clues: [
-        'Raathri aayaal njan urangaan pokum.',
-        'Enikku nallavanaya glasse kaanikkan pattoo.',
-      ],
-    },
-    {
-      id: 6,
-      question:
-        'Enikku vellam thannaal njan marikkum. Enikku viraku thannaal njan valarum. Njan aaranu?',
-      options: ['Thee 🔥', 'Dinosaur 🦖', 'Aana 🐘'],
-      correctAnswer: 'Thee 🔥',
-      cleanAnswer: 'Thee',
-      clues: [
-        'Enne thottal pollum.',
-        'Kitchenil chaaya undakkan njan venam.',
-      ],
-    },
-    {
-      id: 7,
-      question:
-        'Njan eppozhum nadannukonde irikkum, pakshe enikku kaalukal illa. Kadalil cheriyaal njan illathakkum. Njan aaranu?',
-      options: ['Puzha 🌊', 'Snake 🐍', 'Bus 🚌'],
-      correctAnswer: 'Puzha 🌊',
-      cleanAnswer: 'Puzha',
-      clues: [
-        'Malayil ninnu thudangi kadalil avasaanikkum.',
-        'Enil meenukal neenthum.',
-      ],
-    },
-    {
-      id: 8,
-      question:
-        'Njan oru sthalathu thanne nilkkum, pakshe ellaavarkkum nizhalum pazhavum tharum. Njan aaranu?',
-      options: ['Maram 🌳', 'Pillar 🏛️', 'Umbrella ☂️'],
-      correctAnswer: 'Maram 🌳',
-      cleanAnswer: 'Maram',
-      clues: ['Enikku ilakal undu.', 'Kuruvi ente meledathu koodu kattum.'],
-    },
-    {
-      id: 9,
-      question:
-        'Njan aakashathu parannu nadakkum. Karutha niram aayaal vellam tharum. Njan aaranu?',
-      options: ['Megam ☁️', 'Kakka 🐦‍⬛', 'Helicopter 🚁'],
-      correctAnswer: 'Megam ☁️',
-      cleanAnswer: 'Megam',
-      clues: [
-        'Njan aakashathile panji pole aanu.',
-        'Mazha tharunna mumpu njan karukkum.',
-      ],
-    },
-  ],
 
-  /* FINAL CONNECTION */
-  finalAnswers: ['nature', 'prakruthi', 'പ്രകൃതി'],
-  finalDisplayAnswer: 'Nature',
+
+  /* === NEW EMOJI EQUATION RIDDLES POOL === */
+
+riddlesPool: [
+  {
+    id: 1,
+    question: '☁️ + 💧 = ?',
+    options: ['🌧️ Rain', '🔥 Fire', '🚗 Car', '⚡ Lightning', '❄️ Snow'],
+    correctAnswer: '🌧️ Rain',
+    cleanAnswer: 'Rain 🌧️',
+    clues: ['Aakashathu ninnu veazhum! ☔', 'Nanayaan thayyaaraano? 💦'],
+  },
+  {
+    id: 2,
+    question: '🌌 + ☀️ = ?',
+    options: ['🌞 Sun', '🧊 Ice', '📱 Phone', '🌈 Rainbow', '🌙 Moon'],
+    correctAnswer: '🌞 Sun',
+    cleanAnswer: 'Sun 🌞',
+    clues: ['Velicham tharum! 💡', 'Raathri aayaal urangaan pokum 🌙'],
+  },
+  {
+    id: 3,
+    question: '🌱 + ⏰ = ?',
+    options: ['🌳 Tree', '🪑 Chair', '💻 Laptop', '🍄 Mushroom', '🪵 Wood'],
+    correctAnswer: '🌳 Tree',
+    cleanAnswer: 'Tree 🌳',
+    clues: ['Nizhalum pazhavum tharum! 🍎', 'Ilakal undu, pakshe kaal illa 🍃'],
+  },
+  {
+    id: 4,
+    question: '🌊 + 🫧 = ?',
+    options: ['🐟 Fish', '🦅 Bird', '🦁 Lion', '🦀 Crab', '🐬 Dolphin'],
+    correctAnswer: '🐟 Fish',
+    cleanAnswer: 'Fish 🐟',
+    clues: ['Vellathil thanne urangum 🌊', 'Swimming aanu main talent 🏊'],
+  },
+  {
+    id: 5,
+    question: '🪵 + 🪨 = ?',
+    options: ['🔥 Fire', '🧊 Ice', '🌧️ Rain', '🧱 Brick', '🌋 Volcano'],
+    correctAnswer: '🔥 Fire',
+    cleanAnswer: 'Fire 🔥',
+    clues: ['Vellam ഒഴിച്ചാൽ marikkum 💦', 'Enne thottal pollum ⚠️'],
+  },
+  {
+    id: 6,
+    question: '🍃 + 💨 = ?',
+    options: ['🌪️ Wind', '🪨 Stone', '⚡ Lightning', '☁️ Cloud', '🌊 Wave'],
+    correctAnswer: '🌪️ Wind',
+    cleanAnswer: 'Wind 🌪️',
+    clues: ['Kaanan pattilla, pakshe anubhavikkam 🌬️', 'Marangal dance cheyyum 🌳'],
+  },
+  {
+    id: 7,
+    question: '⛰️ + 💧 = ?',
+    options: ['🌊 River', '🧱 Wall', '🔥 Lava', '🏜️ Desert', '❄️ Glacier'],
+    correctAnswer: '🌊 River',
+    cleanAnswer: 'River 🌊',
+    clues: ['Malayil ninnu thudangi kadalil avasaanikkum 🏔️', 'Eppozhum nadannukonde irikkum 🚶'],
+  },
+  {
+    id: 8,
+    question: '🌱 + 🌧️ = ?',
+    options: ['🌸 Flower', '🪨 Rock', '⚡ Spark', '🌾 Grass', '🍎 Fruit'],
+    correctAnswer: '🌸 Flower',
+    cleanAnswer: 'Flower 🌸',
+    clues: ['Nalla manam undu 🌺', 'Chediyil ninnu undaagum 🌿'],
+  },
+  {
+    id: 9,
+    question: '☀️ + 🌊 = ?',
+    options: ['☁️ Cloud', '🌋 Volcano', '🧱 Brick', '🌈 Rainbow', '🌪️ Tornado'],
+    correctAnswer: '☁️ Cloud',
+    cleanAnswer: 'Cloud ☁️',
+    clues: ['Aakashathile panji pole aanu ☁️', 'Karutha niram aayaal mazha tharum 🌧️'],
+  },
+],
+
+/* FINAL CONNECTION REMAINS THE SAME */
+finalAnswers: ['nature', 'prakruthi', 'പ്രകൃതി'],
+finalDisplayAnswer: 'Nature',
 
   /* POINTS */
   pointsPerRiddle: 100,
@@ -239,7 +216,9 @@ function loadRiddle() {
   attempts = 3;
   cluesUsed = 0;
 
-  questionElement.textContent = riddle.question;
+  /* Make emoji questions big and centerpiece style */
+  questionElement.innerHTML = `<span style="font-size: 2.2rem; letter-spacing: 2px;">${riddle.question}</span>`;
+  
   riddleNumberElement.textContent = `0${currentRiddle + 1}`;
   stageText.textContent = `Riddle ${currentRiddle + 1} of 3`;
   attemptsElement.textContent = attempts;
@@ -257,7 +236,7 @@ function loadRiddle() {
 
   riddle.options.forEach((option) => {
     const btn = document.createElement('button');
-    btn.className = 'btn option-btn w-100 my-2';
+    btn.className = 'btn option-btn w-100 my-2 fs-5';
     btn.textContent = option;
     btn.onclick = () => selectOption(option, btn);
     optionsContainer.appendChild(btn);
@@ -466,18 +445,32 @@ function submitFinalAnswer() {
    SFX & MEME MODALS
 ========================================================= */
 
+/* =========================================================
+   FIXED SFX PLAYER (PREVENTS AUDIO OVERLAPPING)
+========================================================= */
+
 function playSFX(audioPath) {
   const sfxAudio = document.getElementById('sfxAudio');
   const sfxSource = document.getElementById('sfxAudioSource');
 
-  if (sfxAudio && sfxSource && audioPath) {
-    sfxAudio.pause();
+  if (!sfxAudio || !audioPath) return;
+
+  // 1. Immediately stop current sound & rewind to start
+  sfxAudio.pause();
+  sfxAudio.currentTime = 0;
+
+  // 2. Set new audio source
+  if (sfxSource) {
     sfxSource.src = audioPath;
-    sfxAudio.load();
-    sfxAudio.play().catch((err) => {
-      console.warn('SFX autoplay prevented:', err);
-    });
+  } else {
+    sfxAudio.src = audioPath;
   }
+
+  // 3. Reload audio element & play cleanly
+  sfxAudio.load();
+  sfxAudio.play().catch((err) => {
+    console.warn('SFX playback prevented or interrupted:', err);
+  });
 }
 
 function playMeme(type) {
@@ -485,6 +478,13 @@ function playMeme(type) {
   const audio = document.getElementById('memeAudio');
   const audioSource = document.getElementById('memeAudioSource');
   const title = document.getElementById('memeTitle');
+  const sfxAudio = document.getElementById('sfxAudio');
+
+  // Stop any playing SFX immediately
+  if (sfxAudio) {
+    sfxAudio.pause();
+    sfxAudio.currentTime = 0;
+  }
 
   if (audio) {
     audio.pause();
