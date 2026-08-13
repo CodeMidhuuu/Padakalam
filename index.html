@@ -22,7 +22,17 @@
   </head>
 
   <body>
-    <!-- NAVBAR -->
+    <!-- SPLASH OVERLAY TO BYPASS BROWSER AUTOPLAY BLOCK -->
+    <div id="splashOverlay" class="splash-overlay">
+      <div class="splash-content text-center">
+        <div class="hero-icon">⚔️</div>
+        <h1>PADAKKALAM</h1>
+        <p>Tap anywhere to enter the battlefield</p>
+        <button class="btn start-button">🔊 Enter Game</button>
+      </div>
+    </div>
+
+    <!-- NAVBAR
     <nav class="navbar navbar-dark">
       <div class="container">
         <a href="#" class="navbar-brand"> ⚔️ PADAKKALAM </a>
@@ -32,12 +42,16 @@
           <span id="score"> 0 </span>
         </div>
       </div>
-    </nav>
+    </nav> -->
 
     <!-- MAIN -->
     <main class="container main-container">
       <!-- HERO / INTRO SCREEN -->
       <section id="introScreen" class="screen">
+        <!-- INTRO BACKGROUND SONG (PLAYS ONCE) -->
+        <audio id="introAudio" preload="auto">
+          <source src="intro.mp3" type="audio/mpeg" />
+        </audio>
         <div class="hero-icon">⚔️</div>
 
         <div class="small-label">WELCOME TO THE BATTLEFIELD</div>
@@ -140,7 +154,6 @@
 
         <!-- CONNECTION MEDIA -->
         <div id="connectionMedia" class="connection-media">
-          <!-- AUDIO PRELOADED IN HTML FOR ZERO LATENCY (STAYS SILENT UNTIL JS CALLS PLAY) -->
           <audio
             id="connectionAudio"
             src="enhanced_audio.mp3"
@@ -242,35 +255,41 @@
       </section>
     </main>
 
+    <!-- HIDDEN SOUND EFFECTS PLAYER -->
+    <audio id="sfxAudio" preload="auto">
+      <source id="sfxAudioSource" src="" />
+    </audio>
+
     <!-- MEME MODAL -->
-<div class="modal fade" id="memeModal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content meme-modal">
-      <div class="modal-header d-flex justify-content-center align-items-center text-center w-100">
-        <br><br>
-        <h3 class="modal-title" id="memeTitle">🎉 CONGRATULATIONS! 🎉</h3>
-        <br><br>
-      </div>
+    <div class="modal fade" id="memeModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content meme-modal">
+          <div
+            class="modal-header d-flex justify-content-center align-items-center text-center w-100"
+          >
+            <br /><br />
+            <h3 class="modal-title" id="memeTitle">🎉 CONGRATULATIONS! 🎉</h3>
+            <br /><br />
+          </div>
 
-      <div class="modal-body text-center py-2">
-        <!-- Audio plays in background safely -->
-        <audio id="memeAudio">
-          <source id="memeAudioSource" src="" />
-        </audio>
-      </div>
+          <div class="modal-body text-center py-2">
+            <audio id="memeAudio">
+              <source id="memeAudioSource" src="" />
+            </audio>
+          </div>
 
-      <div class="modal-footer d-flex justify-content-center border-0 pt-0">
-        <button
-          class="btn next-button"
-          data-bs-dismiss="modal"
-          onclick="continueAfterMeme()"
-        >
-          Continue →
-        </button>
+          <div class="modal-footer d-flex justify-content-center border-0 pt-0">
+            <button
+              class="btn next-button"
+              data-bs-dismiss="modal"
+              onclick="continueAfterMeme()"
+            >
+              Continue →
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
     <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

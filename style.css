@@ -33,7 +33,7 @@ button {
    NAVBAR
 ========================================================= */
 
-.navbar {
+/* .navbar {
   padding: 20px 0;
   background: rgba(8, 8, 13, 0.7);
   backdrop-filter: blur(18px);
@@ -51,7 +51,7 @@ button {
   border-radius: 50px;
   background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.08);
-}
+} */
 
 /* =========================================================
    MAIN
@@ -649,4 +649,29 @@ h1 span {
     font-size: 1.05rem;
     padding: 15px;
   }
+}
+.splash-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0d0f12;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.splash-content h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-top: 1rem;
+}
+
+.splash-content p {
+  color: #a0aec0;
+  margin-bottom: 1.5rem;
 }

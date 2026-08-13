@@ -51,15 +51,18 @@ const battles = [
     /* MEDIA PATHS */
     connectionVideo: '',
 
-    /* SUCCESS MEDIA (CUSTOM ELEVENLABS AUDIO) */
-    successImage: '/assets/images/success.jpg',
+    /* SUCCESS MEDIA */
+    successImage: 'images/success.jpg',
     successVideo: '',
+    wrongAudio1: 'wrong1.mp3',
+    wrongAudio2: 'wrong2.mp3',
+
     successAudio: 'ElevenLabs_congrats.mp3',
 
     /* FAILURE MEDIA */
-    failureImage: '/assets/images/failure.jpg',
+    failureImage: 'images/failure.jpg',
     failureVideo: '',
-    failureAudio: '/assets/audio/failure.mp3',
+    failureAudio: 'failure.mp3',
   },
 ];
 
@@ -98,10 +101,46 @@ const clueText = document.getElementById('clueText');
 const scoreElement = document.getElementById('score');
 
 /* =========================================================
+   INTRO AUDIO MANAGEMENT & SPLASH OVERLAY
+========================================================= */
+
+function playIntroAudio() {
+  const introAudio = document.getElementById('introAudio');
+  if (!introAudio) return;
+
+  introAudio.currentTime = 0;
+  introAudio.play().catch((err) => {
+    console.warn('Audio playback waiting for splash interaction:', err);
+  });
+}
+
+function stopIntroAudio() {
+  const introAudio = document.getElementById('introAudio');
+  if (introAudio) {
+    introAudio.pause();
+    introAudio.currentTime = 0;
+  }
+}
+
+/* Initialize Splash Screen to satisfy browser autoplay requirements */
+document.addEventListener('DOMContentLoaded', () => {
+  const splash = document.getElementById('splashOverlay');
+
+  if (splash) {
+    splash.addEventListener('click', () => {
+      playIntroAudio();
+      splash.style.display = 'none';
+    });
+  }
+});
+
+/* =========================================================
    START BATTLE
 ========================================================= */
 
 function startBattle() {
+  stopIntroAudio();
+
   currentBattle = 0;
   currentRiddle = 0;
   attempts = 3;
@@ -226,7 +265,11 @@ function submitAnswer() {
   attempts--;
   attemptsElement.textContent = attempts;
 
-  if (attempts > 0) {
+  const battle = getBattle();
+
+  if (attempts === 2) {
+    /* 1ST WRONG ATTEMPT */
+    playSFX(battle.wrongAudio1);
     feedback.textContent = `Wrong da 😂 ${attempts} chance koodi undu.`;
     feedback.className = 'wrong';
     answerInput.value = '';
@@ -234,7 +277,17 @@ function submitAnswer() {
     return;
   }
 
-  /* FAILED RIDDLE */
+  if (attempts === 1) {
+    /* 2ND WRONG ATTEMPT */
+    playSFX(battle.wrongAudio2);
+    feedback.textContent = `Wrong da 😂 Last 1 chance koodi!`;
+    feedback.className = 'wrong';
+    answerInput.value = '';
+    answerInput.focus();
+    return;
+  }
+
+  /* FAILED RIDDLE (0 ATTEMPTS LEFT) */
   feedback.textContent = 'Mone... pani paali. 💀';
   feedback.className = 'wrong';
 
@@ -243,6 +296,7 @@ function submitAnswer() {
 
   riddleAnswers[currentRiddle] = riddle.answers[0];
 
+  /* TRIGGERS FAILURE MODAL + FAILURE AUDIO */
   playMeme('failure');
 }
 
@@ -370,7 +424,7 @@ function submitFinalAnswer() {
     score += battle.finalPoints;
     scoreElement.textContent = score;
 
-    feedbackElement.textContent = ''; // Kept clean so the popup modal is the star!
+    feedbackElement.textContent = '';
 
     /* TRIGGER CONGRATS POPUP WITH ELEVENLABS AUDIO */
     playMeme('success');
@@ -378,9 +432,28 @@ function submitFinalAnswer() {
   }
 
   /* WRONG FINAL ANSWER */
-  feedbackElement.textContent = 'Connection kandupidichilla da. Onnukoodi nokku! 💀';
+  feedbackElement.textContent =
+    'Connection kandupidichilla da. Onnukoodi nokku! 💀';
   feedbackElement.className = 'wrong';
   input.value = '';
+}
+
+/* =========================================================
+   PLAY SFX SOUND EFFECTS
+========================================================= */
+
+function playSFX(audioPath) {
+  const sfxAudio = document.getElementById('sfxAudio');
+  const sfxSource = document.getElementById('sfxAudioSource');
+
+  if (sfxAudio && sfxSource && audioPath) {
+    sfxAudio.pause();
+    sfxSource.src = audioPath;
+    sfxAudio.load();
+    sfxAudio.play().catch((err) => {
+      console.warn('SFX autoplay prevented:', err);
+    });
+  }
 }
 
 /* =========================================================
@@ -394,7 +467,6 @@ function playMeme(type) {
   const audioSource = document.getElementById('memeAudioSource');
   const title = document.getElementById('memeTitle');
 
-  // Stop any playing audio
   if (audio) {
     audio.pause();
     audio.currentTime = 0;
@@ -403,7 +475,6 @@ function playMeme(type) {
   if (type === 'success') {
     title.textContent = '🎉 CONGRATULATIONS! 🎉';
 
-    /* PLAY ELEVENLABS AUDIO IN BACKGROUND */
     if (battle.successAudio && audioSource && audio) {
       audioSource.src = battle.successAudio;
       audio.load();
@@ -413,7 +484,7 @@ function playMeme(type) {
     }
   } else {
     /* FAILURE STATE */
-    title.textContent = '💀 PANI PAALI!';
+    title.textContent = 'POYIT ADUTHA VELLIYAYCHA VAA...';
 
     if (battle.failureAudio && audioSource && audio) {
       audioSource.src = battle.failureAudio;
@@ -422,9 +493,10 @@ function playMeme(type) {
     }
   }
 
-  /* SHOW MODAL SAFELY */
   if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
-    modal = bootstrap.Modal.getInstance(modalElement) || new bootstrap.Modal(modalElement);
+    modal =
+      bootstrap.Modal.getInstance(modalElement) ||
+      new bootstrap.Modal(modalElement);
     modal.show();
   } else {
     modalElement.style.display = 'block';
@@ -441,7 +513,6 @@ function continueAfterMeme() {
   const modalElement = document.getElementById('memeModal');
   const audio = document.getElementById('memeAudio');
 
-  /* STOP AUDIO WHEN USER CLICKS CONTINUE */
   if (audio) {
     audio.pause();
     audio.currentTime = 0;
@@ -491,7 +562,7 @@ function restartGame() {
 
   resultScreen.classList.add('d-none');
   introScreen.classList.remove('d-none');
-
+  playIntroAudio();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
