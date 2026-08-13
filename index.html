@@ -243,50 +243,34 @@
     </main>
 
     <!-- MEME MODAL -->
-    <div class="modal fade" id="memeModal" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content meme-modal">
-          <div class="modal-header">
-            <h5 class="modal-title" id="memeTitle">💀 PANI PAALI</h5>
+<div class="modal fade" id="memeModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content meme-modal">
+      <div class="modal-header d-flex justify-content-center align-items-center text-center w-100">
+        <br><br>
+        <h3 class="modal-title" id="memeTitle">🎉 CONGRATULATIONS! 🎉</h3>
+        <br><br>
+      </div>
 
-            <button
-              type="button"
-              class="btn-close btn-close-white"
-              data-bs-dismiss="modal"
-            ></button>
-          </div>
+      <div class="modal-body text-center py-2">
+        <!-- Audio plays in background safely -->
+        <audio id="memeAudio">
+          <source id="memeAudioSource" src="" />
+        </audio>
+      </div>
 
-          <div class="modal-body text-center">
-            <img
-              id="memeImage"
-              src=""
-              class="meme-image d-none"
-              alt="Malayalam meme"
-            />
-
-            <video id="memeVideo" class="meme-video d-none" controls>
-              <source id="memeVideoSource" src="" />
-            </video>
-
-            <audio id="memeAudio" class="w-100" controls>
-              <source id="memeAudioSource" src="" />
-            </audio>
-
-            <p id="memeMessage" class="meme-message"></p>
-          </div>
-
-          <div class="modal-footer">
-            <button
-              class="btn next-button"
-              data-bs-dismiss="modal"
-              onclick="continueAfterMeme()"
-            >
-              Continue →
-            </button>
-          </div>
-        </div>
+      <div class="modal-footer d-flex justify-content-center border-0 pt-0">
+        <button
+          class="btn next-button"
+          data-bs-dismiss="modal"
+          onclick="continueAfterMeme()"
+        >
+          Continue →
+        </button>
       </div>
     </div>
+  </div>
+</div>
 
     <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

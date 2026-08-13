@@ -51,10 +51,10 @@ const battles = [
     /* MEDIA PATHS */
     connectionVideo: '',
 
-    /* SUCCESS MEDIA */
+    /* SUCCESS MEDIA (CUSTOM ELEVENLABS AUDIO) */
     successImage: '/assets/images/success.jpg',
     successVideo: '',
-    successAudio: '/assets/audio/success.mp3',
+    successAudio: 'ElevenLabs_congrats.mp3',
 
     /* FAILURE MEDIA */
     failureImage: '/assets/images/failure.jpg',
@@ -127,16 +127,12 @@ function startBattle() {
 }
 
 /* =========================================================
-   GET CURRENT BATTLE
+   GET CURRENT BATTLE & RIDDLE
 ========================================================= */
 
 function getBattle() {
   return battles[currentBattle];
 }
-
-/* =========================================================
-   GET CURRENT RIDDLE
-========================================================= */
 
 function getRiddle() {
   return getBattle().riddles[currentRiddle];
@@ -174,7 +170,7 @@ function loadRiddle() {
 }
 
 /* =========================================================
-   NORMALIZE ANSWER
+   NORMALIZE & CHECK ANSWER
 ========================================================= */
 
 function normalizeAnswer(answer) {
@@ -185,13 +181,8 @@ function normalizeAnswer(answer) {
     .replace(/[.,!?]/g, '');
 }
 
-/* =========================================================
-   CHECK ANSWER
-========================================================= */
-
 function isAnswerCorrect(userAnswer, correctAnswers) {
   const normalizedUserAnswer = normalizeAnswer(userAnswer);
-
   return correctAnswers.some(
     (answer) => normalizeAnswer(answer) === normalizedUserAnswer,
   );
@@ -256,7 +247,7 @@ function submitAnswer() {
 }
 
 /* =========================================================
-   NEXT RIDDLE
+   NEXT RIDDLE & CLUES
 ========================================================= */
 
 function goToNextRiddle() {
@@ -269,10 +260,6 @@ function goToNextRiddle() {
 
   loadRiddle();
 }
-
-/* =========================================================
-   USE CLUE
-========================================================= */
 
 function useClue() {
   const riddle = getRiddle();
@@ -324,7 +311,6 @@ function showConnectionScreen() {
     connectionVideo.play().catch(() => {});
   }
 
-  /* AUTO-SCROLL DOWNWARD TO BOTTOM OF CONNECTION PAGE */
   setTimeout(() => {
     window.scrollTo({
       top: document.body.scrollHeight,
@@ -384,103 +370,96 @@ function submitFinalAnswer() {
     score += battle.finalPoints;
     scoreElement.textContent = score;
 
-    feedbackElement.textContent = 'DAAAAA! Connection kandupidichu! 🔥🧠';
-    feedbackElement.className = 'correct';
+    feedbackElement.textContent = ''; // Kept clean so the popup modal is the star!
 
-    setTimeout(() => {
-      playMeme('success');
-    }, 500);
-
+    /* TRIGGER CONGRATS POPUP WITH ELEVENLABS AUDIO */
+    playMeme('success');
     return;
   }
 
   /* WRONG FINAL ANSWER */
-  feedbackElement.textContent = 'Connection kandupidichilla. 💀';
+  feedbackElement.textContent = 'Connection kandupidichilla da. Onnukoodi nokku! 💀';
   feedbackElement.className = 'wrong';
   input.value = '';
 }
 
 /* =========================================================
-   PLAY MEME
+   PLAY POPUP MODAL & AUDIO
 ========================================================= */
 
 function playMeme(type) {
   const battle = getBattle();
   const modalElement = document.getElementById('memeModal');
-  const image = document.getElementById('memeImage');
-  const video = document.getElementById('memeVideo');
-  const videoSource = document.getElementById('memeVideoSource');
   const audio = document.getElementById('memeAudio');
   const audioSource = document.getElementById('memeAudioSource');
   const title = document.getElementById('memeTitle');
-  const message = document.getElementById('memeMessage');
 
-  image.classList.add('d-none');
-  video.classList.add('d-none');
-  audio.pause();
+  // Stop any playing audio
+  if (audio) {
+    audio.pause();
+    audio.currentTime = 0;
+  }
 
   if (type === 'success') {
-    title.textContent = '🔥 AAHAA, ENTHORU PERFORMANCE!';
-    message.textContent =
-      'Ahaa! Sariyaya sthalathu thanne tight aayi kayatti... connection decode cheythu! 🧠💥 Brain maathram alla, adiyilulla B-complex vare onnu trigger aayi. Kandappol thanne chirichukondu chorinjirangiya aa timing undallo, pure mass! Adutha roundilum ithupole fasaakkalle ketto! 😉🚀';
+    title.textContent = '🎉 CONGRATULATIONS! 🎉';
 
-    if (battle.successImage) {
-      image.src = battle.successImage;
-      image.classList.remove('d-none');
-    }
-
-    if (battle.successVideo) {
-      videoSource.src = battle.successVideo;
-      video.load();
-      video.classList.remove('d-none');
-      video.play().catch(() => {});
-    }
-
-    if (battle.successAudio) {
+    /* PLAY ELEVENLABS AUDIO IN BACKGROUND */
+    if (battle.successAudio && audioSource && audio) {
       audioSource.src = battle.successAudio;
       audio.load();
-      audio.play().catch(() => {});
+      audio.play().catch((err) => {
+        console.warn('Audio playback prevented by browser policy:', err);
+      });
     }
   } else {
-    title.textContent = '💀 PANI PAALI';
-    message.textContent =
-      'Moonu riddle solve cheythittum connection kandupidikkan pattiyilla. 😭';
+    /* FAILURE STATE */
+    title.textContent = '💀 PANI PAALI!';
 
-    if (battle.failureImage) {
-      image.src = battle.failureImage;
-      image.classList.remove('d-none');
-    }
-
-    if (battle.failureVideo) {
-      videoSource.src = battle.failureVideo;
-      video.load();
-      video.classList.remove('d-none');
-      video.play().catch(() => {});
-    }
-
-    if (battle.failureAudio) {
+    if (battle.failureAudio && audioSource && audio) {
       audioSource.src = battle.failureAudio;
       audio.load();
-      audio.play().catch(() => {});
+      audio.play().catch((err) => {});
     }
   }
 
-  modal = new Bootstrap.Modal(modalElement);
-  modal.show();
+  /* SHOW MODAL SAFELY */
+  if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+    modal = bootstrap.Modal.getInstance(modalElement) || new bootstrap.Modal(modalElement);
+    modal.show();
+  } else {
+    modalElement.style.display = 'block';
+    modalElement.classList.add('show');
+    document.body.classList.add('modal-open');
+  }
 }
 
 /* =========================================================
-   CONTINUE AFTER MEME
+   CLOSE MODAL & CONTINUE
 ========================================================= */
 
 function continueAfterMeme() {
-  if (currentRiddle >= 3) {
-    showResult();
+  const modalElement = document.getElementById('memeModal');
+  const audio = document.getElementById('memeAudio');
+
+  /* STOP AUDIO WHEN USER CLICKS CONTINUE */
+  if (audio) {
+    audio.pause();
+    audio.currentTime = 0;
   }
+
+  if (modal) {
+    modal.hide();
+  } else {
+    modalElement.style.display = 'none';
+    modalElement.classList.remove('show');
+    document.body.classList.remove('modal-open');
+  }
+
+  showResult();
 }
 
 /* =========================================================
-   SHOW RESULT
+   SHOW RESULT & RESTART
 ========================================================= */
 
 function showResult() {
@@ -499,10 +478,6 @@ function showResult() {
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
-/* =========================================================
-   RESTART
-========================================================= */
 
 function restartGame() {
   currentBattle = 0;
