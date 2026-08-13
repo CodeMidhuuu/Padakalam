@@ -2,212 +2,296 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Padakkalam | Riddle Battle</title>
 
-    <title>Padakkalam | Malayalam Riddle Game</title>
-
-    <!-- Bootstrap 5 -->
+    <!-- BOOTSTRAP CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
-    <!-- Google Font -->
+    <!-- GOOGLE FONT -->
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Our CSS -->
+    <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <!-- =====================================================
-     NAVBAR
-===================================================== -->
-
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-dark">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#"> 🧠 PADAKKALAM </a>
+        <a href="#" class="navbar-brand"> ⚔️ PADAKKALAM </a>
 
-        <span class="score-badge"> Score: <span id="score">0</span> </span>
+        <div class="score-box">
+          🏆
+          <span id="score"> 0 </span>
+        </div>
       </div>
     </nav>
 
-    <!-- =====================================================
-     MAIN GAME AREA
-===================================================== -->
+    <!-- MAIN -->
+    <main class="container main-container">
+      <!-- HERO / INTRO SCREEN -->
+      <section id="introScreen" class="screen">
+        <div class="hero-icon">⚔️</div>
 
-    <main class="container game-container">
-      <!-- Header -->
+        <div class="small-label">WELCOME TO THE BATTLEFIELD</div>
 
-      <div class="text-center mb-4">
-        <div class="game-tag">⚔️ RIDDLE BATTLE</div>
+        <h1>PADAKKALAM</h1>
+
+        <p class="hero-description">
+          Moonu chodyangal.
+          <br />
+          Moonu utharangal.
+          <br />
+          Pakshe...
+          <strong> oru final answer. </strong>
+        </p>
+
+        <div class="warning-box">
+          🧠 <strong>Warning:</strong> Overthink cheythal pani paalum.
+        </div>
+
+        <button class="btn start-button" onclick="startBattle()">
+          ⚔️ Battle Start
+        </button>
+      </section>
+
+      <!-- RIDDLE SCREEN -->
+      <section id="riddleScreen" class="screen d-none">
+        <!-- Battle Progress -->
+        <div class="battle-progress">
+          <div class="progress-info">
+            <span id="stageText"> Riddle 1 of 3 </span>
+
+            <span>
+              ❤️
+              <span id="attempts"> 3 </span>
+            </span>
+          </div>
+
+          <div class="progress">
+            <div id="progressBar" class="progress-bar"></div>
+          </div>
+        </div>
+
+        <!-- Riddle Card -->
+        <div class="riddle-card">
+          <div class="riddle-number">
+            CHALLENGE
+            <span id="riddleNumber"> 01 </span>
+          </div>
+
+          <div class="riddle-emoji">🤔</div>
+
+          <h2 id="question">Loading...</h2>
+
+          <!-- Clue -->
+          <button id="clueButton" class="btn clue-button" onclick="useClue()">
+            💡 Use Clue
+          </button>
+
+          <div id="clueText" class="clue-box d-none"></div>
+
+          <!-- Answer -->
+          <div class="answer-container">
+            <input
+              type="text"
+              id="answerInput"
+              class="form-control answer-input"
+              placeholder="Answer para mone..."
+              autocomplete="off"
+            />
+
+            <button
+              id="submitButton"
+              class="btn submit-button"
+              onclick="submitAnswer()"
+            >
+              Lock Answer 🔒
+            </button>
+          </div>
+
+          <div id="feedback"></div>
+        </div>
+      </section>
+
+      <!-- CONNECTION REVEAL SCREEN -->
+      <section id="connectionScreen" class="screen d-none">
+        <div class="connection-icon">👀</div>
+
+        <div class="small-label">WAIT A SECOND...</div>
 
         <h1>
-          Buddhi undenkil<br />
-          <span>jayikkada.</span>
+          Angane angu<br />
+          <span>poyalo?</span>
         </h1>
 
-        <p class="subtitle">3 chances. 2 clues. Pinne nanakkedu. 💀</p>
-      </div>
+        <p class="connection-description">
+          Nee moonu chodyangal solve cheythu.
+          <br />
+          But why are these three answers connected?
+        </p>
 
-      <!-- =================================================
-         GAME CARD
-    ================================================== -->
+        <!-- CONNECTION MEDIA -->
+        <div id="connectionMedia" class="connection-media">
+          <!-- AUDIO PRELOADED IN HTML FOR ZERO LATENCY (STAYS SILENT UNTIL JS CALLS PLAY) -->
+          <audio
+            id="connectionAudio"
+            src="enhanced_audio.mp3"
+            preload="auto"
+            class="d-none"
+          ></audio>
 
-      <div class="game-card">
-        <!-- Question number -->
-
-        <div class="question-top">
-          <span id="questionNumber"> Question 1 / 10 </span>
-
-          <span class="attempt-display">
-            ❤️
-            <span id="attempts">3</span>
-          </span>
+          <video id="connectionVideo" controls class="w-100 d-none">
+            <source src="" type="video/mp4" />
+          </video>
         </div>
 
-        <!-- RIDDLE -->
+        <!-- Answers Reveal -->
+        <div class="answers-reveal">
+          <div class="answer-pill">
+            <span> RIDDLE 1 </span>
+            <strong id="answerOne"> ? </strong>
+          </div>
 
-        <div class="riddle-box">
-          <div class="riddle-icon">🤔</div>
+          <div class="connection-arrow">↓</div>
 
-          <h2 id="question">Loading question...</h2>
+          <div class="answer-pill">
+            <span> RIDDLE 2 </span>
+            <strong id="answerTwo"> ? </strong>
+          </div>
+
+          <div class="connection-arrow">↓</div>
+
+          <div class="answer-pill">
+            <span> RIDDLE 3 </span>
+            <strong id="answerThree"> ? </strong>
+          </div>
         </div>
 
-        <!-- =================================================
-             CLUES
-        ================================================== -->
-
-        <div class="clue-area">
-          <button id="clueButton" class="btn clue-button" onclick="useClue()">
-            💡 Use a Clue
-          </button>
-
-          <div id="clueText" class="clue-text d-none"></div>
+        <div class="thinking-box">
+          🧠
+          <strong> Find the connection. </strong>
+          <br />
+          Take your time.
         </div>
 
-        <!-- =================================================
-             ANSWER INPUT
-        ================================================== -->
+        <button class="btn final-button" onclick="startFinalChallenge()">
+          🔓 Decode Final Answer
+        </button>
+      </section>
 
-        <div class="answer-area">
-          <input
-            type="text"
-            id="answerInput"
-            class="form-control answer-input"
-            placeholder="Answer para mone..."
-            autocomplete="off"
-          />
+      <!-- FINAL ANSWER SCREEN -->
+      <section id="finalScreen" class="screen d-none">
+        <div class="final-icon">🔐</div>
 
-          <button
-            id="submitButton"
-            class="btn submit-button"
-            onclick="submitAnswer()"
-          >
-            Submit Answer →
-          </button>
+        <div class="small-label">FINAL BATTLE</div>
+
+        <h1>
+          What connects<br />
+          <span>these three?</span>
+        </h1>
+
+        <div class="final-answers">
+          <span id="finalAnswerOne"> ? </span>
+          <span>+</span>
+          <span id="finalAnswerTwo"> ? </span>
+          <span>+</span>
+          <span id="finalAnswerThree"> ? </span>
         </div>
 
-        <!-- Feedback -->
+        <input
+          type="text"
+          id="finalInput"
+          class="form-control final-input"
+          placeholder="One word. Think deeply..."
+          autocomplete="off"
+        />
 
-        <div id="feedback"></div>
-      </div>
+        <button class="btn final-submit" onclick="submitFinalAnswer()">
+          🔥 Submit Final Answer
+        </button>
 
-      <!-- =================================================
-         MEME POPUP
-    ================================================== -->
+        <div id="finalFeedback"></div>
+      </section>
 
-      <div class="modal fade" id="memeModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content meme-modal">
-            <div class="modal-header">
-              <h5 class="modal-title" id="memeTitle">💀 PANI PAALI</h5>
+      <!-- GAME OVER / RESULT SCREEN -->
+      <section id="resultScreen" class="screen d-none">
+        <div id="resultEmoji" class="result-emoji">🏆</div>
 
-              <button
-                type="button"
-                class="btn-close btn-close-white"
-                data-bs-dismiss="modal"
-              ></button>
-            </div>
+        <div id="resultTitle" class="small-label">BATTLE COMPLETE</div>
 
-            <div class="modal-body text-center">
-              <!-- =================================================
-                         MEME IMAGE PLACEHOLDER
+        <h1 id="resultHeading">Sheri Mone! 🔥</h1>
 
-                         PUT YOUR MEME IMAGE HERE.
+        <p id="resultMessage"></p>
 
-                         Example:
+        <div class="final-score-card">
+          <span> FINAL SCORE </span>
+          <strong id="finalScore"> 0 </strong>
+        </div>
 
-                         /assets/memes/failure.jpg
+        <button class="btn start-button" onclick="restartGame()">
+          🔄 Fight Again
+        </button>
+      </section>
+    </main>
 
-                    ================================================== -->
+    <!-- MEME MODAL -->
+    <div class="modal fade" id="memeModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content meme-modal">
+          <div class="modal-header">
+            <h5 class="modal-title" id="memeTitle">💀 PANI PAALI</h5>
 
-              <img
-                id="memeImage"
-                src=""
-                alt="Malayalam Meme"
-                class="meme-image d-none"
-              />
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
 
-              <!-- =================================================
-                         MEME VIDEO PLACEHOLDER
+          <div class="modal-body text-center">
+            <img
+              id="memeImage"
+              src=""
+              class="meme-image d-none"
+              alt="Malayalam meme"
+            />
 
-                         PUT YOUR MOVIE MEME VIDEO HERE.
+            <video id="memeVideo" class="meme-video d-none" controls>
+              <source id="memeVideoSource" src="" />
+            </video>
 
-                         Example:
+            <audio id="memeAudio" class="w-100" controls>
+              <source id="memeAudioSource" src="" />
+            </audio>
 
-                         /assets/videos/failure.mp4
+            <p id="memeMessage" class="meme-message"></p>
+          </div>
 
-                    ================================================== -->
-
-              <video id="memeVideo" class="meme-video d-none" controls>
-                <source id="memeVideoSource" src="" />
-              </video>
-
-              <p id="memeMessage" class="meme-message"></p>
-
-              <!-- =================================================
-                         MEME AUDIO PLACEHOLDER
-
-                         PUT YOUR AUDIO FILE HERE.
-
-                         Example:
-
-                         /assets/audio/failure.mp3
-
-                    ================================================== -->
-
-              <audio id="memeAudio" controls>
-                <source id="memeAudioSource" src="" />
-              </audio>
-            </div>
-
-            <div class="modal-footer">
-              <button
-                class="btn next-button"
-                data-bs-dismiss="modal"
-                onclick="nextQuestion()"
-              >
-                Next Question →
-              </button>
-            </div>
+          <div class="modal-footer">
+            <button
+              class="btn next-button"
+              data-bs-dismiss="modal"
+              onclick="continueAfterMeme()"
+            >
+              Continue →
+            </button>
           </div>
         </div>
       </div>
-    </main>
+    </div>
 
-    <!-- =====================================================
-     BOOTSTRAP JS
-===================================================== -->
-
+    <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Our JavaScript -->
-
+    <!-- GAME JS -->
     <script src="script.js"></script>
   </body>
 </html>

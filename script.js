@@ -1,482 +1,528 @@
-/* =====================================================
-   PADAKKALAM GAME DATA
-===================================================== */
+/* =========================================================
+   PADAKKALAM
+   CONNECTED RIDDLE MODE
+========================================================= */
 
-const riddles = [
+/* =========================================================
+   GAME DATA
+========================================================= */
+
+const battles = [
   {
-    question:
-      'Oru marathil 10 kilikal irunnu. Nee oru kiliye nokki chirichu. Baaki ethra?',
+    id: 1,
 
-    answers: ['0', 'zero', '0 kili'],
+    /* RIDDLE 1 */
+    riddles: [
+      {
+        question:
+          'Njan vellathil jeevikkum. Vellam kudikkum. Vellathil thanne urangum. Njan aaranu?',
+        answers: ['meen', 'fish', 'മീൻ'],
+        clues: ['Enikku kaal illa.', 'Swimming aanu ente main talent.'],
+      },
 
-    clues: ['Nee chirichath kandappol ellam pedichu parannu.'],
+      /* RIDDLE 2 */
+      {
+        question:
+          'Njan kaanilla, pakshe enne anubhavikkam. Enne pidikkan pattilla. Njan vannal marangal dance cheyyum. Njan aaranu?',
+        answers: ['kaattu', 'kattu', 'wind', 'കാറ്റ്'],
+        clues: [
+          'Window adachillenkil njan veettil kayarum.',
+          'Marangal enne kandappol aadi nadakkum.',
+        ],
+      },
 
-    points: 100,
+      /* RIDDLE 3 */
+      {
+        question:
+          'Njan raathriyil kaanum. Pakalil enne kaanilla. Enikku light undu, pakshe current bill illa. Njan aaranu?',
+        answers: ['chandran', 'moon', 'ചന്ദ്രൻ'],
+        clues: ['Njan aakashathil aanu.', 'Sooryan ente best friend alla.'],
+      },
+    ],
 
-    /* =============================================
-           SUCCESS MEME
+    /* FINAL CONNECTION */
+    finalAnswers: ['nature', 'prakruthi', 'പ്രകൃതി'],
+    finalDisplayAnswer: 'Nature',
 
-           PUT YOUR SUCCESS MEME IMAGE/VIDEO/AUDIO
-           FILE PATH HERE.
-        ============================================= */
+    /* POINTS */
+    pointsPerRiddle: 100,
+    finalPoints: 500,
 
-    successImage: '/assets/memes/success.jpg',
+    /* MEDIA PATHS */
+    connectionVideo: '',
 
+    /* SUCCESS MEDIA */
+    successImage: '/assets/images/success.jpg',
     successVideo: '',
-
     successAudio: '/assets/audio/success.mp3',
 
-    /* =============================================
-           FAILURE MEME
-
-           PUT YOUR FAILURE MEME IMAGE/VIDEO/AUDIO
-           FILE PATH HERE.
-        ============================================= */
-
-    failureImage: '/assets/memes/failure.jpg',
-
+    /* FAILURE MEDIA */
+    failureImage: '/assets/images/failure.jpg',
     failureVideo: '',
-
-    failureAudio: '/assets/audio/failure.mp3',
-  },
-
-  {
-    question:
-      'Njan vellathil jeevikkum. Vellam kudikkum. Vellathil urangum. Njan aaranu?',
-
-    answers: ['meen', 'fish', 'മീൻ'],
-
-    clues: ['Enikku kaal illa.', 'Njan swimming-il expert aanu.'],
-
-    points: 100,
-
-    successImage: '/assets/memes/success.jpg',
-
-    successVideo: '',
-
-    successAudio: '/assets/audio/success.mp3',
-
-    failureImage: '/assets/memes/failure.jpg',
-
-    failureVideo: '',
-
-    failureAudio: '/assets/audio/failure.mp3',
-  },
-
-  {
-    question:
-      'Njan kaanilla, pakshe enne anubhavikkam. Njan pidikkan pattilla, pakshe enne thadayan pattum. Njan aaranu?',
-
-    answers: ['kaattu', 'kattu', 'wind', 'കാറ്റ്'],
-
-    clues: ['Marangal enne kandappol dance cheyyum.'],
-
-    points: 150,
-
-    successImage: '/assets/memes/success.jpg',
-
-    successVideo: '',
-
-    successAudio: '/assets/audio/success.mp3',
-
-    failureImage: '/assets/memes/failure.jpg',
-
-    failureVideo: '',
-
     failureAudio: '/assets/audio/failure.mp3',
   },
 ];
 
-/* =====================================================
-   GAME VARIABLES
-===================================================== */
+/* =========================================================
+   GAME STATE
+========================================================= */
 
-let currentQuestion = 0;
-
+let currentBattle = 0;
+let currentRiddle = 0;
 let attempts = 3;
-
 let cluesUsed = 0;
-
 let score = 0;
+let riddleAnswers = [];
+let modal;
 
-/* =====================================================
-   HTML ELEMENTS
-===================================================== */
+/* =========================================================
+   DOM ELEMENTS
+========================================================= */
+
+const introScreen = document.getElementById('introScreen');
+const riddleScreen = document.getElementById('riddleScreen');
+const connectionScreen = document.getElementById('connectionScreen');
+const finalScreen = document.getElementById('finalScreen');
+const resultScreen = document.getElementById('resultScreen');
 
 const questionElement = document.getElementById('question');
-
-const questionNumberElement = document.getElementById('questionNumber');
-
+const riddleNumberElement = document.getElementById('riddleNumber');
+const stageText = document.getElementById('stageText');
 const attemptsElement = document.getElementById('attempts');
-
+const progressBar = document.getElementById('progressBar');
+const answerInput = document.getElementById('answerInput');
+const submitButton = document.getElementById('submitButton');
+const feedback = document.getElementById('feedback');
+const clueButton = document.getElementById('clueButton');
+const clueText = document.getElementById('clueText');
 const scoreElement = document.getElementById('score');
 
-const answerInput = document.getElementById('answerInput');
+/* =========================================================
+   START BATTLE
+========================================================= */
 
-const feedbackElement = document.getElementById('feedback');
+function startBattle() {
+  currentBattle = 0;
+  currentRiddle = 0;
+  attempts = 3;
+  cluesUsed = 0;
+  score = 0;
+  riddleAnswers = [];
 
-const clueText = document.getElementById('clueText');
+  const connectionAudio = document.getElementById('connectionAudio');
+  if (connectionAudio) {
+    connectionAudio.pause();
+    connectionAudio.currentTime = 0;
+  }
 
-const clueButton = document.getElementById('clueButton');
+  scoreElement.textContent = score;
 
-const submitButton = document.getElementById('submitButton');
+  introScreen.classList.add('d-none');
+  connectionScreen.classList.add('d-none');
+  finalScreen.classList.add('d-none');
+  resultScreen.classList.add('d-none');
+  riddleScreen.classList.remove('d-none');
 
-/* =====================================================
-   LOAD QUESTION
-===================================================== */
+  loadRiddle();
+}
 
-function loadQuestion() {
-  const riddle = riddles[currentQuestion];
+/* =========================================================
+   GET CURRENT BATTLE
+========================================================= */
 
-  questionElement.textContent = riddle.question;
+function getBattle() {
+  return battles[currentBattle];
+}
 
-  questionNumberElement.textContent = `Question ${currentQuestion + 1} / ${riddles.length}`;
+/* =========================================================
+   GET CURRENT RIDDLE
+========================================================= */
+
+function getRiddle() {
+  return getBattle().riddles[currentRiddle];
+}
+
+/* =========================================================
+   LOAD RIDDLE
+========================================================= */
+
+function loadRiddle() {
+  const riddle = getRiddle();
 
   attempts = 3;
-
   cluesUsed = 0;
 
+  questionElement.textContent = riddle.question;
+  riddleNumberElement.textContent = `0${currentRiddle + 1}`;
+  stageText.textContent = `Riddle ${currentRiddle + 1} of 3`;
   attemptsElement.textContent = attempts;
+  progressBar.style.width = `${((currentRiddle + 1) / 3) * 100}%`;
 
   answerInput.value = '';
-
   answerInput.disabled = false;
-
   submitButton.disabled = false;
 
-  feedbackElement.textContent = '';
-
-  feedbackElement.className = '';
+  feedback.textContent = '';
+  feedback.className = '';
 
   clueText.textContent = '';
-
   clueText.classList.add('d-none');
-
   clueButton.disabled = false;
+  clueButton.textContent = '💡 Use Clue';
 
-  clueButton.textContent = '💡 Use a Clue';
+  answerInput.focus();
 }
 
-/* =====================================================
+/* =========================================================
    NORMALIZE ANSWER
-===================================================== */
+========================================================= */
 
 function normalizeAnswer(answer) {
-  return answer.toLowerCase().trim().replace(/\s+/g, ' ');
+  return answer
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, ' ')
+    .replace(/[.,!?]/g, '');
 }
 
-/* =====================================================
-   SUBMIT ANSWER
-===================================================== */
+/* =========================================================
+   CHECK ANSWER
+========================================================= */
+
+function isAnswerCorrect(userAnswer, correctAnswers) {
+  const normalizedUserAnswer = normalizeAnswer(userAnswer);
+
+  return correctAnswers.some(
+    (answer) => normalizeAnswer(answer) === normalizedUserAnswer,
+  );
+}
+
+/* =========================================================
+   SUBMIT RIDDLE ANSWER
+========================================================= */
 
 function submitAnswer() {
-  const userAnswer = normalizeAnswer(answerInput.value);
+  const userAnswer = answerInput.value;
 
-  if (!userAnswer) {
-    feedbackElement.textContent = 'Answer onnu type cheyyeda. 😂';
-
-    feedbackElement.className = 'wrong';
-
+  if (!userAnswer.trim()) {
+    feedback.textContent = 'Answer onnu type cheyyeda. 😂';
+    feedback.className = 'wrong';
     return;
   }
 
-  const riddle = riddles[currentQuestion];
+  const riddle = getRiddle();
 
-  const isCorrect = riddle.answers.some(
-    (answer) => normalizeAnswer(answer) === userAnswer,
-  );
-
-  /* =================================================
-       CORRECT
-    ================================================= */
-
-  if (isCorrect) {
-    score += riddle.points;
-
+  /* CORRECT */
+  if (isAnswerCorrect(userAnswer, riddle.answers)) {
+    riddleAnswers[currentRiddle] = userAnswer;
+    score += getBattle().pointsPerRiddle;
     scoreElement.textContent = score;
 
-    feedbackElement.textContent = 'Correct! Enthoru buddhi! 🧠🔥';
-
-    feedbackElement.className = 'correct';
+    feedback.textContent = 'Correct! 🔥';
+    feedback.className = 'correct';
 
     answerInput.disabled = true;
-
     submitButton.disabled = true;
 
-    playMeme('success');
+    setTimeout(() => {
+      goToNextRiddle();
+    }, 400);
 
     return;
   }
 
-  /* =================================================
-       WRONG
-    ================================================= */
-
+  /* WRONG */
   attempts--;
-
   attemptsElement.textContent = attempts;
 
   if (attempts > 0) {
-    feedbackElement.textContent = `Wrong! Ini ${attempts} chance undu. 💀`;
-
-    feedbackElement.className = 'wrong';
-
+    feedback.textContent = `Wrong da 😂 ${attempts} chance koodi undu.`;
+    feedback.className = 'wrong';
     answerInput.value = '';
-
+    answerInput.focus();
     return;
   }
 
-  /* =================================================
-       THREE ATTEMPTS FAILED
-    ================================================= */
-
-  feedbackElement.textContent = 'Mone... pani paali. 💀';
-
-  feedbackElement.className = 'wrong';
+  /* FAILED RIDDLE */
+  feedback.textContent = 'Mone... pani paali. 💀';
+  feedback.className = 'wrong';
 
   answerInput.disabled = true;
-
   submitButton.disabled = true;
+
+  riddleAnswers[currentRiddle] = riddle.answers[0];
 
   playMeme('failure');
 }
 
-/* =====================================================
-   USE CLUE
-===================================================== */
+/* =========================================================
+   NEXT RIDDLE
+========================================================= */
 
-function useClue() {
-  const riddle = riddles[currentQuestion];
+function goToNextRiddle() {
+  currentRiddle++;
 
-  if (cluesUsed >= riddle.clues.length) {
-    clueButton.disabled = true;
-
-    clueButton.textContent = 'No more clues 😭';
-
+  if (currentRiddle >= 3) {
+    showConnectionScreen();
     return;
   }
 
-  clueText.textContent = `💡 Clue: ${riddle.clues[cluesUsed]}`;
+  loadRiddle();
+}
 
+/* =========================================================
+   USE CLUE
+========================================================= */
+
+function useClue() {
+  const riddle = getRiddle();
+
+  if (cluesUsed >= riddle.clues.length) {
+    clueButton.disabled = true;
+    return;
+  }
+
+  clueText.textContent = `💡 ${riddle.clues[cluesUsed]}`;
   clueText.classList.remove('d-none');
 
   cluesUsed++;
 
   if (cluesUsed >= riddle.clues.length) {
+    clueButton.textContent = 'No More Clues 💀';
     clueButton.disabled = true;
-
-    clueButton.textContent = 'Clues Finished 💀';
   } else {
     clueButton.textContent = '💡 Another Clue';
   }
 }
 
-/* =====================================================
-   PLAY MEME
-===================================================== */
+/* =========================================================
+   SHOW CONNECTION SCREEN
+========================================================= */
 
-function playMeme(type) {
-  const riddle = riddles[currentQuestion];
+function showConnectionScreen() {
+  riddleScreen.classList.add('d-none');
+  connectionScreen.classList.remove('d-none');
 
-  const image = document.getElementById('memeImage');
+  document.getElementById('answerOne').textContent = riddleAnswers[0];
+  document.getElementById('answerTwo').textContent = riddleAnswers[1];
+  document.getElementById('answerThree').textContent = riddleAnswers[2];
 
-  const video = document.getElementById('memeVideo');
+  const connectionAudio = document.getElementById('connectionAudio');
 
-  const videoSource = document.getElementById('memeVideoSource');
-
-  const audio = document.getElementById('memeAudio');
-
-  const audioSource = document.getElementById('memeAudioSource');
-
-  const title = document.getElementById('memeTitle');
-
-  const message = document.getElementById('memeMessage');
-
-  /* Reset media */
-
-  image.classList.add('d-none');
-
-  video.classList.add('d-none');
-
-  audio.pause();
-
-  /* =================================================
-       SUCCESS
-    ================================================= */
-
-  if (type === 'success') {
-    title.textContent = '🔥 SHERI MONE!';
-
-    message.textContent = 'Buddhi undennu theliyichu. 😂';
-
-    /* =============================================
-           SUCCESS IMAGE
-
-           PUT IMAGE PATH IN successImage ABOVE.
-        ============================================= */
-
-    if (riddle.successImage) {
-      image.src = riddle.successImage;
-
-      image.classList.remove('d-none');
-    }
-
-    /* =============================================
-           SUCCESS VIDEO
-
-           PUT VIDEO PATH IN successVideo ABOVE.
-        ============================================= */
-
-    if (riddle.successVideo) {
-      videoSource.src = riddle.successVideo;
-
-      video.load();
-
-      video.classList.remove('d-none');
-
-      video.play().catch(() => {});
-    }
-
-    /* =============================================
-           SUCCESS AUDIO
-
-           PUT AUDIO PATH IN successAudio ABOVE.
-        ============================================= */
-
-    if (riddle.successAudio) {
-      audioSource.src = riddle.successAudio;
-
-      audio.load();
-
-      audio.play().catch(() => {});
-    }
-  } else {
-
-  /* =================================================
-       FAILURE
-    ================================================= */
-    title.textContent = '💀 PANI PAALI';
-
-    message.textContent = 'Moonu chance kitti. Ennittum... 😭';
-
-    /* =============================================
-           FAILURE IMAGE
-
-           PUT IMAGE PATH IN failureImage ABOVE.
-        ============================================= */
-
-    if (riddle.failureImage) {
-      image.src = riddle.failureImage;
-
-      image.classList.remove('d-none');
-    }
-
-    /* =============================================
-           FAILURE VIDEO
-
-           PUT VIDEO PATH IN failureVideo ABOVE.
-        ============================================= */
-
-    if (riddle.failureVideo) {
-      videoSource.src = riddle.failureVideo;
-
-      video.load();
-
-      video.classList.remove('d-none');
-
-      video.play().catch(() => {});
-    }
-
-    /* =============================================
-           FAILURE AUDIO
-
-           PUT AUDIO PATH IN failureAudio ABOVE.
-        ============================================= */
-
-    if (riddle.failureAudio) {
-      audioSource.src = riddle.failureAudio;
-
-      audio.load();
-
-      audio.play().catch(() => {});
-    }
+  if (connectionAudio) {
+    connectionAudio.currentTime = 0;
+    connectionAudio.play().catch((err) => {
+      console.warn('Autoplay blocked by browser:', err);
+    });
   }
 
-  /* =================================================
-       SHOW MODAL
-    ================================================= */
+  const battle = getBattle();
+  const connectionVideo = document.getElementById('connectionVideo');
+  if (battle.connectionVideo) {
+    connectionVideo.src = battle.connectionVideo;
+    connectionVideo.classList.remove('d-none');
+    connectionVideo.play().catch(() => {});
+  }
 
-  const modal = new bootstrap.Modal(document.getElementById('memeModal'));
-
-  modal.show();
+  /* AUTO-SCROLL DOWNWARD TO BOTTOM OF CONNECTION PAGE */
+  setTimeout(() => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth',
+    });
+  }, 200);
 }
 
-/* =====================================================
-   NEXT QUESTION
-===================================================== */
+/* =========================================================
+   START FINAL CHALLENGE
+========================================================= */
 
-function nextQuestion() {
-  currentQuestion++;
+function startFinalChallenge() {
+  connectionScreen.classList.add('d-none');
+  finalScreen.classList.remove('d-none');
 
-  if (currentQuestion >= riddles.length) {
-    showGameOver();
+  const connectionAudio = document.getElementById('connectionAudio');
+  if (connectionAudio) {
+    connectionAudio.pause();
+    connectionAudio.currentTime = 0;
+  }
+
+  document.getElementById('finalAnswerOne').textContent = riddleAnswers[0];
+  document.getElementById('finalAnswerTwo').textContent = riddleAnswers[1];
+  document.getElementById('finalAnswerThree').textContent = riddleAnswers[2];
+
+  const finalInput = document.getElementById('finalInput');
+  finalInput.value = '';
+  document.getElementById('finalFeedback').textContent = '';
+
+  setTimeout(() => {
+    finalInput.focus();
+    finalInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }, 150);
+}
+
+/* =========================================================
+   SUBMIT FINAL ANSWER
+========================================================= */
+
+function submitFinalAnswer() {
+  const input = document.getElementById('finalInput');
+  const feedbackElement = document.getElementById('finalFeedback');
+  const userAnswer = normalizeAnswer(input.value);
+
+  if (!userAnswer) {
+    feedbackElement.textContent = 'Final answer para mone. 😂';
+    feedbackElement.className = 'wrong';
+    return;
+  }
+
+  const battle = getBattle();
+  const correct = isAnswerCorrect(userAnswer, battle.finalAnswers);
+
+  /* CORRECT FINAL ANSWER */
+  if (correct) {
+    score += battle.finalPoints;
+    scoreElement.textContent = score;
+
+    feedbackElement.textContent = 'DAAAAA! Connection kandupidichu! 🔥🧠';
+    feedbackElement.className = 'correct';
+
+    setTimeout(() => {
+      playMeme('success');
+    }, 500);
 
     return;
   }
 
-  loadQuestion();
+  /* WRONG FINAL ANSWER */
+  feedbackElement.textContent = 'Connection kandupidichilla. 💀';
+  feedbackElement.className = 'wrong';
+  input.value = '';
 }
 
-/* =====================================================
-   GAME OVER
-===================================================== */
+/* =========================================================
+   PLAY MEME
+========================================================= */
 
-function showGameOver() {
-  questionElement.textContent = 'Game Over! 🎉';
+function playMeme(type) {
+  const battle = getBattle();
+  const modalElement = document.getElementById('memeModal');
+  const image = document.getElementById('memeImage');
+  const video = document.getElementById('memeVideo');
+  const videoSource = document.getElementById('memeVideoSource');
+  const audio = document.getElementById('memeAudio');
+  const audioSource = document.getElementById('memeAudioSource');
+  const title = document.getElementById('memeTitle');
+  const message = document.getElementById('memeMessage');
 
-  questionNumberElement.textContent = 'PADAKKALAM COMPLETE';
+  image.classList.add('d-none');
+  video.classList.add('d-none');
+  audio.pause();
 
-  attemptsElement.textContent = '🏆';
+  if (type === 'success') {
+    title.textContent = '🔥 AAHAA, ENTHORU PERFORMANCE!';
+    message.textContent =
+      'Ahaa! Sariyaya sthalathu thanne tight aayi kayatti... connection decode cheythu! 🧠💥 Brain maathram alla, adiyilulla B-complex vare onnu trigger aayi. Kandappol thanne chirichukondu chorinjirangiya aa timing undallo, pure mass! Adutha roundilum ithupole fasaakkalle ketto! 😉🚀';
 
-  clueButton.disabled = true;
+    if (battle.successImage) {
+      image.src = battle.successImage;
+      image.classList.remove('d-none');
+    }
 
-  answerInput.disabled = true;
+    if (battle.successVideo) {
+      videoSource.src = battle.successVideo;
+      video.load();
+      video.classList.remove('d-none');
+      video.play().catch(() => {});
+    }
 
-  submitButton.disabled = true;
+    if (battle.successAudio) {
+      audioSource.src = battle.successAudio;
+      audio.load();
+      audio.play().catch(() => {});
+    }
+  } else {
+    title.textContent = '💀 PANI PAALI';
+    message.textContent =
+      'Moonu riddle solve cheythittum connection kandupidikkan pattiyilla. 😭';
 
-  feedbackElement.innerHTML = `
-        <div class="correct">
-            Final Score: ${score}
-        </div>
+    if (battle.failureImage) {
+      image.src = battle.failureImage;
+      image.classList.remove('d-none');
+    }
 
-        <br>
+    if (battle.failureVideo) {
+      videoSource.src = battle.failureVideo;
+      video.load();
+      video.classList.remove('d-none');
+      video.play().catch(() => {});
+    }
 
-        <button
-            class="btn btn-light"
-            onclick="restartGame()"
-        >
-            🔄 Play Again
-        </button>
-        `;
+    if (battle.failureAudio) {
+      audioSource.src = battle.failureAudio;
+      audio.load();
+      audio.play().catch(() => {});
+    }
+  }
+
+  modal = new Bootstrap.Modal(modalElement);
+  modal.show();
 }
 
-/* =====================================================
-   RESTART GAME
-===================================================== */
+/* =========================================================
+   CONTINUE AFTER MEME
+========================================================= */
+
+function continueAfterMeme() {
+  if (currentRiddle >= 3) {
+    showResult();
+  }
+}
+
+/* =========================================================
+   SHOW RESULT
+========================================================= */
+
+function showResult() {
+  introScreen.classList.add('d-none');
+  riddleScreen.classList.add('d-none');
+  connectionScreen.classList.add('d-none');
+  finalScreen.classList.add('d-none');
+
+  resultScreen.classList.remove('d-none');
+
+  document.getElementById('finalScore').textContent = score;
+  document.getElementById('resultHeading').textContent =
+    'PADAKKALAM COMPLETE! ⚔️';
+  document.getElementById('resultMessage').textContent =
+    'Nee battlefield survive cheythu. Respect. 🫡';
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* =========================================================
+   RESTART
+========================================================= */
 
 function restartGame() {
-  currentQuestion = 0;
-
+  currentBattle = 0;
+  currentRiddle = 0;
+  attempts = 3;
+  cluesUsed = 0;
   score = 0;
+  riddleAnswers = [];
 
   scoreElement.textContent = score;
 
-  loadQuestion();
+  resultScreen.classList.add('d-none');
+  introScreen.classList.remove('d-none');
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-/* =====================================================
-   ENTER KEY SUPPORT
-===================================================== */
+/* =========================================================
+   KEYBOARD EVENT LISTENERS
+========================================================= */
 
 answerInput.addEventListener('keydown', function (event) {
   if (event.key === 'Enter') {
@@ -484,8 +530,10 @@ answerInput.addEventListener('keydown', function (event) {
   }
 });
 
-/* =====================================================
-   START GAME
-===================================================== */
-
-loadQuestion();
+document
+  .getElementById('finalInput')
+  .addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+      submitFinalAnswer();
+    }
+  });
