@@ -1,93 +1,107 @@
 /* =========================================================
-   PADAKKALAM - FIXED SCRIPT.JS
+   PADAKKALAM - SCRIPT.JS
 ========================================================= */
 
 const battleConfig = {
   id: 1,
 
-  /* POOL OF 9 RIDDLES */
+  /* === EMOJI EQUATION RIDDLES POOL === */
+  riddlesPool: [
+    {
+      id: 1,
+      question: '☁️ + 💧 = ?',
+      options: ['🌧️ Rain', '🔥 Fire', '🚗 Car', '⚡ Lightning', '❄️ Snow'],
+      correctAnswer: '🌧️ Rain',
+      cleanAnswer: 'Rain 🌧️',
+      clues: ['Aakashathu ninnu veazhum! ☔', 'Nanayaan thayyaaraano? 💦'],
+    },
+    {
+      id: 2,
+      question: '🌌 + ☀️ = ?',
+      options: ['🌞 Sun', '🧊 Ice', '📱 Phone', '🌈 Rainbow', '🌙 Moon'],
+      correctAnswer: '🌞 Sun',
+      cleanAnswer: 'Sun 🌞',
+      clues: ['Velicham tharum! 💡', 'Raathri aayaal urangaan pokum 🌙'],
+    },
+    {
+      id: 3,
+      question: '🌱 + ⏰ = ?',
+      options: ['🌳 Tree', '🪑 Chair', '💻 Laptop', '🍄 Mushroom', '🪵 Wood'],
+      correctAnswer: '🌳 Tree',
+      cleanAnswer: 'Tree 🌳',
+      clues: [
+        'Nizhalum pazhavum tharum! 🍎',
+        'Ilakal undu, pakshe kaal illa 🍃',
+      ],
+    },
+    {
+      id: 4,
+      question: '🌊 + 🫧 = ?',
+      options: ['🐟 Fish', '🦅 Bird', '🦁 Lion', '🦀 Crab', '🐬 Dolphin'],
+      correctAnswer: '🐟 Fish',
+      cleanAnswer: 'Fish 🐟',
+      clues: ['Vellathil thanne urangum 🌊', 'Swimming aanu main talent 🏊'],
+    },
+    {
+      id: 5,
+      question: '🪵 + 🪨 = ?',
+      options: ['🔥 Fire', '🧊 Ice', '🌧️ Rain', '🧱 Brick', '🌋 Volcano'],
+      correctAnswer: '🔥 Fire',
+      cleanAnswer: 'Fire 🔥',
+      clues: ['Vellam ഒഴിച്ചാൽ marikkum 💦', 'Enne thottal pollum ⚠️'],
+    },
+    {
+      id: 6,
+      question: '🍃 + 💨 = ?',
+      options: ['🌪️ Wind', '🪨 Stone', '⚡ Lightning', '☁️ Cloud', '🌊 Wave'],
+      correctAnswer: '🌪️ Wind',
+      cleanAnswer: 'Wind 🌪️',
+      clues: [
+        'Kaanan pattilla, pakshe anubhavikkam 🌬️',
+        'Marangal dance cheyyum 🌳',
+      ],
+    },
+    {
+      id: 7,
+      question: '⛰️ + 💧 = ?',
+      options: ['🌊 River', '🧱 Wall', '🔥 Lava', '🏜️ Desert', '❄️ Glacier'],
+      correctAnswer: '🌊 River',
+      cleanAnswer: 'River 🌊',
+      clues: [
+        'Malayil ninnu thudangi kadalil avasaanikkum 🏔️',
+        'Eppozhum nadannukonde irikkum 🚶',
+      ],
+    },
+    {
+      id: 8,
+      question: '🌱 + 🌧️ = ?',
+      options: ['🌸 Flower', '🪨 Rock', '⚡ Spark', '🌾 Grass', '🍎 Fruit'],
+      correctAnswer: '🌸 Flower',
+      cleanAnswer: 'Flower 🌸',
+      clues: ['Nalla manam undu 🌺', 'Chediyil ninnu undaagum 🌿'],
+    },
+    {
+      id: 9,
+      question: '☀️ + 🌊 = ?',
+      options: [
+        '☁️ Cloud',
+        '🌋 Volcano',
+        '🧱 Brick',
+        '🌈 Rainbow',
+        '🌪️ Tornado',
+      ],
+      correctAnswer: '☁️ Cloud',
+      cleanAnswer: 'Cloud ☁️',
+      clues: [
+        'Aakashathile panji pole aanu ☁️',
+        'Karutha niram aayaal mazha tharum 🌧️',
+      ],
+    },
+  ],
 
-
-  /* === NEW EMOJI EQUATION RIDDLES POOL === */
-
-riddlesPool: [
-  {
-    id: 1,
-    question: '☁️ + 💧 = ?',
-    options: ['🌧️ Rain', '🔥 Fire', '🚗 Car', '⚡ Lightning', '❄️ Snow'],
-    correctAnswer: '🌧️ Rain',
-    cleanAnswer: 'Rain 🌧️',
-    clues: ['Aakashathu ninnu veazhum! ☔', 'Nanayaan thayyaaraano? 💦'],
-  },
-  {
-    id: 2,
-    question: '🌌 + ☀️ = ?',
-    options: ['🌞 Sun', '🧊 Ice', '📱 Phone', '🌈 Rainbow', '🌙 Moon'],
-    correctAnswer: '🌞 Sun',
-    cleanAnswer: 'Sun 🌞',
-    clues: ['Velicham tharum! 💡', 'Raathri aayaal urangaan pokum 🌙'],
-  },
-  {
-    id: 3,
-    question: '🌱 + ⏰ = ?',
-    options: ['🌳 Tree', '🪑 Chair', '💻 Laptop', '🍄 Mushroom', '🪵 Wood'],
-    correctAnswer: '🌳 Tree',
-    cleanAnswer: 'Tree 🌳',
-    clues: ['Nizhalum pazhavum tharum! 🍎', 'Ilakal undu, pakshe kaal illa 🍃'],
-  },
-  {
-    id: 4,
-    question: '🌊 + 🫧 = ?',
-    options: ['🐟 Fish', '🦅 Bird', '🦁 Lion', '🦀 Crab', '🐬 Dolphin'],
-    correctAnswer: '🐟 Fish',
-    cleanAnswer: 'Fish 🐟',
-    clues: ['Vellathil thanne urangum 🌊', 'Swimming aanu main talent 🏊'],
-  },
-  {
-    id: 5,
-    question: '🪵 + 🪨 = ?',
-    options: ['🔥 Fire', '🧊 Ice', '🌧️ Rain', '🧱 Brick', '🌋 Volcano'],
-    correctAnswer: '🔥 Fire',
-    cleanAnswer: 'Fire 🔥',
-    clues: ['Vellam ഒഴിച്ചാൽ marikkum 💦', 'Enne thottal pollum ⚠️'],
-  },
-  {
-    id: 6,
-    question: '🍃 + 💨 = ?',
-    options: ['🌪️ Wind', '🪨 Stone', '⚡ Lightning', '☁️ Cloud', '🌊 Wave'],
-    correctAnswer: '🌪️ Wind',
-    cleanAnswer: 'Wind 🌪️',
-    clues: ['Kaanan pattilla, pakshe anubhavikkam 🌬️', 'Marangal dance cheyyum 🌳'],
-  },
-  {
-    id: 7,
-    question: '⛰️ + 💧 = ?',
-    options: ['🌊 River', '🧱 Wall', '🔥 Lava', '🏜️ Desert', '❄️ Glacier'],
-    correctAnswer: '🌊 River',
-    cleanAnswer: 'River 🌊',
-    clues: ['Malayil ninnu thudangi kadalil avasaanikkum 🏔️', 'Eppozhum nadannukonde irikkum 🚶'],
-  },
-  {
-    id: 8,
-    question: '🌱 + 🌧️ = ?',
-    options: ['🌸 Flower', '🪨 Rock', '⚡ Spark', '🌾 Grass', '🍎 Fruit'],
-    correctAnswer: '🌸 Flower',
-    cleanAnswer: 'Flower 🌸',
-    clues: ['Nalla manam undu 🌺', 'Chediyil ninnu undaagum 🌿'],
-  },
-  {
-    id: 9,
-    question: '☀️ + 🌊 = ?',
-    options: ['☁️ Cloud', '🌋 Volcano', '🧱 Brick', '🌈 Rainbow', '🌪️ Tornado'],
-    correctAnswer: '☁️ Cloud',
-    cleanAnswer: 'Cloud ☁️',
-    clues: ['Aakashathile panji pole aanu ☁️', 'Karutha niram aayaal mazha tharum 🌧️'],
-  },
-],
-
-/* FINAL CONNECTION REMAINS THE SAME */
-finalAnswers: ['nature', 'prakruthi', 'പ്രകൃതി'],
-finalDisplayAnswer: 'Nature',
+  /* FINAL CONNECTION */
+  finalAnswers: ['nature', 'prakruthi', 'പ്രകൃതി'],
+  finalDisplayAnswer: 'Nature',
 
   /* POINTS */
   pointsPerRiddle: 100,
@@ -95,14 +109,15 @@ finalDisplayAnswer: 'Nature',
 
   /* MEDIA PATHS */
   connectionVideo: '',
-  successImage: 'images/success.jpg',
+  successImage: 'success.jpg',
   successVideo: '',
   wrongAudio1: 'wrong1.mp3',
   wrongAudio2: 'wrong2.mp3',
   successAudio: 'ElevenLabs_congrats.mp3',
-  failureImage: 'images/failure.jpg',
+  failureImage: 'failure.jpg',
   failureVideo: '',
   failureAudio: 'failure.mp3',
+  finalFailureAudio: 'final_failure.mp3',
 };
 
 /* =========================================================
@@ -179,7 +194,9 @@ document.addEventListener('DOMContentLoaded', () => {
 function startBattle() {
   stopIntroAudio();
 
-  const shuffled = [...battleConfig.riddlesPool].sort(() => 0.5 - Math.random());
+  const shuffled = [...battleConfig.riddlesPool].sort(
+    () => 0.5 - Math.random(),
+  );
   activeRiddles = shuffled.slice(0, 3);
 
   currentRiddle = 0;
@@ -216,9 +233,8 @@ function loadRiddle() {
   attempts = 3;
   cluesUsed = 0;
 
-  /* Make emoji questions big and centerpiece style */
   questionElement.innerHTML = `<span style="font-size: 2.2rem; letter-spacing: 2px;">${riddle.question}</span>`;
-  
+
   riddleNumberElement.textContent = `0${currentRiddle + 1}`;
   stageText.textContent = `Riddle ${currentRiddle + 1} of 3`;
   attemptsElement.textContent = attempts;
@@ -379,9 +395,12 @@ function startFinalChallenge() {
     connectionAudio.currentTime = 0;
   }
 
-  document.getElementById('finalAnswerOne').textContent = riddleAnswers[0] || '?';
-  document.getElementById('finalAnswerTwo').textContent = riddleAnswers[1] || '?';
-  document.getElementById('finalAnswerThree').textContent = riddleAnswers[2] || '?';
+  document.getElementById('finalAnswerOne').textContent =
+    riddleAnswers[0] || '?';
+  document.getElementById('finalAnswerTwo').textContent =
+    riddleAnswers[1] || '?';
+  document.getElementById('finalAnswerThree').textContent =
+    riddleAnswers[2] || '?';
 
   const finalInput = document.getElementById('finalInput');
   finalInput.value = '';
@@ -435,18 +454,17 @@ function submitFinalAnswer() {
     return;
   }
 
+  /* WRONG FINAL ANSWER LOGIC */
   feedbackElement.textContent =
     'Connection kandupidichilla da. Onnukoodi nokku! 💀';
   feedbackElement.className = 'wrong';
   input.value = '';
-}
 
+  // PLAY FINAL FAILURE AUDIO HERE! 🎧
+  playSFX(battleConfig.finalFailureAudio);
+}
 /* =========================================================
    SFX & MEME MODALS
-========================================================= */
-
-/* =========================================================
-   FIXED SFX PLAYER (PREVENTS AUDIO OVERLAPPING)
 ========================================================= */
 
 function playSFX(audioPath) {
@@ -455,18 +473,15 @@ function playSFX(audioPath) {
 
   if (!sfxAudio || !audioPath) return;
 
-  // 1. Immediately stop current sound & rewind to start
   sfxAudio.pause();
   sfxAudio.currentTime = 0;
 
-  // 2. Set new audio source
   if (sfxSource) {
     sfxSource.src = audioPath;
   } else {
     sfxAudio.src = audioPath;
   }
 
-  // 3. Reload audio element & play cleanly
   sfxAudio.load();
   sfxAudio.play().catch((err) => {
     console.warn('SFX playback prevented or interrupted:', err);
@@ -477,10 +492,10 @@ function playMeme(type) {
   const modalElement = document.getElementById('memeModal');
   const audio = document.getElementById('memeAudio');
   const audioSource = document.getElementById('memeAudioSource');
+  const memeImg = document.getElementById('memeImage'); // Added image reference
   const title = document.getElementById('memeTitle');
   const sfxAudio = document.getElementById('sfxAudio');
 
-  // Stop any playing SFX immediately
   if (sfxAudio) {
     sfxAudio.pause();
     sfxAudio.currentTime = 0;
@@ -494,6 +509,13 @@ function playMeme(type) {
   if (type === 'success') {
     title.textContent = '🎉 CONGRATULATIONS! 🎉';
 
+    // Set success image
+    if (battleConfig.successImage && memeImg) {
+      memeImg.src = battleConfig.successImage;
+      memeImg.classList.remove('d-none');
+    }
+
+    // Set success audio
     if (battleConfig.successAudio && audioSource && audio) {
       audioSource.src = battleConfig.successAudio;
       audio.load();
@@ -504,6 +526,13 @@ function playMeme(type) {
   } else {
     title.textContent = '💀 PANI PAALI!';
 
+    // Set failure image
+    if (battleConfig.failureImage && memeImg) {
+      memeImg.src = battleConfig.failureImage;
+      memeImg.classList.remove('d-none');
+    }
+
+    // Set failure audio
     if (battleConfig.failureAudio && audioSource && audio) {
       audioSource.src = battleConfig.failureAudio;
       audio.load();
@@ -559,12 +588,16 @@ function showResult(isWin = true) {
 
   if (isWin) {
     document.getElementById('resultEmoji').textContent = '🏆';
-    document.getElementById('resultHeading').textContent = 'PADAKKALAM COMPLETE! ⚔️';
-    document.getElementById('resultMessage').textContent = 'Nee battlefield survive cheythu. Respect. 🫡';
+    document.getElementById('resultHeading').textContent =
+      'PADAKKALAM COMPLETE! ⚔️';
+    document.getElementById('resultMessage').textContent =
+      'Nee battlefield survive cheythu. Respect. 🫡';
   } else {
     document.getElementById('resultEmoji').textContent = '💀';
-    document.getElementById('resultHeading').textContent = 'PANI PAALI MONE! 💀';
-    document.getElementById('resultMessage').textContent = 'Nee battle-il thottu. Onnukoodi try cheyyu!';
+    document.getElementById('resultHeading').textContent =
+      'PANI PAALI MONE! 💀';
+    document.getElementById('resultMessage').textContent =
+      'Nee battle-il thottu. Onnukoodi try cheyyu!';
   }
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
