@@ -2,106 +2,14 @@
    PADAKKALAM - SCRIPT.JS
 ========================================================= */
 
+
+
 const battleConfig = {
   id: 1,
 
-  /* === EMOJI EQUATION RIDDLES POOL === */
-  riddlesPool: [
-    {
-      id: 1,
-      question: '☁️ + 💧 = ?',
-      options: ['🌧️ Rain', '🔥 Fire', '🚗 Car', '⚡ Lightning', '❄️ Snow'],
-      correctAnswer: '🌧️ Rain',
-      cleanAnswer: 'Rain 🌧️',
-      clues: ['Aakashathu ninnu veazhum! ☔', 'Nanayaan thayyaaraano? 💦'],
-    },
-    {
-      id: 2,
-      question: '🌌 + ☀️ = ?',
-      options: ['🌞 Sun', '🧊 Ice', '📱 Phone', '🌈 Rainbow', '🌙 Moon'],
-      correctAnswer: '🌞 Sun',
-      cleanAnswer: 'Sun 🌞',
-      clues: ['Velicham tharum! 💡', 'Raathri aayaal urangaan pokum 🌙'],
-    },
-    {
-      id: 3,
-      question: '🌱 + ⏰ = ?',
-      options: ['🌳 Tree', '🪑 Chair', '💻 Laptop', '🍄 Mushroom', '🪵 Wood'],
-      correctAnswer: '🌳 Tree',
-      cleanAnswer: 'Tree 🌳',
-      clues: [
-        'Nizhalum pazhavum tharum! 🍎',
-        'Ilakal undu, pakshe kaal illa 🍃',
-      ],
-    },
-    {
-      id: 4,
-      question: '🌊 + 🫧 = ?',
-      options: ['🐟 Fish', '🦅 Bird', '🦁 Lion', '🦀 Crab', '🐬 Dolphin'],
-      correctAnswer: '🐟 Fish',
-      cleanAnswer: 'Fish 🐟',
-      clues: ['Vellathil thanne urangum 🌊', 'Swimming aanu main talent 🏊'],
-    },
-    {
-      id: 5,
-      question: '🪵 + 🪨 = ?',
-      options: ['🔥 Fire', '🧊 Ice', '🌧️ Rain', '🧱 Brick', '🌋 Volcano'],
-      correctAnswer: '🔥 Fire',
-      cleanAnswer: 'Fire 🔥',
-      clues: ['Vellam ഒഴിച്ചാൽ marikkum 💦', 'Enne thottal pollum ⚠️'],
-    },
-    {
-      id: 6,
-      question: '🍃 + 💨 = ?',
-      options: ['🌪️ Wind', '🪨 Stone', '⚡ Lightning', '☁️ Cloud', '🌊 Wave'],
-      correctAnswer: '🌪️ Wind',
-      cleanAnswer: 'Wind 🌪️',
-      clues: [
-        'Kaanan pattilla, pakshe anubhavikkam 🌬️',
-        'Marangal dance cheyyum 🌳',
-      ],
-    },
-    {
-      id: 7,
-      question: '⛰️ + 💧 = ?',
-      options: ['🌊 River', '🧱 Wall', '🔥 Lava', '🏜️ Desert', '❄️ Glacier'],
-      correctAnswer: '🌊 River',
-      cleanAnswer: 'River 🌊',
-      clues: [
-        'Malayil ninnu thudangi kadalil avasaanikkum 🏔️',
-        'Eppozhum nadannukonde irikkum 🚶',
-      ],
-    },
-    {
-      id: 8,
-      question: '🌱 + 🌧️ = ?',
-      options: ['🌸 Flower', '🪨 Rock', '⚡ Spark', '🌾 Grass', '🍎 Fruit'],
-      correctAnswer: '🌸 Flower',
-      cleanAnswer: 'Flower 🌸',
-      clues: ['Nalla manam undu 🌺', 'Chediyil ninnu undaagum 🌿'],
-    },
-    {
-      id: 9,
-      question: '☀️ + 🌊 = ?',
-      options: [
-        '☁️ Cloud',
-        '🌋 Volcano',
-        '🧱 Brick',
-        '🌈 Rainbow',
-        '🌪️ Tornado',
-      ],
-      correctAnswer: '☁️ Cloud',
-      cleanAnswer: 'Cloud ☁️',
-      clues: [
-        'Aakashathile panji pole aanu ☁️',
-        'Karutha niram aayaal mazha tharum 🌧️',
-      ],
-    },
-  ],
-
-  /* FINAL CONNECTION */
-  finalAnswers: ['nature', 'prakruthi', 'പ്രകൃതി'],
-  finalDisplayAnswer: 'Nature',
+  /* Active connection answers (updated dynamically per match) */
+  finalAnswers: [],
+  finalDisplayAnswer: '',
 
   /* POINTS */
   pointsPerRiddle: 100,
@@ -109,15 +17,15 @@ const battleConfig = {
 
   /* MEDIA PATHS */
   connectionVideo: '',
-  successImage: 'success.jpg',
+  successImage: 'assets/success.jpg',
   successVideo: '',
-  wrongAudio1: 'wrong1.mp3',
-  wrongAudio2: 'wrong2.mp3',
-  successAudio: 'ElevenLabs_congrats.mp3',
-  failureImage: 'failure.jpg',
+  wrongAudio1: 'assets/wrong1.mp3',
+  wrongAudio2: 'assets/wrong2.mp3',
+  successAudio: 'assets/ElevenLabs_congrats.mp3',
+  failureImage: 'assets/failure.jpg',
   failureVideo: '',
-  failureAudio: 'failure.mp3',
-  finalFailureAudio: 'final_failure.mp3',
+  failureAudio: 'assets/failure.mp3',
+  finalFailureAudio: 'assets/final_failure.mp3',
 };
 
 /* =========================================================
@@ -188,15 +96,27 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* =========================================================
-   START BATTLE
+   START BATTLE (DYNAMIC GROUP SELECTION)
 ========================================================= */
 
 function startBattle() {
   stopIntroAudio();
 
-  const shuffled = [...battleConfig.riddlesPool].sort(
-    () => 0.5 - Math.random(),
-  );
+  // Safety check to ensure riddles pool is loaded
+  if (typeof riddlesGroupedPool === 'undefined' || !riddlesGroupedPool.length) {
+    console.error('riddlesGroupedPool is missing or empty! Check index.html script tags.');
+    return;
+  }
+
+  // 1. Pick a random theme group from riddlesGroupedPool
+  const selectedGroup = riddlesGroupedPool[Math.floor(Math.random() * riddlesGroupedPool.length)];
+
+  // 2. Set the connection answers dynamically for this round
+  battleConfig.finalAnswers = selectedGroup.finalAnswers || selectedGroup.connectionAnswers || [];
+  battleConfig.finalDisplayAnswer = selectedGroup.finalDisplayAnswer || selectedGroup.groupName || 'Secret';
+
+  // 3. Shuffle and pick 3 riddles from the chosen group
+  const shuffled = [...selectedGroup.riddles].sort(() => 0.5 - Math.random());
   activeRiddles = shuffled.slice(0, 3);
 
   currentRiddle = 0;
@@ -395,12 +315,9 @@ function startFinalChallenge() {
     connectionAudio.currentTime = 0;
   }
 
-  document.getElementById('finalAnswerOne').textContent =
-    riddleAnswers[0] || '?';
-  document.getElementById('finalAnswerTwo').textContent =
-    riddleAnswers[1] || '?';
-  document.getElementById('finalAnswerThree').textContent =
-    riddleAnswers[2] || '?';
+  document.getElementById('finalAnswerOne').textContent = riddleAnswers[0] || '?';
+  document.getElementById('finalAnswerTwo').textContent = riddleAnswers[1] || '?';
+  document.getElementById('finalAnswerThree').textContent = riddleAnswers[2] || '?';
 
   const finalInput = document.getElementById('finalInput');
   finalInput.value = '';
@@ -460,9 +377,9 @@ function submitFinalAnswer() {
   feedbackElement.className = 'wrong';
   input.value = '';
 
-  // PLAY FINAL FAILURE AUDIO HERE! 🎧
   playSFX(battleConfig.finalFailureAudio);
 }
+
 /* =========================================================
    SFX & MEME MODALS
 ========================================================= */
@@ -492,7 +409,7 @@ function playMeme(type) {
   const modalElement = document.getElementById('memeModal');
   const audio = document.getElementById('memeAudio');
   const audioSource = document.getElementById('memeAudioSource');
-  const memeImg = document.getElementById('memeImage'); // Added image reference
+  const memeImg = document.getElementById('memeImage');
   const title = document.getElementById('memeTitle');
   const sfxAudio = document.getElementById('sfxAudio');
 
@@ -509,13 +426,11 @@ function playMeme(type) {
   if (type === 'success') {
     title.textContent = '🎉 CONGRATULATIONS! 🎉';
 
-    // Set success image
     if (battleConfig.successImage && memeImg) {
       memeImg.src = battleConfig.successImage;
       memeImg.classList.remove('d-none');
     }
 
-    // Set success audio
     if (battleConfig.successAudio && audioSource && audio) {
       audioSource.src = battleConfig.successAudio;
       audio.load();
@@ -526,13 +441,11 @@ function playMeme(type) {
   } else {
     title.textContent = '💀 PANI PAALI!';
 
-    // Set failure image
     if (battleConfig.failureImage && memeImg) {
       memeImg.src = battleConfig.failureImage;
       memeImg.classList.remove('d-none');
     }
 
-    // Set failure audio
     if (battleConfig.failureAudio && audioSource && audio) {
       audioSource.src = battleConfig.failureAudio;
       audio.load();
