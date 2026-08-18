@@ -2,8 +2,6 @@
    PADAKKALAM - SCRIPT.JS
 ========================================================= */
 
-
-
 const battleConfig = {
   id: 1,
 
@@ -112,8 +110,8 @@ function startBattle() {
   const selectedGroup = riddlesGroupedPool[Math.floor(Math.random() * riddlesGroupedPool.length)];
 
   // 2. Set the connection answers dynamically for this round
-  battleConfig.finalAnswers = selectedGroup.finalAnswers || selectedGroup.connectionAnswers || [];
-  battleConfig.finalDisplayAnswer = selectedGroup.finalDisplayAnswer || selectedGroup.groupName || 'Secret';
+  battleConfig.finalAnswers = selectedGroup.groupConnection || selectedGroup.finalAnswers || selectedGroup.connectionAnswers || [];
+  battleConfig.finalDisplayAnswer = selectedGroup.groupName || selectedGroup.finalDisplayAnswer || 'Secret';
 
   // 3. Shuffle and pick 3 riddles from the chosen group
   const shuffled = [...selectedGroup.riddles].sort(() => 0.5 - Math.random());
@@ -170,7 +168,10 @@ function loadRiddle() {
 
   optionsContainer.innerHTML = '';
 
-  riddle.options.forEach((option) => {
+  // 🎲 SHUFFLE OPTIONS SO USER DOESN'T SEE A PATTERN
+  const shuffledOptions = [...riddle.options].sort(() => 0.5 - Math.random());
+
+  shuffledOptions.forEach((option) => {
     const btn = document.createElement('button');
     btn.className = 'btn option-btn w-100 my-2 fs-5';
     btn.textContent = option;
@@ -466,6 +467,11 @@ function playMeme(type) {
 }
 
 function continueAfterMeme() {
+  // 1. Remove focus from the button to stop the aria-hidden warning 🎯
+  if (document.activeElement) {
+    document.activeElement.blur();
+  }
+
   const modalElement = document.getElementById('memeModal');
   const audio = document.getElementById('memeAudio');
 
