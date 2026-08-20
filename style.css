@@ -1,7 +1,6 @@
 /* =========================================================
    GLOBAL
 ========================================================= */
-
 * {
   box-sizing: border-box;
 }
@@ -12,16 +11,8 @@ body {
   font-family: 'Manrope', sans-serif;
   color: white;
   background:
-    radial-gradient(
-      circle at 10% 10%,
-      rgba(255, 65, 108, 0.18),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 90% 90%,
-      rgba(99, 102, 241, 0.2),
-      transparent 30%
-    ),
+    radial-gradient(circle at 10% 10%, rgba(255, 65, 108, 0.18), transparent 30%),
+    radial-gradient(circle at 90% 90%, rgba(99, 102, 241, 0.2), transparent 30%),
     #08080d;
 }
 
@@ -30,42 +21,13 @@ button {
 }
 
 /* =========================================================
-   NAVBAR
+   MAIN & SCREEN
 ========================================================= */
-
-/* .navbar {
-  padding: 20px 0;
-  background: rgba(8, 8, 13, 0.7);
-  backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.navbar-brand {
-  font-size: 1.15rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.score-box {
-  padding: 8px 16px;
-  border-radius: 50px;
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-} */
-
-/* =========================================================
-   MAIN
-========================================================= */
-
 .main-container {
   max-width: 900px;
   padding-top: 60px;
   padding-bottom: 100px;
 }
-
-/* =========================================================
-   SCREEN
-========================================================= */
 
 .screen {
   min-height: 75vh;
@@ -79,629 +41,240 @@ button {
 /* =========================================================
    HERO
 ========================================================= */
-
-.hero-icon {
-  font-size: 4rem;
-  margin-bottom: 20px;
-}
-
+.hero-icon { font-size: 4rem; margin-bottom: 20px; }
 .small-label {
-  font-size: 0.75rem;
-  letter-spacing: 3px;
-  font-weight: 800;
-  color: #9999a7;
-  margin-bottom: 20px;
+  font-size: 0.75rem; letter-spacing: 3px;
+  font-weight: 800; color: #9999a7; margin-bottom: 20px;
 }
-
 h1 {
-  font-size: clamp(3.2rem, 10vw, 7rem);
-  line-height: 0.9;
-  font-weight: 800;
-  letter-spacing: -5px;
-  margin-bottom: 30px;
+  font-size: clamp(3.2rem, 10vw, 7rem); line-height: 0.9;
+  font-weight: 800; letter-spacing: -5px; margin-bottom: 30px;
 }
-
 h1 span {
   background: linear-gradient(90deg, #ff416c, #ff8a3d, #ffd166);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
-
-.hero-description {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #aaaab6;
-}
-
-.hero-description strong {
-  color: white;
-}
-
+.hero-description { font-size: 1.2rem; line-height: 1.8; color: #aaaab6; }
+.hero-description strong { color: white; }
 .warning-box {
-  margin: 30px 0;
-  padding: 14px 20px;
-  border-radius: 15px;
+  margin: 30px 0; padding: 14px 20px; border-radius: 15px;
   background: rgba(255, 209, 102, 0.07);
-  border: 1px solid rgba(255, 209, 102, 0.15);
-  color: #ffd166;
+  border: 1px solid rgba(255, 209, 102, 0.15); color: #ffd166;
 }
 
 /* =========================================================
    BUTTONS
 ========================================================= */
-
 .start-button {
-  padding: 15px 30px;
-  border-radius: 15px;
+  padding: 15px 30px; border-radius: 15px;
   background: linear-gradient(135deg, #ff416c, #ff7043);
-  color: white;
-  border: none;
-  font-weight: 800;
-  font-size: 1rem;
-  transition: 0.2s;
+  color: white; border: none; font-weight: 800; font-size: 1rem; transition: 0.2s;
 }
-
-.start-button:hover {
-  color: white;
-  transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(255, 65, 108, 0.3);
-}
+.start-button:hover { color: white; transform: translateY(-3px); box-shadow: 0 15px 40px rgba(255, 65, 108, 0.3); }
 
 .final-button {
-  padding: 16px 36px;
-  border-radius: 16px;
+  padding: 16px 36px; border-radius: 16px;
   background: linear-gradient(135deg, #ff416c, #ff8a3d);
-  color: white;
-  border: none;
-  font-weight: 800;
-  font-size: 1.1rem;
-  box-shadow: 0 10px 30px rgba(255, 65, 108, 0.4);
-  transition: all 0.3s ease;
+  color: white; border: none; font-weight: 800; font-size: 1.1rem;
+  box-shadow: 0 10px 30px rgba(255, 65, 108, 0.4); transition: all 0.3s ease;
 }
-
 .final-button:hover {
-  color: white;
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 15px 40px rgba(255, 65, 108, 0.6);
+  color: white; transform: translateY(-3px) scale(1.03); box-shadow: 0 15px 40px rgba(255, 65, 108, 0.6);
 }
 
 /* =========================================================
-   PROGRESS
+   PROGRESS & RIDDLE CARD
 ========================================================= */
-
-.battle-progress {
-  width: 100%;
-  margin-bottom: 25px;
-}
-
-.progress-info {
-  display: flex;
-  justify-content: space-between;
-  color: #9999a7;
-  font-size: 0.85rem;
-  margin-bottom: 10px;
-}
-
-.progress {
-  height: 6px;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-}
-
-.progress-bar {
-  background: linear-gradient(90deg, #ff416c, #ff9f43);
-  transition: width 0.4s ease;
-}
-
-/* =========================================================
-   RIDDLE CARD
-========================================================= */
+.battle-progress { width: 100%; margin-bottom: 25px; }
+.progress-info { display: flex; justify-content: space-between; color: #9999a7; font-size: 0.85rem; margin-bottom: 10px; }
+.progress { height: 6px; background: rgba(255, 255, 255, 0.08); border-radius: 20px; }
+.progress-bar { background: linear-gradient(90deg, #ff416c, #ff9f43); transition: width 0.4s ease; }
 
 .riddle-card {
-  width: 100%;
-  padding: 45px;
-  border-radius: 30px;
-  background: rgba(255, 255, 255, 0.045);
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(20px);
+  width: 100%; padding: 45px; border-radius: 30px;
+  background: rgba(255, 255, 255, 0.045); border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.45); backdrop-filter: blur(20px);
 }
-
-.riddle-number {
-  color: #777783;
-  font-size: 0.8rem;
-  letter-spacing: 2px;
-  font-weight: 800;
-}
-
-.riddle-number span {
-  color: #ff607c;
-}
-
-.riddle-emoji {
-  font-size: 3.5rem;
-  margin: 30px 0 20px;
-}
-
-.riddle-card h2 {
-  font-size: clamp(1.3rem, 3vw, 2rem);
-  line-height: 1.6;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-
-/* =========================================================
-   CLUE
-========================================================= */
+.riddle-number { color: #777783; font-size: 0.8rem; letter-spacing: 2px; font-weight: 800; }
+.riddle-number span { color: #ff607c; }
+.riddle-card h2 { font-size: clamp(1.3rem, 3vw, 2rem); line-height: 1.6; font-weight: 700; margin-bottom: 30px; }
 
 .clue-button {
-  color: #ffd166;
-  border: 1px solid rgba(255, 209, 102, 0.2);
-  background: rgba(255, 209, 102, 0.06);
-  border-radius: 50px;
-  padding: 10px 20px;
+  color: #ffd166; border: 1px solid rgba(255, 209, 102, 0.2);
+  background: rgba(255, 209, 102, 0.06); border-radius: 50px; padding: 10px 20px;
 }
+.clue-button:hover { color: #ffd166; background: rgba(255, 209, 102, 0.12); }
+.clue-box { margin: 15px auto; max-width: 600px; padding: 14px 18px; border-radius: 12px; color: #ffd166; background: rgba(255, 209, 102, 0.06); }
 
-.clue-button:hover {
-  color: #ffd166;
-  background: rgba(255, 209, 102, 0.12);
+/* MCQ Option Buttons */
+.option-btn {
+  background-color: #1a1d24; color: #ffffff; border: 2px solid #2d3748;
+  padding: 14px; font-size: 1.1rem; font-weight: 600; border-radius: 12px;
+  transition: all 0.2s ease-in-out; text-align: center;
 }
+.option-btn:hover:not(:disabled) { background-color: #2d3748; border-color: #4a5568; transform: translateY(-2px); }
+.option-btn.correct-choice { background-color: #198754 !important; border-color: #198754 !important; color: white !important; }
+.option-btn.wrong-choice { background-color: #dc3545 !important; border-color: #dc3545 !important; color: white !important; }
 
-.clue-box {
-  margin: 15px auto;
-  max-width: 600px;
-  padding: 14px 18px;
-  border-radius: 12px;
-  color: #ffd166;
-  background: rgba(255, 209, 102, 0.06);
-}
-
-/* =========================================================
-   ANSWER
-========================================================= */
-
-.answer-container {
-  display: flex;
-  gap: 12px;
-  margin-top: 30px;
-}
-
-.answer-input {
-  padding: 16px 18px;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: white;
-}
-
-.answer-input:focus {
-  background: rgba(255, 255, 255, 0.09);
-  color: white;
-  border-color: #ff416c;
-  box-shadow: 0 0 0 3px rgba(255, 65, 108, 0.1);
-}
-
-.answer-input::placeholder {
-  color: #686875;
-}
-
-.submit-button {
-  white-space: nowrap;
-  padding: 0 25px;
-  border-radius: 14px;
-  border: none;
-  color: white;
-  font-weight: 800;
-  background: linear-gradient(135deg, #ff416c, #ff7043);
-}
-
-/* =========================================================
-   FEEDBACK
-========================================================= */
-
-#feedback {
-  min-height: 30px;
-  margin-top: 20px;
-  font-weight: 700;
-}
-
-.correct {
-  color: #55efc4;
-}
-
-.wrong {
-  color: #ff7675;
-}
+#feedback { min-height: 30px; margin-top: 20px; font-weight: 700; }
+.correct { color: #55efc4; }
+.wrong { color: #ff7675; }
 
 /* =========================================================
    CONNECTION SCREEN
 ========================================================= */
+.connection-icon { font-size: 4rem; margin-bottom: 20px; }
+.connection-description { color: #aaaab6; font-size: 1.1rem; line-height: 1.8; }
+.connection-media { width: 100%; max-width: 600px; margin: 30px 0; }
+.connection-media audio, .connection-media video { border-radius: 15px; }
 
-.connection-icon {
-  font-size: 4rem;
-  margin-bottom: 20px;
-}
-
-.connection-description {
-  color: #aaaab6;
-  font-size: 1.1rem;
-  line-height: 1.8;
-}
-
-.connection-media {
-  width: 100%;
-  max-width: 600px;
-  margin: 30px 0;
-}
-
-.connection-media audio,
-.connection-media video {
-  border-radius: 15px;
-}
-
-.answers-reveal {
-  width: 100%;
-  max-width: 600px;
-}
-
+.answers-reveal { width: 100%; max-width: 600px; }
 .answer-pill {
-  padding: 18px 25px;
-  border-radius: 15px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 18px 25px; border-radius: 15px; background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08); display: flex; justify-content: space-between; align-items: center;
 }
-
-.answer-pill span {
-  color: #777783;
-  font-size: 0.7rem;
-  letter-spacing: 2px;
-}
-
-.answer-pill strong {
-  color: #ffd166;
-  font-size: 1.1rem;
-}
-
-.connection-arrow {
-  color: #ff416c;
-  font-size: 1.5rem;
-  margin: 5px 0;
-}
-
+.answer-pill span { color: #777783; font-size: 0.7rem; letter-spacing: 2px; }
+.answer-pill strong { color: #ffd166; font-size: 1.1rem; }
+.connection-arrow { color: #ff416c; font-size: 1.5rem; margin: 5px 0; }
 .thinking-box {
-  margin: 30px 0;
-  padding: 20px;
-  border-radius: 15px;
-  background: rgba(255, 65, 108, 0.07);
-  border: 1px solid rgba(255, 65, 108, 0.12);
-  line-height: 1.8;
+  margin: 30px 0; padding: 20px; border-radius: 15px;
+  background: rgba(255, 65, 108, 0.07); border: 1px solid rgba(255, 65, 108, 0.12); line-height: 1.8;
 }
 
 /* =========================================================
-   FINAL SCREEN & ATTRACTIVE INPUT
+   FINAL SCREEN & MASKED PATTERN (N_ _ U _ E)
 ========================================================= */
-
-.final-icon {
-  font-size: 4rem;
-  margin-bottom: 20px;
-}
-
+.final-icon { font-size: 4rem; margin-bottom: 20px; }
 .final-answers {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 30px 0;
+  display: flex; gap: 15px; align-items: center; justify-content: center; flex-wrap: wrap; margin: 30px 0;
 }
-
 .final-answers span {
-  padding: 12px 20px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.06);
-  color: #ffd166;
-  font-weight: 800;
+  padding: 12px 20px; border-radius: 12px; background: rgba(255, 255, 255, 0.06); color: #ffd166; font-weight: 800;
 }
 
-/* PULSING GLOW ANIMATION FOR ATTRACTIVE INPUT */
-@keyframes inputGlowPulse {
-  0% {
-    box-shadow:
-      0 0 15px rgba(255, 65, 108, 0.5),
-      0 0 30px rgba(255, 209, 102, 0.3);
-    border-color: #ff416c;
-  }
-  50% {
-    box-shadow:
-      0 0 30px rgba(255, 65, 108, 0.9),
-      0 0 50px rgba(255, 209, 102, 0.6);
-    border-color: #ffd166;
-  }
-  100% {
-    box-shadow:
-      0 0 15px rgba(255, 65, 108, 0.5),
-      0 0 30px rgba(255, 209, 102, 0.3);
-    border-color: #ff416c;
-  }
-}
-
-.final-input {
-  width: 100%;
-  max-width: 520px;
-  padding: 20px 24px;
+/* NEW: Masked Letter Pattern Styles */
+.masked-container {
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px dashed rgba(255, 209, 102, 0.5);
   border-radius: 18px;
-  background: #12101c !important;
-  border: 2.5px solid #ff416c !important;
-  color: #ffd166 !important;
-  -webkit-text-fill-color: #ffd166 !important;
-  caret-color: #ffffff !important;
-  text-align: center;
-  font-size: 1.3rem;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  animation: inputGlowPulse 2.2s infinite ease-in-out;
-  transition: all 0.3s ease;
+  padding: 20px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+.masked-word {
+  font-family: monospace;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: 8px;
+  color: #ffd166;
+  text-shadow: 0 0 15px rgba(255, 209, 102, 0.6);
+  font-weight: 900;
 }
 
+/* Input Styles */
+@keyframes inputGlowPulse {
+  0% { box-shadow: 0 0 15px rgba(255, 65, 108, 0.5), 0 0 30px rgba(255, 209, 102, 0.3); border-color: #ff416c; }
+  50% { box-shadow: 0 0 30px rgba(255, 65, 108, 0.9), 0 0 50px rgba(255, 209, 102, 0.6); border-color: #ffd166; }
+  100% { box-shadow: 0 0 15px rgba(255, 65, 108, 0.5), 0 0 30px rgba(255, 209, 102, 0.3); border-color: #ff416c; }
+}
+.final-input {
+  width: 100%; max-width: 520px; padding: 20px 24px; border-radius: 18px;
+  background: #12101c !important; border: 2.5px solid #ff416c !important;
+  color: #ffd166 !important; -webkit-text-fill-color: #ffd166 !important; caret-color: #ffffff !important;
+  text-align: center; font-size: 1.3rem; font-weight: 800; letter-spacing: 1.5px;
+  animation: inputGlowPulse 2.2s infinite ease-in-out; transition: all 0.3s ease; margin: 0 auto;
+}
 .final-input:focus {
-  outline: none;
-  background: #1c182a !important;
-  border-color: #ffd166 !important;
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-  box-shadow:
-    0 0 40px rgba(255, 209, 102, 0.9),
-    0 0 25px rgba(255, 65, 108, 0.9) !important;
-  transform: scale(1.03);
+  outline: none; background: #1c182a !important; border-color: #ffd166 !important;
+  color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;
+  box-shadow: 0 0 40px rgba(255, 209, 102, 0.9), 0 0 25px rgba(255, 65, 108, 0.9) !important; transform: scale(1.03);
 }
-
-.final-input::placeholder {
-  color: #ffd166 !important;
-  -webkit-text-fill-color: #ffd166 !important;
-  opacity: 0.65;
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.final-input:-webkit-autofill,
-.final-input:-webkit-autofill:hover,
-.final-input:-webkit-autofill:focus {
-  -webkit-text-fill-color: #ffd166 !important;
-  -webkit-box-shadow: 0 0 0px 1000px #12101c inset !important;
-  transition: background-color 5000s ease-in-out 0s;
-}
-
+.final-input::placeholder { color: #ffd166 !important; -webkit-text-fill-color: #ffd166 !important; opacity: 0.65; font-size: 1rem; font-weight: 600; }
 .final-submit {
-  margin-top: 22px;
-  padding: 16px 36px;
-  border-radius: 16px;
-  border: none;
-  color: white;
-  font-size: 1.05rem;
-  font-weight: 800;
+  max-width: 520px; margin: 22px auto 0 auto; padding: 16px 36px; border-radius: 16px;
   background: linear-gradient(135deg, #ff416c, #ff7043);
-  box-shadow: 0 10px 30px rgba(255, 65, 108, 0.35);
-  transition: all 0.3s ease;
+  color: white; border: none; font-weight: 800; font-size: 1.1rem;
+  box-shadow: 0 10px 30px rgba(255, 65, 108, 0.35); transition: all 0.3s ease;
 }
+.final-submit:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 15px 40px rgba(255, 65, 108, 0.55); color: #fff;}
 
-.final-submit:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 15px 40px rgba(255, 65, 108, 0.55);
+/* NEW: Lelu Allu Button */
+.lelu-btn {
+  background: linear-gradient(135deg, #ff2e63, #d90429);
+  color: #fff;
+  font-weight: 800;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  padding: 10px 25px;
+  box-shadow: 0 0 20px rgba(255, 46, 99, 0.6);
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  cursor: pointer;
+  z-index: 1000;
 }
+.lelu-btn.visible-lelu { opacity: 1; }
+.lelu-btn:hover { color: #fff; }
 
 /* =========================================================
    RESULT
 ========================================================= */
-
-.result-emoji {
-  font-size: 5rem;
-  margin-bottom: 20px;
-}
-
-#resultMessage {
-  color: #aaaab6;
-  font-size: 1.1rem;
-  line-height: 1.7;
-}
-
+.result-emoji { font-size: 5rem; margin-bottom: 20px; }
+#resultMessage { color: #aaaab6; font-size: 1.1rem; line-height: 1.7; }
 .final-score-card {
-  margin: 30px 0;
-  padding: 25px 60px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  margin: 30px auto; padding: 25px 60px; border-radius: 20px; max-width: 500px;
+  background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex; flex-direction: column; gap: 10px;
 }
+.final-score-card span { font-size: 0.7rem; letter-spacing: 2px; color: #777783; }
+.final-score-card strong { font-size: 3rem; color: #ffd166; }
 
-.final-score-card span {
-  font-size: 0.7rem;
+/* NEW: Revealed Connection Box */
+.revealed-box {
+  background: rgba(255, 65, 108, 0.08);
+  border: 1px solid rgba(255, 65, 108, 0.3);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.revealed-text {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #ff416c;
   letter-spacing: 2px;
-  color: #777783;
-}
-
-.final-score-card strong {
-  font-size: 3rem;
-  color: #ffd166;
+  text-transform: uppercase;
 }
 
 /* =========================================================
-   BIGGER & IMPRESSIVE MEME MODAL
+   MEME MODAL
 ========================================================= */
-
-#memeModal .modal-dialog {
-  max-width: 680px !important;
-  margin: 1.75rem auto;
-}
-
+#memeModal .modal-dialog { max-width: 680px !important; margin: 1.75rem auto; }
 .meme-modal {
-  background: #0f0d18;
-  border: 2px solid rgba(255, 65, 108, 0.5);
-  border-radius: 28px;
-  padding: 28px;
-  box-shadow:
-    0 20px 60px rgba(0, 0, 0, 0.8),
-    0 0 40px rgba(255, 65, 108, 0.25);
-  overflow: hidden;
+  background: #0f0d18; border: 2px solid rgba(255, 65, 108, 0.5); border-radius: 28px;
+  padding: 28px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(255, 65, 108, 0.25); overflow: hidden;
 }
-
-.meme-modal .modal-header {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: 15px;
-  margin-bottom: 20px;
-}
-
-.meme-modal .modal-title {
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: #ffd166;
-  letter-spacing: 1px;
-}
-
-.meme-image,
-.meme-video {
-  width: 100%;
-  max-height: 480px;
-  object-fit: contain;
-  border-radius: 18px;
-  margin-bottom: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.meme-message {
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 1.75;
-  color: #f1f5f9;
-  background: rgba(255, 255, 255, 0.04);
-  padding: 20px;
-  border-radius: 18px;
-  border-left: 4px solid #ff416c;
-  margin-bottom: 25px;
-}
-
+.meme-modal .modal-header { border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 15px; margin-bottom: 20px; }
+.meme-modal .modal-title { font-size: 1.6rem; font-weight: 800; color: #ffd166; letter-spacing: 1px; }
+.meme-image, .meme-video, #memeImage { width: 100%; max-height: 480px; object-fit: contain; border-radius: 18px; margin-bottom: 22px; border: 1px solid rgba(255, 255, 255, 0.1); }
 .next-button {
-  width: 100%;
-  padding: 16px;
-  border-radius: 15px;
-  background: linear-gradient(135deg, #ff416c, #ff7043);
-  color: white;
-  font-size: 1.1rem;
-  font-weight: 800;
-  border: none;
-  box-shadow: 0 10px 25px rgba(255, 65, 108, 0.4);
-  transition: all 0.3s ease;
+  width: 100%; padding: 16px; border-radius: 15px; background: linear-gradient(135deg, #ff416c, #ff7043);
+  color: white; font-size: 1.1rem; font-weight: 800; border: none; box-shadow: 0 10px 25px rgba(255, 65, 108, 0.4); transition: all 0.3s ease;
 }
+.next-button:hover { transform: translateY(-2px); box-shadow: 0 15px 35px rgba(255, 65, 108, 0.6); }
 
-.next-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 15px 35px rgba(255, 65, 108, 0.6);
-}
+/* Splash Screen */
+.splash-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #0d0f12; z-index: 9999; display: flex; justify-content: center; align-items: center; color: #ffffff; cursor: pointer; }
+.splash-content h1 { font-size: 2.5rem; font-weight: 800; margin-top: 1rem; }
+.splash-content p { color: #a0aec0; margin-bottom: 1.5rem; }
 
 /* =========================================================
    MOBILE
 ========================================================= */
-
 @media (max-width: 600px) {
-  .main-container {
-    padding-top: 30px;
-  }
-
-  h1 {
-    letter-spacing: -3px;
-  }
-
-  .riddle-card {
-    padding: 25px 20px;
-  }
-
-  .answer-container {
-    flex-direction: column;
-  }
-
-  .submit-button {
-    padding: 15px;
-  }
-
-  .final-answers {
-    gap: 8px;
-  }
-
-  .final-input {
-    font-size: 1.1rem;
-    padding: 16px 18px;
-  }
-
-  #memeModal .modal-dialog {
-    max-width: 92% !important;
-    margin: 10px auto;
-  }
-
-  .meme-modal {
-    padding: 18px;
-  }
-
-  .meme-message {
-    font-size: 1.05rem;
-    padding: 15px;
-  }
-}
-.splash-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #0d0f12;
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  cursor: pointer;
-}
-
-.splash-content h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-top: 1rem;
-}
-
-.splash-content p {
-  color: #a0aec0;
-  margin-bottom: 1.5rem;
-}
-/* MCQ Option Buttons */
-.option-btn {
-  background-color: #1a1d24;
-  color: #ffffff;
-  border: 2px solid #2d3748;
-  padding: 14px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 12px;
-  transition: all 0.2s ease-in-out;
-  text-align: center;
-}
-
-.option-btn:hover:not(:disabled) {
-  background-color: #2d3748;
-  border-color: #4a5568;
-  transform: translateY(-2px);
-}
-
-.option-btn.correct-choice {
-  background-color: #198754 !important;
-  border-color: #198754 !important;
-  color: white !important;
-}
-
-.option-btn.wrong-choice {
-  background-color: #dc3545 !important;
-  border-color: #dc3545 !important;
-  color: white !important;
+  .main-container { padding-top: 30px; }
+  h1 { letter-spacing: -3px; }
+  .riddle-card { padding: 25px 20px; }
+  .final-input { font-size: 1.1rem; padding: 16px 18px; }
+  #memeModal .modal-dialog { max-width: 92% !important; margin: 10px auto; }
+  .meme-modal { padding: 18px; }
+  .masked-word { font-size: 2rem; letter-spacing: 5px; }
 }

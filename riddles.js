@@ -1,12 +1,12 @@
 // riddlesGroupedPool.js
 // Clean 200 Abstract Riddle Database for Padakkalam Game
 
- const riddlesGroupedPool = [
+const riddlesGroupedPool = [
   /* ================= GROUP 1: MYSTERIES & ABSTRACT ================= */
   {
     groupId: 1,
     groupName: "Concepts & Mysteries",
-    groupConnection: ["abstract", "concepts", "mysteries", "അരൂപ കാര്യങ്ങൾ"],
+    groupConnection: ["abstract", "concepts", "mysteries", "enigma"],
     riddles: [
       {
         id: 1,
@@ -15,9 +15,9 @@
         correctAnswer: "Echo",
         cleanAnswer: "Echo",
         clues: [
-          "Malayil ninno empty roomil ninno vilichal thirichu kettunna shabdam. 🔊",
-          "Nammal parayunnathu thanne thirichu parayunna prathibhasa. ⛰️",
-          "Prathidhvani aanu mone! 🗣️",
+          "The sound you hear bouncing back from a mountain or an empty room. 🔊",
+          "A phenomenon that repeats exactly what you say. ⛰️",
+          "It is an echo, my friend! 🗣️",
           "Sound reflection back to your ears."
         ]
       },
@@ -28,9 +28,9 @@
         correctAnswer: "Silence",
         cleanAnswer: "Silence",
         clues: [
-          "Onnum mindathirikkumbol ullath. 🤫",
-          "Paranjaal udan illathaakunna vasthu. 🙊",
-          "Nishabdatha aanu mone! 🌌",
+          "What exists when no one is speaking. 🤫",
+          "The thing that breaks as soon as you name it. 🙊",
+          "It is silence, my friend! 🌌",
           "Absence of all sound."
         ]
       },
@@ -41,9 +41,9 @@
         correctAnswer: "Secret",
         cleanAnswer: "Secret",
         clues: [
-          "Oraalodu paranjaal pinne adu ithu allathagum. 🔒",
-          "Ullil vechu pootti kaakkunna karyam. 🤫",
-          "Rahasyam aanu mone! 🗣️",
+          "If you tell it to someone, it is no longer what it was. 🔒",
+          "Something kept locked safely inside you. 🤫",
+          "It is a secret, my friend! 🗣️",
           "Something meant for nobody else to know."
         ]
       },
@@ -54,9 +54,9 @@
         correctAnswer: "Shadow",
         cleanAnswer: "Shadow",
         clues: [
-          "Velichathil koode nadakkum, iruttil kaanilla. ☀️",
-          "Nammude appuram thanne nadakkunna karuppu roopam. 🚶",
-          "Nizhal aanu mone! 👤",
+          "It walks with you in the light but disappears in the dark. ☀️",
+          "The dark figure that follows right beside you. 🚶",
+          "It is a shadow, my friend! 👤",
           "Dark outline following your body."
         ]
       },
@@ -67,9 +67,9 @@
         correctAnswer: "Promise",
         cleanAnswer: "Promise",
         clues: [
-          "Kodukkan eluppamaanu, paalikkaan paadaanuu. 🤝",
-          "Vaakku tharunne reethiyilulla urappu. 💖",
-          "Sathyam / Vaakku (Promise) aanu mone! 🗣️",
+          "It is easy to give but hard to keep. 🤝",
+          "An assurance given by giving your word. 💖",
+          "It is a promise, my friend! 🗣️",
           "Word pledged to someone."
         ]
       },
@@ -80,10 +80,10 @@
         correctAnswer: "Age",
         cleanAnswer: "Age",
         clues: [
-          "Koodukayalladhe thazhotthu povatha sangathi. 🎂",
-          "Varsham kazhiyumthorum namukku koodunnathu. 📅",
-          "Vayassu aanu mone! ⬆️",
-          "Number of years you've been alive."
+          "Something that only goes up and never goes down. 🎂",
+          "It increases for you every passing year. 📅",
+          "It is your age, my friend! ⬆️",
+          "Number of years you have been alive."
         ]
       },
       {
@@ -93,9 +93,9 @@
         correctAnswer: "Name",
         cleanAnswer: "Name",
         clues: [
-          "Nammudethaanu, pakshe mattullavaraanu kooduthal use cheyyunnathu. 🏷️",
-          "Nammale vilikkan aalukal upayogikkunno shabdham. 🗣️",
-          "Perasnu mone! 👶",
+          "It belongs to you, but others use it more than you do. 🏷️",
+          "The sound people use to call you. 🗣️",
+          "It is your name, my friend! 👶",
           "What people call you."
         ]
       },
@@ -106,9 +106,9 @@
         correctAnswer: "Hole",
         cleanAnswer: "Hole",
         clues: [
-          "Athil ninnum edukkaadhorum valuthayikondirikkum. 🕳️",
-          "Kuzhikkumthorum perugaunna sangathi. 📦",
-          "Kuzhi (Hole) aanu mone! ✂️",
+          "It keeps getting bigger the more you take away from it. 🕳️",
+          "Something that increases as you dig. 📦",
+          "It is a hole, my friend! ✂️",
           "The more you take away, the bigger it gets."
         ]
       },
@@ -119,9 +119,9 @@
         correctAnswer: "Yesterday",
         cleanAnswer: "Yesterday",
         clues: [
-          "Innu varan pattilla, naale thirichu pokan pattilla. 🌅",
-          "Poya divasam, thirichu varatha samayam. ⏳",
-          "Innale (Yesterday) aanu mone! 📜",
+          "It cannot come today and you cannot go back to it tomorrow. 🌅",
+          "The day that has passed, time that will never return. ⏳",
+          "It is yesterday, my friend! 📜",
           "The day before today."
         ]
       },
@@ -132,9 +132,9 @@
         correctAnswer: "Reflection",
         cleanAnswer: "Reflection",
         clues: [
-          "Kannaadiyil kaanunna ninne poleulla roopam. 🪞",
-          "Nee thirinjus nokkumbol marayunna chithram. 👁️",
-          "Prathibhimbam (Reflection) aanu mone! 👤",
+          "The figure looking just like you in the mirror. 🪞",
+          "A picture that disappears when you look away. 👁️",
+          "It is a reflection, my friend! 👤",
           "Mirror image of yourself."
         ]
       }
@@ -145,7 +145,7 @@
   {
     groupId: 2,
     groupName: "Human Experience",
-    groupConnection: ["body", "human", "states", "മനുഷ്യാവസ്ഥകൾ"],
+    groupConnection: ["body", "human", "states", "existence"],
     riddles: [
       {
         id: 11,
@@ -154,9 +154,9 @@
         correctAnswer: "Breath",
         cleanAnswer: "Breath",
         clues: [
-          "Akathokku eduthu purathokku vidunna kaattu. 🫁",
-          "Ithu ninnaal katha kazhinju. 💨",
-          "Shwaasam aanu mone! 🫀",
+          "The air you take inside and let outside. 🫁",
+          "If this stops, it is game over. 💨",
+          "It is your breath, my friend! 🫀",
           "Inhale and exhale action."
         ]
       },
@@ -167,9 +167,9 @@
         correctAnswer: "Footsteps",
         cleanAnswer: "Footsteps",
         clues: [
-          "Nee ethra kooduthal edukkinno, athra kooduthal pinneel aakum. 👣",
-          "Manalath nadannal pinneel kaanunna aadayalangal. 🏖️",
-          "Kaalppadukal (Footsteps) aanu mone! 🥾",
+          "The more of these you take, the more you leave behind. 👣",
+          "The marks you see behind you when walking on sand. 🏖️",
+          "They are footsteps, my friend! 🥾",
           "Marks left behind by walking."
         ]
       },
@@ -180,9 +180,9 @@
         correctAnswer: "Thought",
         cleanAnswer: "Thought",
         clues: [
-          "Manassil minni marayunna chinthakal. 🧠",
-          "Thalayil eppozhum aalochikkunna sangathi. 💭",
-          "Chintha (Thought) aanu mone! ⚡",
+          "The ideas flashing in your mind. 🧠",
+          "The thing you are always pondering in your head. 💭",
+          "It is a thought, my friend! ⚡",
           "Mental process happening in head."
         ]
       },
@@ -193,9 +193,9 @@
         correctAnswer: "Heartbeat",
         cleanAnswer: "Heartbeat",
         clues: [
-          "Lubb-Dubb ennu nenjil kelkunna thudippu. 🫀",
-          "Stethoscope vechal doctor kelkunna sound. 🔊",
-          "Hridhaya thudippu aanu mone! 💓",
+          "The lubb-dubb rhythm you hear in your chest. 🫀",
+          "The sound the doctor listens to with a stethoscope. 🔊",
+          "It is a heartbeat, my friend! 💓",
           "Rhythmic contraction of the heart."
         ]
       },
@@ -206,9 +206,9 @@
         correctAnswer: "Voice",
         cleanAnswer: "Voice",
         clues: [
-          "Samsarikumbol thondayil ninnu varunna shabdam. 🗣️",
-          "Oraalkku oru tharam maathram ulla unique sound. 🎶",
-          "Shabdam / Sound (Voice) aanu mone! 👂",
+          "The sound coming from your throat when you speak. 🗣️",
+          "A unique sound that is different for every person. 🎶",
+          "It is a voice, my friend! 👂",
           "Sound produced by vocal cords."
         ]
       },
@@ -219,9 +219,9 @@
         correctAnswer: "Hunger",
         cleanAnswer: "Hunger",
         clues: [
-          "Vayaru kaalikhayaal undaagunna visual & feeling. 🫄",
-          "Kazhikkan thonnikkunna avastha. 🤤",
-          "Pasi (Hunger) aanu mone! 🍲",
+          "The feeling you get when your stomach is completely empty. 🫄",
+          "The state that makes you want to eat. 🤤",
+          "It is hunger, my friend! 🍲",
           "Physical desire for food."
         ]
       },
@@ -232,9 +232,9 @@
         correctAnswer: "Thirst",
         cleanAnswer: "Thirst",
         clues: [
-          "Thonda varallumbol vellam kudikkan thonnunnathu. 🥛",
-          "Veyilath nadannal varunna avastha. 🏜️",
-          "Dhaaham (Thirst) aanu mone! 🥵",
+          "What you feel when your throat is dry and you need water. 🥛",
+          "The condition you get after walking in the hot sun. 🏜️",
+          "It is thirst, my friend! 🥵",
           "Need for drinking liquids."
         ]
       },
@@ -245,9 +245,9 @@
         correctAnswer: "Sleepiness",
         cleanAnswer: "Sleepiness",
         clues: [
-          "Kannu adayunno tharathil vaay thurannu aambal idunnathu. 🥱",
-          "Urangaan time aayi ennu mind parayunnathu. 😴",
-          "Urakkatchadaavu / Sleepiness aanu mone! 🛏️",
+          "When you open your mouth wide to yawn as your eyes close. 🥱",
+          "Your mind telling you it is time for bed. 😴",
+          "It is sleepiness, my friend! 🛏️",
           "Feeling of being ready to sleep."
         ]
       },
@@ -258,9 +258,9 @@
         correctAnswer: "Whistle",
         cleanAnswer: "Whistle",
         clues: [
-          "Chundu kootti vechu kaattadichu shabdham undakkunnathu. 😗",
-          "Paattinte koode chundukondu adikkunna tune. 🎶",
-          "Chunduvili / Whistle aanu mone! 🌬️",
+          "Making a sound by blowing air through puckered lips. 😗",
+          "A tune you blow along with a song using your lips. 🎶",
+          "It is a whistle, my friend! 🌬️",
           "High-pitched sound made through lips."
         ]
       },
@@ -271,9 +271,9 @@
         correctAnswer: "Idea",
         cleanAnswer: "Idea",
         clues: [
-          "Thalayil pettennu minni udikkunna nalla thondal. 💡",
-          "Problem solve cheyyan varunna trick. ⚡",
-          "Budhi / Idea aanu mone! 🧠",
+          "A great thought that suddenly lights up in your head. 💡",
+          "A trick that comes to you to solve a problem. ⚡",
+          "It is an idea, my friend! 🧠",
           "Sudden creative spark or solution."
         ]
       }
@@ -284,7 +284,7 @@
   {
     groupId: 3,
     groupName: "Natural Forces",
-    groupConnection: ["forces", "physics", "nature", "പ്രകൃതി ശക്തികൾ"],
+    groupConnection: ["forces", "physics", "nature", "elements"],
     riddles: [
       {
         id: 21,
@@ -293,9 +293,9 @@
         correctAnswer: "Wind",
         cleanAnswer: "Wind",
         clues: [
-          "Kaanan pattilla, pakshe marangalkk ilakkam undakkum. 🍃",
-          "Vegathil odunna aakaashathile kaattu. 💨",
-          "Kaattu (Wind) aanu mone! 🌲",
+          "You cannot see it, but it makes the trees move. 🍃",
+          "Air running fast through the sky. 💨",
+          "It is the wind, my friend! 🌲",
           "Air moving at speed."
         ]
       },
@@ -306,9 +306,9 @@
         correctAnswer: "Gravity",
         cleanAnswer: "Gravity",
         clues: [
-          "Mukaalilekk erinjaal thazhekk thalliyidunna force. 🍎",
-          "Newton appooppan kandupidichathu. 🌍",
-          "Gurutwaakarshanam (Gravity) aanu mone! ⬇️",
+          "The force that pulls things down when you throw them up. 🍎",
+          "The thing that Sir Isaac Newton discovered. 🌍",
+          "It is gravity, my friend! ⬇️",
           "Universal downward pulling force."
         ]
       },
@@ -319,9 +319,9 @@
         correctAnswer: "Speed",
         cleanAnswer: "Speed",
         clues: [
-          "Etavum vegathil pokunno alavu. 🏎️",
-          "KM/H vechu mekkunna measure. ⏱️",
-          "Vegatha (Speed) aanu mone! ⚡",
+          "The measure of how fast you are going. 🏎️",
+          "The measurement checked using kilometers per hour. ⏱️",
+          "It is speed, my friend! ⚡",
           "Rate of motion or travel."
         ]
       },
@@ -332,9 +332,9 @@
         correctAnswer: "Friction",
         cleanAnswer: "Friction",
         clues: [
-          "Rendu kayyugul thammil thekkumbol choodu undaakkunnathu. ✋",
-          "Break idumbol vandi nikaan sahayikkunna dravyam. 🧱",
-          "Gharshanam (Friction) aanu mone! 🔥",
+          "What creates heat when you rub your two hands together. ✋",
+          "The material property that helps stop a vehicle when braking. 🧱",
+          "It is friction, my friend! 🔥",
           "Resistance between two sliding surfaces."
         ]
       },
@@ -345,9 +345,9 @@
         correctAnswer: "Pressure",
         cleanAnswer: "Pressure",
         clues: [
-          "Balloon-il kooduthal kettiyaal athu pottan kaaranam. 🎈",
-          "Amarthumbol undaagunna force per unit area. 🤏",
-          "Mardhanam (Pressure) aanu mone! 💥",
+          "The reason a balloon pops if you overfill it. 🎈",
+          "The force generated per unit area when you squeeze something. 🤏",
+          "It is pressure, my friend! 💥",
           "Continuous physical force against an object."
         ]
       },
@@ -358,9 +358,9 @@
         correctAnswer: "Weight",
         cleanAnswer: "Weight",
         clues: [
-          "Weighing machine-il thookki kaanikkunna number. ⚖️",
-          "Gurutwaakarshanam namukku nalkunna alavu. 🏋️",
-          "Bharam (Weight) aanu mone! ⬇️",
+          "The number shown when you step on a weighing scale. ⚖️",
+          "The measurement given to us by gravity. 🏋️",
+          "It is weight, my friend! ⬇️",
           "Measure of heavy force on an object."
         ]
       },
@@ -371,9 +371,9 @@
         correctAnswer: "Energy",
         cleanAnswer: "Energy",
         clues: [
-          "Pravarthikkan aavashyamaaya shakthi. 🔋",
-          "Nalppathu vithathil maattaan pattunna nithya vasthu. ⚡",
-          "Oorjam (Energy) aanu mone! 🔌",
+          "The power required to do any work. 🔋",
+          "The constant thing that can be converted into forty different forms. ⚡",
+          "It is energy, my friend! 🔌",
           "Capacity for doing work."
         ]
       },
@@ -384,9 +384,9 @@
         correctAnswer: "Vacuum",
         cleanAnswer: "Vacuum",
         clues: [
-          "Kaattum shabdam polum illatha sthalam. 🌌",
-          "Space-il kaanunna poornnamaya shoonnyatha. 🚫",
-          "Shoonnyatha (Vacuum) aanu mone! 🕳️",
+          "A place with absolutely no air and no sound. 🌌",
+          "The complete emptiness found out in space. 🚫",
+          "It is a vacuum, my friend! 🕳️",
           "Space entirely devoid of matter."
         ]
       },
@@ -397,9 +397,9 @@
         correctAnswer: "Balance",
         cleanAnswer: "Balance",
         clues: [
-          "Veena povathe urachu nirkkunna sthithi. 🧘",
-          "Rendu pakshavum samamaayi nirthunnatuka. ⚖️",
-          "Samathulyatha (Balance) aanu mone! 🧍",
+          "The state of standing firm without falling over. 🧘",
+          "Keeping both sides completely equal. ⚖️",
+          "It is balance, my friend! 🧍",
           "State of remaining steady and upright."
         ]
       },
@@ -410,9 +410,9 @@
         correctAnswer: "Heat",
         cleanAnswer: "Heat",
         clues: [
-          "Veyilathum theeyilum ninnu uyarunna choodu. ☀️",
-          "Temperature koodumbol thonnikkunna sangathi. 🥵",
-          "Choodu (Heat) aanu mone! 🌡️",
+          "The warmth rising when you stand in the sun or by a fire. ☀️",
+          "The feeling you get when the temperature rises. 🥵",
+          "It is heat, my friend! 🌡️",
           "Thermal energy flow."
         ]
       }
@@ -423,7 +423,7 @@
   {
     groupId: 4,
     groupName: "Temporal Dimensions",
-    groupConnection: ["time", "duration", "clock", "കാലഘട്ടം"],
+    groupConnection: ["time", "duration", "clock", "periods"],
     riddles: [
       {
         id: 31,
@@ -432,9 +432,9 @@
         correctAnswer: "Tomorrow",
         cleanAnswer: "Tomorrow",
         clues: [
-          "Innu eppozhum ethilla, naale maathram varum. 🌅",
-          "Adutha divasam enna pratheeksha. 🔮",
-          "Naale (Tomorrow) aanu mone! ⏳",
+          "It is never here today, it will only arrive later. 🌅",
+          "The expectation for the very next day. 🔮",
+          "It is tomorrow, my friend! ⏳",
           "The day following today."
         ]
       },
@@ -445,9 +445,9 @@
         correctAnswer: "Future",
         cleanAnswer: "Future",
         clues: [
-          "Iniyum varan irikkunna kaalam. 🔮",
-          "Aarkkum accurate aayi pravakshikkan pattatha time. 🚀",
-          "Bhaavi (Future) aanu mone! 🌌",
+          "The time that is yet to come. 🔮",
+          "The timeline that nobody can accurately predict. 🚀",
+          "It is the future, my friend! 🌌",
           "Time that is yet to come."
         ]
       },
@@ -458,9 +458,9 @@
         correctAnswer: "Moment",
         cleanAnswer: "Moment",
         clues: [
-          "Kannechira thurakkunna samayam kondu poyathu. ⚡",
-          "Chiriya oru alavu samayam. 🤏",
-          "Kshanam (Moment) aanu mone! ⏱️",
+          "Gone in the blink of an eye. ⚡",
+          "A very tiny measure of time. 🤏",
+          "It is a moment, my friend! ⏱️",
           "A brief period of time."
         ]
       },
@@ -471,9 +471,9 @@
         correctAnswer: "History",
         cleanAnswer: "History",
         clues: [
-          "Pazhaya kaalathile sambhavangalude charithram. 📜",
-          "Textbook-il padikkunna pazhaya kathakal. 🏛️",
-          "Charithram (History) aanu mone! ⏳",
+          "The records of events from the olden days. 📜",
+          "The old stories you study in a textbook. 🏛️",
+          "It is history, my friend! ⏳",
           "Study of past events."
         ]
       },
@@ -484,9 +484,9 @@
         correctAnswer: "Century",
         cleanAnswer: "Century",
         clues: [
-          "Nooru varshangal koodiyath. 💯",
-          "Cricket-ile 100 runs poleulla period. 📅",
-          "Noottaandu (Century) aanu mone! ⏳",
+          "A combination of one hundred years. 💯",
+          "A period similar to scoring 100 runs in cricket. 📅",
+          "It is a century, my friend! ⏳",
           "Period of one hundred years."
         ]
       },
@@ -497,9 +497,9 @@
         correctAnswer: "Pause",
         cleanAnswer: "Pause",
         clues: [
-          "Pravarthanam idaykku vechu nirthunnathu. ⏸️",
-          "Video play cheyyumbol amarthunna button status. ☕",
-          "Idavela / Pause aanu mone! ⏱️",
+          "Stopping an activity right in the middle of it. ⏸️",
+          "The status when you press the button while playing a video. ☕",
+          "It is a pause, my friend! ⏱️",
           "Temporary stop in action."
         ]
       },
@@ -510,9 +510,9 @@
         correctAnswer: "Delay",
         cleanAnswer: "Delay",
         clues: [
-          "Karuthiya samayathil ethaadirikkunnathu. 🐢",
-          "Train late aakumbozhe sthithi. 🚦",
-          "Vaikal (Delay) aanu mone! ⌛",
+          "Not arriving at the expected time. 🐢",
+          "The situation when a train is running late. 🚦",
+          "It is a delay, my friend! ⌛",
           "Period of time spent waiting or lagging."
         ]
       },
@@ -523,9 +523,9 @@
         correctAnswer: "Beginning",
         cleanAnswer: "Beginning",
         clues: [
-          "Ellathinum thudakam kurikkunno bindhu. 🟢",
-          "Cinema start cheyyunna pradhama scene. 🎬",
-          "Thudakkam (Beginning) aanu mone! 🏁",
+          "The exact point where everything starts. 🟢",
+          "The very first scene when a movie starts. 🎬",
+          "It is the beginning, my friend! 🏁",
           "The point in time where something starts."
         ]
       },
@@ -536,9 +536,9 @@
         correctAnswer: "End",
         cleanAnswer: "End",
         clues: [
-          "Katha avasanikkunna sthalam. 🛑",
-          "The End ennu screenil varunnathu. 🔴",
-          "Avasanam (End) aanu mone! 🔚",
+          "The place where the story finishes. 🛑",
+          "When those final words pop up on the screen. 🔴",
+          "It is the end, my friend! 🔚",
           "Final point of time or action."
         ]
       },
@@ -549,9 +549,9 @@
         correctAnswer: "Lifetime",
         cleanAnswer: "Lifetime",
         clues: [
-          "Jananam muthal maranam vareyulla kaalam. 👶",
-          "Oru manushyanu jeevikkan kittunna motham time. 👴",
-          "Jeevitha kaalam (Lifetime) aanu mone! 👨",
+          "The period from birth all the way to death. 👶",
+          "The total amount of time a human gets to live. 👴",
+          "It is a lifetime, my friend! 👨",
           "Duration of a person's existence."
         ]
       }
@@ -562,7 +562,7 @@
   {
     groupId: 5,
     groupName: "Environmental Elements",
-    groupConnection: ["atmosphere", "perception", "environment", "അന്തരീക്ഷം"],
+    groupConnection: ["atmosphere", "perception", "environment", "climate"],
     riddles: [
       {
         id: 41,
@@ -571,9 +571,9 @@
         correctAnswer: "Horizon",
         cleanAnswer: "Horizon",
         clues: [
-          "Aakaashavum bhoomiyum thammil muttunnathayi thonnikkunna rekha. 🌅",
-          "Kadalinapuram aakaasham thodunna sthalam. 👀",
-          "Kshithijam (Horizon) aanu mone! 🌌",
+          "The line where the sky and the earth seem to touch. 🌅",
+          "The place across the ocean where it meets the sky. 👀",
+          "It is the horizon, my friend! 🌌",
           "Apparent line where earth meets sky."
         ]
       },
@@ -584,9 +584,9 @@
         correctAnswer: "Darkness",
         cleanAnswer: "Darkness",
         clues: [
-          "Velicham poornnamaayi illathirikkunna sthithi. 🌑",
-          "Current poyaal kooriruttil kaanunnathu. 🙈",
-          "Iruttu (Darkness) aanu mone! 🌌",
+          "A state completely devoid of light. 🌑",
+          "What you see in pitch black when the power goes out. 🙈",
+          "It is darkness, my friend! 🌌",
           "Total absence of light."
         ]
       },
@@ -597,9 +597,9 @@
         correctAnswer: "Cold",
         cleanAnswer: "Cold",
         clues: [
-          "Manjathilum Fridge-ilum kaanunna vira. 🧊",
-          "Choodu illathirikkumbol thonnikkunna thaanppu. 🥶",
-          "Thaanppu (Cold) aanu mone! ❄️",
+          "The chill you find in snow or inside a fridge. 🧊",
+          "The shivering feeling you get when there is no heat. 🥶",
+          "It is cold, my friend! ❄️",
           "Low temperature state."
         ]
       },
@@ -610,9 +610,9 @@
         correctAnswer: "Tide",
         cleanAnswer: "Tide",
         clues: [
-          "Chandraneyulla aakarshanam moolam kadal uyarunnathu. 🌙",
-          "Vellam karaye nokki uyarukayum thaazhukayum cheyyunnathu. 🌊",
-          "Oettavum Erakkavum (Tide) aanu mone! ⬆️",
+          "The ocean rising due to the moon's attraction. 🌙",
+          "Water rising and falling against the shore. 🌊",
+          "It is the tide, my friend! ⬆️",
           "Alternate rising and falling of sea."
         ]
       },
@@ -623,9 +623,9 @@
         correctAnswer: "Current",
         cleanAnswer: "Current",
         clues: [
-          "Vellathil kaanunna shakthamaaya ozhukku. 🌊",
-          "Kadalanathil aalkkaare koodi ozhikki kondu pokunno force. 🏊",
-          "Ozhukku (Current) aanu mone! ➡️",
+          "A strong flow seen moving through the water. 🌊",
+          "The force in the ocean that can sweep people away. 🏊",
+          "It is a current, my friend! ➡️",
           "Flow of water moving in a definite direction."
         ]
       },
@@ -636,9 +636,9 @@
         correctAnswer: "Climate",
         cleanAnswer: "Climate",
         clues: [
-          "Oru sthalaththe dherghakaala kaalaavastha. 🍂",
-          "Global Warming moolam marunna sthithi. 🌧️",
-          "Kaalaavastha (Climate) aanu mone! ☀️",
+          "The long-term weather condition of a specific place. 🍂",
+          "The state that is changing due to Global Warming. 🌧️",
+          "It is the climate, my friend! ☀️",
           "Long term pattern of weather."
         ]
       },
@@ -649,9 +649,9 @@
         correctAnswer: "Season",
         cleanAnswer: "Season",
         clues: [
-          "Maasangal kazhiyumbol marunna kaalam (Summer, Winter, Monsoon). 🌸",
-          "Varshathil 4 thavanayayi marunna weather pattern. ☀️",
-          "Rithu / Season aanu mone! ❄️",
+          "The changing times as months pass by, like Summer or Winter. 🌸",
+          "The weather pattern that changes multiple times a year. ☀️",
+          "It is a season, my friend! ❄️",
           "Divisions of the year based on weather."
         ]
       },
@@ -662,9 +662,9 @@
         correctAnswer: "Atmosphere",
         cleanAnswer: "Atmosphere",
         clues: [
-          "Bhoomiyudey chuttumulla kaattinte paali. ☁️",
-          "Nammal shwasikkan aavashyamaaya oxygen ulla space. 🌌",
-          "Avanavrutham / Atmosphere aanu mone! 🌬️",
+          "The layer of air surrounding the earth. ☁️",
+          "The space containing the oxygen we need to breathe. 🌌",
+          "It is the atmosphere, my friend! 🌬️",
           "Envelope of gases surrounding planet."
         ]
       },
@@ -675,9 +675,9 @@
         correctAnswer: "Eclipse",
         cleanAnswer: "Eclipse",
         clues: [
-          "Surayano Chandrano nillalil marayunna avastha. ☀️",
-          "Grahanam ennu vilikkunna prathibhasa. 🌑",
-          "Grahanam (Eclipse) aanu mone! 🌙",
+          "The event where the sun or moon is hidden in shadow. ☀️",
+          "A phenomenon where celestial bodies block each other's light. 🌑",
+          "It is an eclipse, my friend! 🌙",
           "Obscuration of light from celestial body."
         ]
       },
@@ -688,9 +688,9 @@
         correctAnswer: "Humidity",
         cleanAnswer: "Humidity",
         clues: [
-          "Kaattil vellathinte amsham koodumpol ullath. 💧",
-          "Keralathil eppozhum nannayi veyarppikkan kaaranam. ☀️",
-          "Aardratha (Humidity) aanu mone! 🌧️",
+          "When there is a high amount of water content in the air. 💧",
+          "The reason you sweat so much in tropical places. ☀️",
+          "It is humidity, my friend! 🌧️",
           "Amount of water vapor in air."
         ]
       }
@@ -701,7 +701,7 @@
   {
     groupId: 6,
     groupName: "Emotions & Mind",
-    groupConnection: ["emotions", "feelings", "mind", "വികാരങ്ങൾ"],
+    groupConnection: ["emotions", "feelings", "mind", "sentiments"],
     riddles: [
       {
         id: 51,
@@ -710,9 +710,9 @@
         correctAnswer: "Hope",
         cleanAnswer: "Hope",
         clues: [
-          "Nallathu nadakum enna vishwasam. 🌈",
-          "Iruttil ninnum velicham kaanunna feeling. ✨",
-          "Pratheeksha (Hope) aanu mone! 💭",
+          "The belief that something good is going to happen. 🌈",
+          "The feeling of seeing light in the darkness. ✨",
+          "It is hope, my friend! 💭",
           "Feeling of expectation for a good outcome."
         ]
       },
@@ -723,9 +723,9 @@
         correctAnswer: "Fear",
         cleanAnswer: "Fear",
         clues: [
-          "Pretham kaanumbol nenju thudikkunna avastha. 😱",
-          "Iruttil ottakku nikkumbol varunna feeling. 🖤",
-          "Bhayam (Fear) aanu mone! 👻",
+          "The state where your heart pounds when seeing a ghost. 😱",
+          "The feeling you get standing all alone in the dark. 🖤",
+          "It is fear, my friend! 👻",
           "Emotion induced by perceived danger."
         ]
       },
@@ -736,9 +736,9 @@
         correctAnswer: "Anger",
         cleanAnswer: "Anger",
         clues: [
-          "Mukham chuvannu choodaagunna mood. 😡",
-          "Kopam allel Deshyam. 🔥",
-          "Deshyam (Anger) aanu mone! 💥",
+          "The mood where your face turns red and hot. 😡",
+          "Pure wrath and fury. 🔥",
+          "It is anger, my friend! 💥",
           "Strong feeling of annoyance or hostility."
         ]
       },
@@ -749,9 +749,9 @@
         correctAnswer: "Courage",
         cleanAnswer: "Courage",
         clues: [
-          "Bhayathine neridaan ullil ulla dhyryam. 🦁",
-          "Risk edukkan prachodanam nalkunna shakthi. ⚔️",
-          "Dhyryam (Courage) aanu mone! 🛡️",
+          "The bravery inside you to face your fears. 🦁",
+          "The power that motivates you to take a risk. ⚔️",
+          "It is courage, my friend! 🛡️",
           "Ability to do something that frightens one."
         ]
       },
@@ -762,9 +762,9 @@
         correctAnswer: "Patience",
         cleanAnswer: "Patience",
         clues: [
-          "Kaathirikkaan ullathil samadhanam kaanunnathu. 🧘",
-          "Kopam thadayan ulla kazhivu. 🕊️",
-          "Kshamatha (Patience) aanu mone! ⏳",
+          "Finding peace in waiting for something. 🧘",
+          "The ability to hold back your anger. 🕊️",
+          "It is patience, my friend! ⏳",
           "Capacity to accept delay without getting angry."
         ]
       },
@@ -775,9 +775,9 @@
         correctAnswer: "Curiosity",
         cleanAnswer: "Curiosity",
         clues: [
-          "Kooduthal ariyaan ulla aagraham. 🔍",
-          "Kuttikalil eppozhum kaanunna chinthakal. ❓",
-          "Kouthukam / Curiosity aanu mone! 🧠",
+          "A strong desire to know more. 🔍",
+          "The inquisitive thoughts you always see in children. ❓",
+          "It is curiosity, my friend! 🧠",
           "Strong desire to know or learn something."
         ]
       },
@@ -788,9 +788,9 @@
         correctAnswer: "Instinct",
         cleanAnswer: "Instinct",
         clues: [
-          "Padikaathe thanne ullil ninnum pettennu varunna response. 🐅",
-          "Janthukalkku aapatthil thonnikkunna prirodha kazhivu. ⚡",
-          "Naisargika vaasan (Instinct) aanu mone! 🧠",
+          "A sudden response coming from within without learning it. 🐅",
+          "The natural defensive ability animals feel in danger. ⚡",
+          "It is instinct, my friend! 🧠",
           "Innate, fixed pattern of behavior."
         ]
       },
@@ -801,9 +801,9 @@
         correctAnswer: "Guilt",
         cleanAnswer: "Guilt",
         clues: [
-          "Thettu cheydha pinne ullil varunna vishamatha. 😔",
-          "Manasaakshiyude kuthu. 💔",
-          "Kuttabhodham (Guilt) aanu mone! ⚖️",
+          "The heavy feeling inside after making a mistake. 😔",
+          "The sharp sting of your conscience. 💔",
+          "It is guilt, my friend! ⚖️",
           "Feeling of having done something wrong."
         ]
       },
@@ -814,9 +814,9 @@
         correctAnswer: "Pride",
         cleanAnswer: "Pride",
         clues: [
-          "Swantham neettathil thonnikkunna abhimaanam. 👑",
-          "Mayil peeli thadunnathu pole ullil ulla feeling. 🦚",
-          "Abhimaanam (Pride) aanu mone! ✨",
+          "The satisfaction you feel in your own achievements. 👑",
+          "A feeling inside that spreads like peacock feathers. 🦚",
+          "It is pride, my friend! ✨",
           "Feeling of pleasure from one's achievements."
         ]
       },
@@ -827,9 +827,9 @@
         correctAnswer: "Jealousy",
         cleanAnswer: "Jealousy",
         clues: [
-          "Mattullavarde valarchayil varunna kshama kedu. 😒",
-          "Kungan eye feeling. 👀",
-          "Asooya (Jealousy) aanu mone! 🐍",
+          "The bitterness you feel when others succeed. 😒",
+          "The green-eyed feeling. 👀",
+          "It is jealousy, my friend! 🐍",
           "Envious feeling towards someone's success."
         ]
       }
@@ -840,7 +840,7 @@
   {
     groupId: 7,
     groupName: "Language & Truth",
-    groupConnection: ["social", "truth", "language", "വാക്കുകളും സത്യവും"],
+    groupConnection: ["social", "truth", "language", "communication"],
     riddles: [
       {
         id: 61,
@@ -849,9 +849,9 @@
         correctAnswer: "Truth",
         cleanAnswer: "Truth",
         clues: [
-          "Marachu vechanal polum velichathil varunna sangathi. 💎",
-          "Kalla tharathil parayaatha yaathardhyam. ☀️",
-          "Sathyam (Truth) aanu mone! 🗣️",
+          "The thing that always comes to light, even if hidden. 💎",
+          "The reality told without any deception. ☀️",
+          "It is the truth, my friend! 🗣️",
           "State of being in accordance with fact."
         ]
       },
@@ -862,9 +862,9 @@
         correctAnswer: "Lie",
         cleanAnswer: "Lie",
         clues: [
-          "Pinokio moongiya pole mookku neelunna sangathi. 🤥",
-          "Sathya allatha parayunna vishayam. 🎭",
-          "Kallam (Lie) aanu mone! 🗣️",
+          "The thing that makes Pinocchio's nose grow. 🤥",
+          "A topic spoken that is not real. 🎭",
+          "It is a lie, my friend! 🗣️",
           "Intentionally false statement."
         ]
       },
@@ -875,9 +875,9 @@
         correctAnswer: "Gossip",
         cleanAnswer: "Gossip",
         clues: [
-          "Mattullavare kurichu charpara samsarikunnathu. 🗣️",
-          "Nattar idayil parakkunna kadhakal. 👂",
-          "Kudumbasutram / Gossip aanu mone! 🤫",
+          "Chattering casually about other people. 🗣️",
+          "Stories flying around among the locals. 👂",
+          "It is gossip, my friend! 🤫",
           "Casual conversation about other people."
         ]
       },
@@ -888,9 +888,9 @@
         correctAnswer: "Reputation",
         cleanAnswer: "Reputation",
         clues: [
-          "Samoohathil ninakku ulla nalla per. 🏆",
-          "Undakkan varshangal venam, kalayaan sec matham. 🌟",
-          "Sunamaam / Reputation aanu mone! 👥",
+          "Your good standing in society. 🏆",
+          "Takes years to build, but only seconds to lose. 🌟",
+          "It is your reputation, my friend! 👥",
           "Beliefs or opinions held about someone."
         ]
       },
@@ -901,9 +901,9 @@
         correctAnswer: "Trust",
         cleanAnswer: "Trust",
         clues: [
-          "Kanneerodukkaatha vishwasam. 🤝",
-          "Bhangapettaal thirichu kittan paadulla vishwasam. 🔒",
-          "Vishwasam (Trust) aanu mone! 💖",
+          "A belief that never fades away. 🤝",
+          "A bond that is very hard to earn back once broken. 🔒",
+          "It is trust, my friend! 💖",
           "Firm belief in reliability of someone."
         ]
       },
@@ -914,9 +914,9 @@
         correctAnswer: "Friendship",
         cleanAnswer: "Friendship",
         clues: [
-          "Changathimar thammil ulla sneha bandham. 👫",
-          "Tea kadayil valarunna bandham. ☕",
-          "Souhrudham (Friendship) aanu mone! 💖",
+          "The bond of affection between buddies. 👫",
+          "A relationship that grows at the tea shop. ☕",
+          "It is friendship, my friend! 💖",
           "Relationship of mutual affection."
         ]
       },
@@ -927,9 +927,9 @@
         correctAnswer: "Word",
         cleanAnswer: "Word",
         clues: [
-          "Aksharangal koodi cherrnu undaagunnathu. 🔤",
-          "Samsarikumbol purathokku varunnathu. 🗣️",
-          "Vaakku (Word) aanu mone! 📄",
+          "Formed by joining letters together. 🔤",
+          "What comes out when you speak. 🗣️",
+          "It is a word, my friend! 📄",
           "Single distinct meaningful element of speech."
         ]
       },
@@ -940,9 +940,9 @@
         correctAnswer: "Riddle",
         cleanAnswer: "Riddle",
         clues: [
-          "Nee ippol kalichukondirikkunna item. ❓",
-          "Budhikkum chinthakkum paare vekkunna chodyam. 🧩",
-          "Kadamkdha (Riddle) aanu mone! 🧠",
+          "The very item you are playing with right now. ❓",
+          "A question designed to test your brain and thinking. 🧩",
+          "It is a riddle, my friend! 🧠",
           "Question phrased as a puzzle to be solved."
         ]
       },
@@ -953,9 +953,9 @@
         correctAnswer: "Story",
         cleanAnswer: "Story",
         clues: [
-          "Muthassi parayu tharunna rasanulla varnana. 📖",
-          "Thudakkavum avasanavum ulla katha. 🎬",
-          "Katha (Story) aanu mone! 💭",
+          "An entertaining tale told by your grandmother. 📖",
+          "A narrative with a beginning and an end. 🎬",
+          "It is a story, my friend! 💭",
           "Account of imaginary or real people and events."
         ]
       },
@@ -966,9 +966,9 @@
         correctAnswer: "Language",
         cleanAnswer: "Language",
         clues: [
-          "Malayalam, English ennorokke parayunna samsara madhyamam. 🗣️",
-          "Aashayavinimayathinu upayogikunno reethi. 🌐",
-          "Bhasha (Language) aanu mone! 💬",
+          "A medium of speech, like Malayalam or English. 🗣️",
+          "The method used to exchange ideas. 🌐",
+          "It is language, my friend! 💬",
           "System of communication used by a nation."
         ]
       }
@@ -979,7 +979,7 @@
   {
     groupId: 8,
     groupName: "Choices & Destiny",
-    groupConnection: ["life", "choices", "destiny", "വിധിയും തീരുമാനവും"],
+    groupConnection: ["life", "choices", "destiny", "fate"],
     riddles: [
       {
         id: 71,
@@ -988,9 +988,9 @@
         correctAnswer: "Opportunity",
         cleanAnswer: "Opportunity",
         clues: [
-          "Jeevithathil otta thavana maathram muttunna vaathil. 🚪",
-          "Valaran kittunna nalla avasaram. 🔑",
-          "Avasaram (Opportunity) aanu mone! ✨",
+          "The door in life that only knocks once. 🚪",
+          "A great chance given to you to grow. 🔑",
+          "It is an opportunity, my friend! ✨",
           "Set of circumstances that makes it possible to do something."
         ]
       },
@@ -1001,9 +1001,9 @@
         correctAnswer: "Decision",
         cleanAnswer: "Decision",
         clues: [
-          "Aalochichu urappikunna theerumaanam. 🤔",
-          "Vazhiyethu venam ennu urappikkkunnathu. 🔀",
-          "Theerumaanam (Decision) aanu mone! ⚖️",
+          "A firm resolution made after deep thought. 🤔",
+          "Determining exactly which path you want to take. 🔀",
+          "It is a decision, my friend! ⚖️",
           "Conclusion or resolution reached after consideration."
         ]
       },
@@ -1014,9 +1014,9 @@
         correctAnswer: "Mistake",
         cleanAnswer: "Mistake",
         clues: [
-          "Padikkaan sahayikkunna dhavala pravruthikal. ❌",
-          "Patty poya thettu. 🤦",
-          "Thettu (Mistake) aanu mone! 📚",
+          "The wrong actions that ultimately help you learn. ❌",
+          "An error that slipped out. 🤦",
+          "It is a mistake, my friend! 📚",
           "Action or judgment that is misguided or wrong."
         ]
       },
@@ -1027,9 +1027,9 @@
         correctAnswer: "Fate",
         cleanAnswer: "Fate",
         clues: [
-          "Head-il ezhuthi vechitund ennu parayunna vidhi. 🔮",
-          "Maataan pattatha kaala thirakkadha. 📜",
-          "Vidhi (Fate) aanu mone! 🌌",
+          "The predetermined script supposedly written on your head. 🔮",
+          "A timeline script that cannot be altered. 📜",
+          "It is fate, my friend! 🌌",
           "Development of events beyond a person's control."
         ]
       },
@@ -1040,9 +1040,9 @@
         correctAnswer: "Luck",
         cleanAnswer: "Luck",
         clues: [
-          "Karuthiyathilum kooduthal nallathu pettennu sambhavikkunnathu. 🎲",
-          "Four leaf clover tharunna bhagyam. 🍀",
-          "Bhagyam (Luck) aanu mone! ✨",
+          "When things happen surprisingly better than expected. 🎲",
+          "The fortune brought by a four-leaf clover. 🍀",
+          "It is luck, my friend! ✨",
           "Success or failure brought by chance."
         ]
       },
@@ -1053,9 +1053,9 @@
         correctAnswer: "Freedom",
         cleanAnswer: "Freedom",
         clues: [
-          "Aarkkum adimayaakaathe swathanthramaayi jeevikkan ulla kazhivu. 🕊️",
-          "Kootil ninnum purath varunna avastha. 🔓",
-          "Swathanthriyam (Freedom) aanu mone! 🌌",
+          "The ability to live independently without being a slave to anyone. 🕊️",
+          "The state of stepping out of a cage. 🔓",
+          "It is freedom, my friend! 🌌",
           "Power or right to act, speak, or think as one wants."
         ]
       },
@@ -1066,9 +1066,9 @@
         correctAnswer: "Justice",
         cleanAnswer: "Justice",
         clues: [
-          "Sathyanikku nalkenna neethi. ⚖️",
-          "Court-il ninnum kittunna nyayam. 🏛️",
-          "Neethi (Justice) aanu mone! 🔨",
+          "The fairness that must be given to truth. ⚖️",
+          "The righteousness you receive from a court. 🏛️",
+          "It is justice, my friend! 🔨",
           "Just behavior or treatment."
         ]
       },
@@ -1079,9 +1079,9 @@
         correctAnswer: "Peace",
         cleanAnswer: "Peace",
         clues: [
-          "Yudhavum prashnangalum illatha nalla sthithi. 🕊️",
-          "Manassil varunna samadhanam. 🧘",
-          "Samadhanam (Peace) aanu mone! 🌿",
+          "A wonderful state without wars or problems. 🕊️",
+          "The calmness that settles in your mind. 🧘",
+          "It is peace, my friend! 🌿",
           "Freedom from disturbance or war."
         ]
       },
@@ -1092,9 +1092,9 @@
         correctAnswer: "Chaos",
         cleanAnswer: "Chaos",
         clues: [
-          "Onnum kaaryamaayi control-il illatha kuzhamachanthy. 🌪️",
-          "Order illatha sthithi. 💥",
-          "Kuzhapam (Chaos) aanu mone! 🤼",
+          "A confusing mess where nothing is really under control. 🌪️",
+          "A state lacking any order entirely. 💥",
+          "It is chaos, my friend! 🤼",
           "Complete disorder and confusion."
         ]
       },
@@ -1105,9 +1105,9 @@
         correctAnswer: "Harmony",
         cleanAnswer: "Harmony",
         clues: [
-          "Ellam uruppode chernnu pokunna layam. 🎶",
-          "Laya vinimayam ennu parayunnathu. ☯️",
-          "Layam / Harmony aanu mone! 🕊️",
+          "The rhythm where everything flows together perfectly. 🎶",
+          "What we call an exchange in perfect sync. ☯️",
+          "It is harmony, my friend! 🕊️",
           "State of peaceful agreement and concord."
         ]
       }
@@ -1118,7 +1118,7 @@
   {
     groupId: 9,
     groupName: "Senses & Illusions",
-    groupConnection: ["senses", "perception", "illusions", "ഇന്ദ്രിയങ്ങൾ"],
+    groupConnection: ["senses", "perception", "illusions", "awareness"],
     riddles: [
       {
         id: 81,
@@ -1127,9 +1127,9 @@
         correctAnswer: "Smell",
         cleanAnswer: "Smell",
         clues: [
-          "Mookku kondu ariyunna sugandhavum durghandhavum. 👃",
-          "Poovin aduth pokumbol thonnikkunna vasthu. 🌹",
-          "Manam (Smell) aanu mone! 💨",
+          "The good and bad scents you sense with your nose. 👃",
+          "The thing you perceive when you get close to a flower. 🌹",
+          "It is smell, my friend! 💨",
           "Faculty of perceiving odors."
         ]
       },
@@ -1140,9 +1140,9 @@
         correctAnswer: "Taste",
         cleanAnswer: "Taste",
         clues: [
-          "Naaku kondu ariyunna madhuravum erivum. 👅",
-          "Bhaksanam kazhikkumbol kittunna ruchi. 🍬",
-          "Ruchi (Taste) aanu mone! 🌶️",
+          "The sweetness and spiciness you sense with your tongue. 👅",
+          "The flavor you get when eating food. 🍬",
+          "It is taste, my friend! 🌶️",
           "Sensation of flavor perceived in mouth."
         ]
       },
@@ -1153,9 +1153,9 @@
         correctAnswer: "Touch",
         cleanAnswer: "Touch",
         clues: [
-          "Kayyo thodumbol ariyunna sparshanam. ✋",
-          "Choodum thaanppum alari tharan sahayikunno sensory experience. 🌵",
-          "Sparshanam (Touch) aanu mone! 🪨",
+          "The contact you feel when your hand meets something. ✋",
+          "The sensory experience that helps you tell hot from cold. 🌵",
+          "It is touch, my friend! 🪨",
           "Sense of physical contact."
         ]
       },
@@ -1166,9 +1166,9 @@
         correctAnswer: "Sight",
         cleanAnswer: "Sight",
         clues: [
-          "Kannu thurannal kaanunna kazhcha. 👁️",
-          "Velichathil vividha varnangal kaanul. 🌈",
-          "Kazhcha (Sight) aanu mone! ☀️",
+          "The view you get when you open your eyes. 👁️",
+          "Seeing various colors in the light. 🌈",
+          "It is sight, my friend! ☀️",
           "Faculty or power of seeing."
         ]
       },
@@ -1179,9 +1179,9 @@
         correctAnswer: "Illusion",
         cleanAnswer: "Illusion",
         clues: [
-          "Sathyam ennu thonnikkunna maaya. 🌀",
-          "Kannukale pattikkunna visual trick. 👁️",
-          "Maaya (Illusion) aanu mone! 😵",
+          "A trick that feels like the truth. 🌀",
+          "A visual trick that deceives your eyes. 👁️",
+          "It is an illusion, my friend! 😵",
           "False impression or deceptive appearance."
         ]
       },
@@ -1192,9 +1192,9 @@
         correctAnswer: "Mirage",
         cleanAnswer: "Mirage",
         clues: [
-          "Tharubhoomiyil vellam undu ennu thonnikkunna kazhcha. 🏜️",
-          "Choodu moolam road-il vellam kaanunna thondal. ☀️",
-          "Marubhoomi jalam / Mirage aanu mone! 💧",
+          "The sight that makes you think there is water in the desert. 🏜️",
+          "The feeling of seeing water on the road due to heat. ☀️",
+          "It is a mirage, my friend! 💧",
           "Optical illusion caused by atmospheric conditions."
         ]
       },
@@ -1205,9 +1205,9 @@
         correctAnswer: "Depth",
         cleanAnswer: "Depth",
         clues: [
-          "Kinarinte thazhekk ulla alavu. 🕳️",
-          "Kadalinethra aazham undu ennu nokkunno distance. ⬇️",
-          "Aazham (Depth) aanu mone! 📏",
+          "The measurement going down into a well. 🕳️",
+          "The distance checked to see how far down the ocean goes. ⬇️",
+          "It is depth, my friend! 📏",
           "Distance from top to bottom."
         ]
       },
@@ -1218,9 +1218,9 @@
         correctAnswer: "Height",
         cleanAnswer: "Height",
         clues: [
-          "Malakalkkum aalkalkkum mukalilekk ulla alavu. 🏔️",
-          "Ethra podakkam undu ennu nokkunnathu. ⬆️",
-          "Uyaram (Height) aanu mone! 📏",
+          "The measurement going upwards for mountains or people. 🏔️",
+          "Checking how tall something is. ⬆️",
+          "It is height, my friend! 📏",
           "Measurement from base to top."
         ]
       },
@@ -1231,9 +1231,9 @@
         correctAnswer: "Distance",
         cleanAnswer: "Distance",
         clues: [
-          "Rendu sthalangal thammil ulla dhooram. 🛣️",
-          "Kilometer-il mekkunna gap. 📍",
-          "Dhooram (Distance) aanu mone! 🚗",
+          "The length of space between two locations. 🛣️",
+          "The gap measured in kilometers. 📍",
+          "It is distance, my friend! 🚗",
           "Amount of space between two points."
         ]
       },
@@ -1244,9 +1244,9 @@
         correctAnswer: "Texture",
         cleanAnswer: "Texture",
         clues: [
-          "Muramurapoo nermayo thodumbozhe ariyunna surface quality. 🧱",
-          "Paarakkum noolukkum alankaram tharunna surface feel. 🧶",
-          "Neythu feel / Texture aanu mone! ✋",
+          "The surface quality you feel when touching something rough or smooth. 🧱",
+          "The surface feel that gives character to a rock or a thread. 🧶",
+          "It is texture, my friend! ✋",
           "Feel, appearance, or consistency of a surface."
         ]
       }
@@ -1257,7 +1257,7 @@
   {
     groupId: 10,
     groupName: "Patterns & Logic",
-    groupConnection: ["logic", "quantities", "math", "ഗണിത ചിന്തകൾ"],
+    groupConnection: ["logic", "quantities", "math", "patterns"],
     riddles: [
       {
         id: 91,
@@ -1266,9 +1266,9 @@
         correctAnswer: "Zero",
         cleanAnswer: "Zero",
         clues: [
-          "Aryabhatta kandupidicha valiya sankhya value. 0️⃣",
-          "Onnum illathirikkunna number. 🚫",
-          "Pujyam (Zero) aanu mone! 🕳️",
+          "The great numeric value discovered by Aryabhata. 0️⃣",
+          "The number that represents having nothing at all. 🚫",
+          "It is zero, my friend! 🕳️",
           "Numerical digit representing nothing."
         ]
       },
@@ -1279,9 +1279,9 @@
         correctAnswer: "Infinity",
         cleanAnswer: "Infinity",
         clues: [
-          "Avasanam illatha alavu. ♾️",
-          "8-ne thirichu vecha symbol. 🔄",
-          "Ananthatha (Infinity) aanu mone! 🌌",
+          "An amount that has no end. ♾️",
+          "The symbol that looks like an 8 turned sideways. 🔄",
+          "It is infinity, my friend! 🌌",
           "State of being limitless or boundless."
         ]
       },
@@ -1292,9 +1292,9 @@
         correctAnswer: "Pattern",
         cleanAnswer: "Pattern",
         clues: [
-          "Muthukal aavarthichu varunna maadhiri. 🔲",
-          "Aavarthana reethiyil ulla design. 🔺",
-          "Maadhiri / Pattern aanu mone! 🇱🇧",
+          "A repeating model of shapes or beads. 🔲",
+          "A design that follows a repeating method. 🔺",
+          "It is a pattern, my friend! 🇱🇧",
           "Repeated decorative or logical design."
         ]
       },
@@ -1305,9 +1305,9 @@
         correctAnswer: "Rhythm",
         cleanAnswer: "Rhythm",
         clues: [
-          "Melathinteyum paattinteyum thalam. 🥁",
-          "Chenda kottumbol kaanunna rhythmic pattern. 🕺",
-          "Thalam (Rhythm) aanu mone! ⏱️",
+          "The beat of the percussion and the song. 🥁",
+          "The patterned flow you see when playing a drum. 🕺",
+          "It is rhythm, my friend! ⏱️",
           "Strong, regular, repeated movement or sound."
         ]
       },
@@ -1318,9 +1318,9 @@
         correctAnswer: "Symmetry",
         cleanAnswer: "Symmetry",
         clues: [
-          "Rendu pakshavum nerkku ner ottha samathwam. 🦋",
-          "Kannaadiyil kaanunnathu pole rendu vazhiyum samamaaya shape. ⚖️",
-          "Samamathma / Symmetry aanu mone! 🪞",
+          "Perfect equality facing each other on both sides. 🦋",
+          "A shape that matches exactly on both sides, like in a mirror. ⚖️",
+          "It is symmetry, my friend! 🪞",
           "Quality of being made of exactly similar parts."
         ]
       },
@@ -1331,9 +1331,9 @@
         correctAnswer: "Equation",
         cleanAnswer: "Equation",
         clues: [
-          "Rendu pakshangal thammil samamaakkunna ganitha vaakaayam. 🟰",
-          "Plus-um minus-um cherthu vakkunna equation. ➕",
-          "Ganitha samavaakyam (Equation) aanu mone! ➖",
+          "A mathematical sentence equating two sides. 🟰",
+          "The setup where plus and minus signs are put together. ➕",
+          "It is an equation, my friend! ➖",
           "Statement that the value of two expressions are equal."
         ]
       },
@@ -1344,9 +1344,9 @@
         correctAnswer: "Ratio",
         cleanAnswer: "Ratio",
         clues: [
-          "Rendu sankhyakal thammil ulla anupaatham (e.g., 2:1). 🍕",
-          "Mix cheyyan upayogikunno proportion measure. 🔢",
-          "Anupaatham (Ratio) aanu mone! 📐",
+          "The proportion between two numbers (e.g., 2:1). 🍕",
+          "The proportional measure used for mixing. 🔢",
+          "It is a ratio, my friend! 📐",
           "Quantitative relation between two amounts."
         ]
       },
@@ -1357,9 +1357,9 @@
         correctAnswer: "Odds",
         cleanAnswer: "Odds",
         clues: [
-          "Jayikkaan ulla saadhyatha alavu. 🎲",
-          "Betting site-il kaanunna probability. 📈",
-          "Saadhyatha (Odds) aanu mone! 🎯",
+          "The measurement of the probability of winning. 🎲",
+          "The probability you see on a betting site. 📈",
+          "It is the odds, my friend! 🎯",
           "Ratio of probability of event happening."
         ]
       },
@@ -1370,9 +1370,9 @@
         correctAnswer: "Average",
         cleanAnswer: "Average",
         clues: [
-          "Ellam koodi kootti ennam kondu vakukkumbol kittunno mean. 📊",
-          "Mark list-il kaanunna sadharana alavu. ➗",
-          "Saraasari (Average) aanu mone! ➕",
+          "The mean obtained by adding everything and dividing by the count. 📊",
+          "The standard measurement seen on a mark list. ➗",
+          "It is an average, my friend! ➕",
           "Result obtained by adding quantities together and dividing."
         ]
       },
@@ -1383,9 +1383,9 @@
         correctAnswer: "Difference",
         cleanAnswer: "Difference",
         clues: [
-          "Rendu kaaryangal thammil ulla vyathyaasam. ➖",
-          "Minus cheyumbol kittunno utharu. 🔀",
-          "Vyathyaasam (Difference) aanu mone! 🔍",
+          "The variation between two things. ➖",
+          "The answer you get when you subtract. 🔀",
+          "It is the difference, my friend! 🔍",
           "Point or way in which things are not the same."
         ]
       }
@@ -1396,7 +1396,7 @@
   {
     groupId: 11,
     groupName: "Physics of Motion",
-    groupConnection: ["motion", "physics", "dynamics", "ചലന നിയമങ്ങൾ"],
+    groupConnection: ["motion", "physics", "dynamics", "movement"],
     riddles: [
       {
         id: 101,
@@ -1405,9 +1405,9 @@
         correctAnswer: "Vibration",
         cleanAnswer: "Vibration",
         clues: [
-          "Phone ring cheyyumbol kaanunna ilakkam. 📳",
-          "Kambi idumbol shabdam undakkunna chalanangal. 🔔",
-          "Kampanam (Vibration) aanu mone! 🔊",
+          "The shaking you see when your phone rings. 📳",
+          "The movements that create sound when plucking a string. 🔔",
+          "It is a vibration, my friend! 🔊",
           "Rapid oscillation back and forth."
         ]
       },
@@ -1418,9 +1418,9 @@
         correctAnswer: "Resonance",
         cleanAnswer: "Resonance",
         clues: [
-          "Oru shabdam mattondine vira kollikkunna prathibhasa. 🎸",
-          "Guitar body-il shabdam valuthaagunna reethi. 🔊",
-          "Anunaadam (Resonance) aanu mone! 🌊",
+          "A phenomenon where one sound makes another vibrate. 🎸",
+          "The way sound amplifies inside a guitar body. 🔊",
+          "It is resonance, my friend! 🌊",
           "Reinforcement of sound by reflection."
         ]
       },
@@ -1431,9 +1431,9 @@
         correctAnswer: "Frequency",
         cleanAnswer: "Frequency",
         clues: [
-          "FM Radio set cheyyunna Hertz measure (93.5 FM). 📻",
-          "Oru second-ile wave counts. 〰️",
-          "Aavruthi (Frequency) aanu mone! 📡",
+          "The Hertz measure set for FM Radio (like 93.5 FM). 📻",
+          "The wave counts in one single second. 〰️",
+          "It is frequency, my friend! 📡",
           "Rate at which a vibration occurs."
         ]
       },
@@ -1444,9 +1444,9 @@
         correctAnswer: "Motion",
         cleanAnswer: "Motion",
         clues: [
-          "Nee nillaathe neengunno sthithi. 🏃",
-          "Chalanam ennu parayunna physical activity. 🚲",
-          "Chalanam (Motion) aanu mone! 🏃‍♂️",
+          "The state of moving continuously without stopping. 🏃",
+          "The physical activity we call movement. 🚲",
+          "It is motion, my friend! 🏃‍♂️",
           "Action or process of moving."
         ]
       },
@@ -1457,9 +1457,9 @@
         correctAnswer: "Inertia",
         cleanAnswer: "Inertia",
         clues: [
-          "Irunnathil ninnum pettennu maaraan ullakeda. 🛋️",
-          "Bus break idumbol munnott thallunna kaaranam. 🛑",
-          "Jadatha (Inertia) aanu mone! 😴",
+          "The laziness to suddenly change from a sitting position. 🛋️",
+          "The reason you get pushed forward when the bus brakes. 🛑",
+          "It is inertia, my friend! 😴",
           "Tendency to remain unchanged or motionless."
         ]
       },
@@ -1470,9 +1470,9 @@
         correctAnswer: "Acceleration",
         cleanAnswer: "Acceleration",
         clues: [
-          "Vandiyude accelerator thakukkumbol varunnathu. 🏎️",
-          "Speed koodikondirikkunna rate of change. 🚀",
-          "Twarana (Acceleration) aanu mone! 📈",
+          "What happens when you press the accelerator in a car. 🏎️",
+          "The rate of change when your speed keeps increasing. 🚀",
+          "It is acceleration, my friend! 📈",
           "Increase in the rate or speed of something."
         ]
       },
@@ -1483,9 +1483,9 @@
         correctAnswer: "Spin",
         cleanAnswer: "Spin",
         clues: [
-          "Ball thirinjukondu pokunna reethi. 🌀",
-          "Leg spin allel Off spin throw. ⚽",
-          "Karakkam / Spin aanu mone! 🔄",
+          "The way a ball moves while rotating. 🌀",
+          "Like a leg spin or an off spin throw. ⚽",
+          "It is a spin, my friend! 🔄",
           "Rapid turning movement."
         ]
       },
@@ -1496,9 +1496,9 @@
         correctAnswer: "Rest",
         cleanAnswer: "Rest",
         clues: [
-          "Joli kazhinju sharirathinu nalkunna vishramam. 🛏️",
-          "Alpam samayam urangathe thanne kidakkunnathu. 🧘",
-          "Vishramam (Rest) aanu mone! 😴",
+          "The relaxation you give your body after work. 🛏️",
+          "Lying down for a little while without sleeping. 🧘",
+          "It is rest, my friend! 😴",
           "Cease work or movement in order to relax."
         ]
       },
@@ -1509,9 +1509,9 @@
         correctAnswer: "Chaos",
         cleanAnswer: "Chaos",
         clues: [
-          "System illatha poornnamaaya thakaraaru. 💥",
-          "Adukkum chitteriyum illatha sthithi. 🌪️",
-          "Kuzhapam (Chaos) aanu mone! 🤼",
+          "A complete breakdown with absolutely no system. 💥",
+          "A state devoid of sequence or arrangement. 🌪️",
+          "It is chaos, my friend! 🤼",
           "Complete disorder and confusion."
         ]
       },
@@ -1522,9 +1522,9 @@
         correctAnswer: "Order",
         cleanAnswer: "Order",
         clues: [
-          "Ellam sthanathu thakkabaadiyil vekkunno reethi. 📚",
-          "Adukkum chittayum ulla avastha. 📐",
-          "Chitta / Order aanu mone! 🧹",
+          "The method of putting everything exactly in its proper place. 📚",
+          "A state of sequence and discipline. 📐",
+          "It is order, my friend! 🧹",
           "Arrangement of people or things in sequence."
         ]
       }
@@ -1535,7 +1535,7 @@
   {
     groupId: 12,
     groupName: "Intellect & Learning",
-    groupConnection: ["knowledge", "learning", "intellect", "അറിവും ചിന്തയും"],
+    groupConnection: ["knowledge", "learning", "intellect", "wisdom"],
     riddles: [
       {
         id: 111,
@@ -1544,9 +1544,9 @@
         correctAnswer: "Wisdom",
         cleanAnswer: "Wisdom",
         clues: [
-          "Anubhavangalil ninnum kittunna nalla budhi. 👴",
-          "Vayassayavarde chinthagalkku ulla aazham. 💡",
-          "Jnanam / Wisdom aanu mone! 📚",
+          "The good judgment you get from life experiences. 👴",
+          "The profound depth in the thoughts of the elderly. 💡",
+          "It is wisdom, my friend! 📚",
           "Quality of having experience and good judgment."
         ]
       },
@@ -1557,9 +1557,9 @@
         correctAnswer: "Knowledge",
         cleanAnswer: "Knowledge",
         clues: [
-          "Vayana moolam nedunno arivu. 📖",
-          "School-il ninnum kittunna valiya sambath. 🎒",
-          "Arivu (Knowledge) aanu mone! 🧠",
+          "The insight you gain through reading. 📖",
+          "The great wealth you acquire from school. 🎒",
+          "It is knowledge, my friend! 🧠",
           "Facts, information, and skills acquired."
         ]
       },
@@ -1570,9 +1570,9 @@
         correctAnswer: "Experience",
         cleanAnswer: "Experience",
         clues: [
-          "Pala varshangalaayi thozhil cheydhu nediya kazhivu. 🛠️",
-          "Kazhinjupoya kaalam nalkiya padangal. ⏳",
-          "Parichayasambath (Experience) aanu mone! 👴",
+          "The capability earned by working a job for many years. 🛠️",
+          "The lessons given to you by the time that has passed. ⏳",
+          "It is experience, my friend! 👴",
           "Practical contact with and observation of facts."
         ]
       },
@@ -1583,9 +1583,9 @@
         correctAnswer: "Skill",
         cleanAnswer: "Skill",
         clues: [
-          "Abhyaasam kondu nediyanguyya nypunyam. 🎨",
-          "Oru kaaryam nannayi cheyyan ulla kazhivu. 🎯",
-          "Kazhivu / Nypunyam (Skill) aanu mone! 🎸",
+          "The proficiency you achieve through practice. 🎨",
+          "The ability to do a specific thing very well. 🎯",
+          "It is skill, my friend! 🎸",
           "Ability to do something well."
         ]
       },
@@ -1596,9 +1596,9 @@
         correctAnswer: "Focus",
         cleanAnswer: "Focus",
         clues: [
-          "Oru karyathil maathram manassu urpikkunnathu. 🧘",
-          "Lakshyathil ninnum Shradha maarathe nirkkunno sthithi. 🎯",
-          "Ekagratha (Focus) aanu mone! 🔍",
+          "Centering your mind purely on one single thing. 🧘",
+          "The state of keeping your attention strictly on the goal. 🎯",
+          "It is focus, my friend! 🔍",
           "Center of interest or activity."
         ]
       },
@@ -1609,9 +1609,9 @@
         correctAnswer: "Attention",
         cleanAnswer: "Attention",
         clues: [
-          "Teacher class-il parayumbol nalkendi varunnathu. 👀",
-          "Shradha nalkunnathu. ⚠️",
-          "Shradha (Attention) aanu mone! 👂",
+          "What you have to give when the teacher is speaking in class. 👀",
+          "Giving your careful notice to something. ⚠️",
+          "It is attention, my friend! 👂",
           "Notice taken of someone or something."
         ]
       },
@@ -1622,9 +1622,9 @@
         correctAnswer: "Ignorance",
         cleanAnswer: "Ignorance",
         clues: [
-          "Arivillathirikkunna avastha. 🙈",
-          "Kaaryangale kurichu avabodham illayima. 🚫",
-          "Ariyayka (Ignorance) aanu mone! 🧠",
+          "The state of not knowing anything. 🙈",
+          "A complete lack of awareness regarding facts. 🚫",
+          "It is ignorance, my friend! 🧠",
           "Lack of knowledge or information."
         ]
       },
@@ -1635,9 +1635,9 @@
         correctAnswer: "Doubt",
         cleanAnswer: "Doubt",
         clues: [
-          "Urppillathirikkunna avastha. 🤔",
-          "Manassil varunna samshayam. ❓",
-          "Samshayam (Doubt) aanu mone! ⚖️",
+          "The state of being unsure. 🤔",
+          "The questioning feeling that arises in your mind. ❓",
+          "It is doubt, my friend! ⚖️",
           "Feeling of uncertainty or lack of conviction."
         ]
       },
@@ -1648,9 +1648,9 @@
         correctAnswer: "Certainty",
         cleanAnswer: "Certainty",
         clues: [
-          "Nooru sathmaanavum urappulla sthithi. 💯",
-          "Samshayame illatha avastha. 🔒",
-          "Urappu (Certainty) aanu mone! ✨",
+          "A state of being one hundred percent sure. 💯",
+          "A condition completely free of doubt. 🔒",
+          "It is certainty, my friend! ✨",
           "Firm conviction that something is the case."
         ]
       },
@@ -1661,9 +1661,9 @@
         correctAnswer: "Discovery",
         cleanAnswer: "Discovery",
         clues: [
-          "Mumbae ullathum aarkkum ariyaathathumaaya karyam kandupidikkunnathu. 🗺️",
-          "Columbus America kandupidichathu pole. 🔍",
-          "Kandethal (Discovery) aanu mone! 💡",
+          "Finding something that was already there but unknown to everyone. 🗺️",
+          "Like how Columbus found America. 🔍",
+          "It is a discovery, my friend! 💡",
           "Act of finding something unexpectedly."
         ]
       }
@@ -1674,7 +1674,7 @@
   {
     groupId: 13,
     groupName: "Auditory World",
-    groupConnection: ["sound", "auditory", "noise", "ശബ്ദപ്രപഞ്ചം"],
+    groupConnection: ["sound", "auditory", "noise", "acoustics"],
     riddles: [
       {
         id: 121,
@@ -1683,9 +1683,9 @@
         correctAnswer: "Noise",
         cleanAnswer: "Noise",
         clues: [
-          "Kekaam thonnathe veruppikunna bahalam. 📢",
-          "Traffic-il ninnum uyarunna kela shabdam. 💥",
-          "Bahalam / Noise aanu mone! 🔊",
+          "The annoying racket you just do not want to hear. 📢",
+          "The loud sounds rising from traffic. 💥",
+          "It is noise, my friend! 🔊",
           "Sound, especially one that is loud or unpleasant."
         ]
       },
@@ -1696,9 +1696,9 @@
         correctAnswer: "Whisper",
         cleanAnswer: "Whisper",
         clues: [
-          "Cheviyil thaka thaka adichu parayunna melleshabdam. 🤫",
-          "Chundu maathram ilakki parayunna samsaram. 👂",
-          "Mellensamsaram / Whisper aanu mone! 🌬️",
+          "The soft sound spoken directly into an ear. 🤫",
+          "Talking while barely moving your lips. 👂",
+          "It is a whisper, my friend! 🌬️",
           "Speaking softly using breath rather than vocal cords."
         ]
       },
@@ -1709,9 +1709,9 @@
         correctAnswer: "Hum",
         cleanAnswer: "Hum",
         clues: [
-          "Eenaam moolunnathaaya continuous sound. 🐝",
-          "Motor-um eechakalum undakkunna nuna shabdam. 🪰",
-          "Moolal (Hum) aanu mone! 🔊",
+          "A continuous sound like a drone. 🐝",
+          "The low sound created by motors and flies. 🪰",
+          "It is a hum, my friend! 🔊",
           "Low, continuous humming sound."
         ]
       },
@@ -1722,9 +1722,9 @@
         correctAnswer: "Static",
         cleanAnswer: "Static",
         clues: [
-          "TV signal poyaal varunna shhh-shhh shabdam. 📺",
-          "Radio-il channel kittatha polulla karakara sound. 📻",
-          "Noise / Static aanu mone! ⚡",
+          "The shhh-shhh sound when the TV signal drops. 📺",
+          "The crackling sound on a radio when you cannot find a channel. 📻",
+          "It is static, my friend! ⚡",
           "Crackling or hissing noise on telephone/radio."
         ]
       },
@@ -1735,9 +1735,9 @@
         correctAnswer: "Applause",
         cleanAnswer: "Applause",
         clues: [
-          "Show kazhinjaal kayyadichu aaraadhikunnathu. 👏",
-          "Audience kayyadikkunna continuous sound. 🎉",
-          "Kayyadi (Applause) aanu mone! 🎭",
+          "Clapping in admiration after a show ends. 👏",
+          "The continuous sound made by an approving audience. 🎉",
+          "It is applause, my friend! 🎭",
           "Approval expressed by clapping."
         ]
       },
@@ -1748,9 +1748,9 @@
         correctAnswer: "Melody",
         cleanAnswer: "Melody",
         clues: [
-          "Kettaal manassu kulirkkunna eenaam. 🎶",
-          "Paattinte snehamulla tune. 🎼",
-          "Eenaam / Melody aanu mone! 🎵",
+          "The musical arrangement that cools your mind when you hear it. 🎶",
+          "The lovely tune of a song. 🎼",
+          "It is a melody, my friend! 🎵",
           "Sequence of single notes that is musically satisfying."
         ]
       },
@@ -1761,9 +1761,9 @@
         correctAnswer: "Pitch",
         cleanAnswer: "Pitch",
         clues: [
-          "Shabdathinte koortha alavu (High or Low). 🔊",
-          "Thonda urakkan parayumbol marunna frequency. ↗️",
-          "Pitch aanu mone! 🎶",
+          "The high or low sharpness of a sound. 🔊",
+          "The frequency that changes when you raise your voice. ↗️",
+          "It is pitch, my friend! 🎶",
           "Quality of a sound governed by rate of vibrations."
         ]
       },
@@ -1774,9 +1774,9 @@
         correctAnswer: "Tone",
         cleanAnswer: "Tone",
         clues: [
-          "Samsarikumbol ullavarkku thonnikkunna bhavam (Friendly or Harsh). 🔊",
-          "Sound-inte unique quality character. 🎨",
-          "Bhavam / Tone aanu mone! 🎶",
+          "The attitude others feel when you speak (like friendly or harsh). 🔊",
+          "The unique quality character of a sound. 🎨",
+          "It is tone, my friend! 🎶",
           "Musical or vocal sound with reference to its quality."
         ]
       },
@@ -1787,9 +1787,9 @@
         correctAnswer: "Clamor",
         cleanAnswer: "Clamor",
         clues: [
-          "Pettennu varunna valiya kela sound. 🌩️",
-          "Idi vettunnathu pole ulla mulakkam. 💥",
-          "Mulakkam / Clamor aanu mone! 🔊",
+          "A sudden, very loud sound. 🌩️",
+          "A rumble similar to a thunderstrike. 💥",
+          "It is clamor, my friend! 🔊",
           "Loud and confused noise."
         ]
       },
@@ -1800,9 +1800,9 @@
         correctAnswer: "Roar",
         cleanAnswer: "Roar",
         clues: [
-          "Singam alakadakkumbol varunna valiya shabdam. 🦁",
-          "Kaattine nadukkunna sound. 👑",
-          "Garbhanam (Roar) aanu mone! 🔊",
+          "The loud sound a lion makes to shake the forest. 🦁",
+          "The sound that shocks the wild. 👑",
+          "It is a roar, my friend! 🔊",
           "Full, deep, prolonged cry uttered by a lion."
         ]
       }
@@ -1813,7 +1813,7 @@
   {
     groupId: 14,
     groupName: "Economics & Value",
-    groupConnection: ["value", "wealth", "money", "മൂല്യവും ധനവും"],
+    groupConnection: ["value", "wealth", "money", "economics"],
     riddles: [
       {
         id: 131,
@@ -1822,9 +1822,9 @@
         correctAnswer: "Worth",
         cleanAnswer: "Worth",
         clues: [
-          "Oru saadhanathinu ulla aantharika moolyam. 💎",
-          "Kaasinekkaal vilapetta sangathi. ⚖️",
-          "Moolyam (Worth) aanu mone! 🌟",
+          "The internal value of an item. 💎",
+          "Something far more valuable than mere cash. ⚖️",
+          "It is worth, my friend! 🌟",
           "Value of something measured by its qualities."
         ]
       },
@@ -1835,9 +1835,9 @@
         correctAnswer: "Price",
         cleanAnswer: "Price",
         clues: [
-          "Kadayil chotikunna MRP amount. 🏷️",
-          "Vangan nalkendi varunna roopa amount. 💵",
-          "Vila (Price) aanu mone! 🛒",
+          "The MRP amount asked at a shop. 🏷️",
+          "The amount in rupees you have to pay to buy it. 💵",
+          "It is the price, my friend! 🛒",
           "Amount of money expected in payment."
         ]
       },
@@ -1848,9 +1848,9 @@
         correctAnswer: "Cost",
         cleanAnswer: "Cost",
         clues: [
-          "Oru karyam cheydh theerkan nalkendi varunna chilavu. 💸",
-          "Uthpadanathinu aaya motham expense. 📉",
-          "Chilavu (Cost) aanu mone! 🧾",
+          "The expense required to complete a task. 💸",
+          "The total expense occurred for production. 📉",
+          "It is the cost, my friend! 🧾",
           "An amount that has to be paid or spent."
         ]
       },
@@ -1861,9 +1861,9 @@
         correctAnswer: "Debt",
         cleanAnswer: "Debt",
         clues: [
-          "Mattullavaril ninnum vaangithu thirichu kodukkan ulla kadam. 💳",
-          "Thirichu kodukkan ulla thoga. 🧾",
-          "Kadam (Debt) aanu mone! ⏳",
+          "What you take from others and have to return later. 💳",
+          "The sum of money that you owe. 🧾",
+          "It is debt, my friend! ⏳",
           "Sum of money that is owed or due."
         ]
       },
@@ -1874,9 +1874,9 @@
         correctAnswer: "Wealth",
         cleanAnswer: "Wealth",
         clues: [
-          "Dhaaralam panavum swathum ulla avastha. 🏰",
-          "Kure kaalam kondu nediyanguyya swathu. 💰",
-          "Sambhath (Wealth) aanu mone! 👑",
+          "A state of having plenty of money and assets. 🏰",
+          "The assets acquired over a long period of time. 💰",
+          "It is wealth, my friend! 👑",
           "An abundance of valuable possessions or money."
         ]
       },
@@ -1887,9 +1887,9 @@
         correctAnswer: "Poverty",
         cleanAnswer: "Poverty",
         clues: [
-          "Muthalkkoottukal illatha dharidryam. 🏚️",
-          "Basic aavashyagal polum niraveraan pattatha avastha. 🍞",
-          "Dharidryam (Poverty) aanu mone! 🚫",
+          "The lack of assets resulting in poor living conditions. 🏚️",
+          "The state of not being able to fulfill basic needs. 🍞",
+          "It is poverty, my friend! 🚫",
           "State of being extremely poor."
         ]
       },
@@ -1900,9 +1900,9 @@
         correctAnswer: "Luxury",
         cleanAnswer: "Luxury",
         clues: [
-          "Aavashyathinekkal kooduthal ulla aabhajaada. 🏎️",
-          "Valiya vilappedutha sugha jeevitham. 🍾",
-          "Bhogha sugham / Luxury aanu mone! 💎",
+          "The extravagance that goes beyond basic needs. 🏎️",
+          "A highly expensive, comfortable lifestyle. 🍾",
+          "It is luxury, my friend! 💎",
           "State of great comfort and extravagant living."
         ]
       },
@@ -1913,9 +1913,9 @@
         correctAnswer: "Bargain",
         cleanAnswer: "Bargain",
         clues: [
-          "Kadayil chennu vila kurakkaan parayunnathu. 🤝",
-          "Laabhathil kittiya vaanganal. 📉",
-          "Vila pesal / Bargain aanu mone! 🏷️",
+          "Going to a shop and asking them to reduce the price. 🤝",
+          "A purchase achieved at a very profitable rate. 📉",
+          "It is a bargain, my friend! 🏷️",
           "Thing bought or offered for sale more cheaply than usual."
         ]
       },
@@ -1926,9 +1926,9 @@
         correctAnswer: "Profit",
         cleanAnswer: "Profit",
         clues: [
-          "Business-il chilavukal kazhinju baakki varunna labham. 📈",
-          "Kachavadathil kittunna labham. 💰",
-          "Laabham (Profit) aanu mone! 💼",
+          "The remaining positive balance after business expenses. 📈",
+          "The financial gain you get in trading. 💰",
+          "It is profit, my friend! 💼",
           "Financial gain from business activity."
         ]
       },
@@ -1939,9 +1939,9 @@
         correctAnswer: "Loss",
         cleanAnswer: "Loss",
         clues: [
-          "Kachavadhathil panam nashtappedunnathu. 📉",
-          "Puthiya venture-il pattiya aabhatthu. 💸",
-          "Nastar (Loss) aanu mone! 😭",
+          "Losing money in a business deal. 📉",
+          "The financial danger you faced in a new venture. 💸",
+          "It is a loss, my friend! 😭",
           "Fact or process of losing something or money."
         ]
       }
@@ -1952,7 +1952,7 @@
   {
     groupId: 15,
     groupName: "Safety & Hazards",
-    groupConnection: ["safety", "hazard", "risk", "സുരക്ഷയും അപകടവും"],
+    groupConnection: ["safety", "hazard", "risk", "security"],
     riddles: [
       {
         id: 141,
@@ -1961,9 +1961,9 @@
         correctAnswer: "Risk",
         cleanAnswer: "Risk",
         clues: [
-          "Nashtam sambhavikkan saadhyathayulla karyam cheyyunnathu. 🎲",
-          "Nee edukkunna chandi tharakam. ⚠️",
-          "Aapadhyalayam / Risk aanu mone! 🕳️",
+          "Doing something that has a strong possibility of loss. 🎲",
+          "The dangerous chance that you take. ⚠️",
+          "It is a risk, my friend! 🕳️",
           "Situation involving exposure to danger."
         ]
       },
@@ -1974,9 +1974,9 @@
         correctAnswer: "Danger",
         cleanAnswer: "Danger",
         clues: [
-          "Apakadam kaanikkunna red signal board. 🔴",
-          "Kaaryangalka thakaraaru varan ulla aapadhu. ⚠️",
-          "Apakadam (Danger) aanu mone! 🛑",
+          "The red signal board that shows a threat. 🔴",
+          "The threat of things going terribly wrong. ⚠️",
+          "It is danger, my friend! 🛑",
           "Possibility of suffering harm or injury."
         ]
       },
@@ -1987,9 +1987,9 @@
         correctAnswer: "Safety",
         cleanAnswer: "Safety",
         clues: [
-          "Apakadangalil ninnum maari irikkunna sthithi. 🛡️",
-          "Seatbelt-um Helmet-um nalkunno protection. 🥽",
-          "Suraksha (Safety) aanu mone! 🏠",
+          "The state of staying completely away from accidents. 🛡️",
+          "The protection provided by seatbelts and helmets. 🥽",
+          "It is safety, my friend! 🏠",
           "Condition of being protected from danger."
         ]
       },
@@ -2000,9 +2000,9 @@
         correctAnswer: "Threat",
         cleanAnswer: "Threat",
         clues: [
-          "Upadravikkaan varunna bheeshani. 🐅",
-          "Aapathu sambhavikkum enna munariyippu. ⚔️",
-          "Bheeshani (Threat) aanu mone! 💥",
+          "An intimidation meant to cause harm. 🐅",
+          "A warning that disaster is about to strike. ⚔️",
+          "It is a threat, my friend! 💥",
           "Statement of an intention to inflict harm."
         ]
       },
@@ -2013,9 +2013,9 @@
         correctAnswer: "Protection",
         cleanAnswer: "Protection",
         clues: [
-          "Aapathukalil ninnum kaathu rakshikunnathu. 💂",
-          "Kotta maadhiri kaaval nillkkunno shield. 🛡️",
-          "Sanrakshanam (Protection) aanu mone! 🏰",
+          "Guarding and saving someone from dangers. 💂",
+          "A shield standing guard like a fortress. 🛡️",
+          "It is protection, my friend! 🏰",
           "Action of protecting or state of being protected."
         ]
       },
@@ -2026,9 +2026,9 @@
         correctAnswer: "Alarm",
         cleanAnswer: "Alarm",
         clues: [
-          "Thee pidikkumbol kettu kelkkunna sound signal. 🚨",
-          "Kaalaththu unaraaan set cheyyunna bell. 🔔",
-          "Alaram (Alarm) aanu mone! 🔊",
+          "The sound signal you hear when a fire breaks out. 🚨",
+          "The bell set to wake you up in the morning. 🔔",
+          "It is an alarm, my friend! 🔊",
           "An anxious awareness of danger or wake call."
         ]
       },
@@ -2039,9 +2039,9 @@
         correctAnswer: "Emergency",
         cleanAnswer: "Emergency",
         clues: [
-          "Pettennu chikitsho rakshayo aavashyamaaya sthithi. 🚑",
-          "Ambulance-il vilikunno urgent situation. 🆘",
-          "Avasiyagattam / Emergency aanu mone! 🚨",
+          "A condition needing immediate treatment or rescue. 🚑",
+          "The urgent situation where you call an ambulance. 🆘",
+          "It is an emergency, my friend! 🚨",
           "Serious, unexpected, and often dangerous situation."
         ]
       },
@@ -2052,9 +2052,9 @@
         correctAnswer: "Rescue",
         cleanAnswer: "Rescue",
         clues: [
-          "Vellathil munngunnavane puratheduthu rakshikunnathu. 🛟",
-          "Fireforce cheyyunna raksha pravarthanam. 👨‍🚒",
-          "Rakshappeduthel / Rescue aanu mone! 🆘",
+          "Pulling someone out of the water to save them from drowning. 🛟",
+          "The saving operations performed by the fire force. 👨‍🚒",
+          "It is a rescue, my friend! 🆘",
           "Save someone from a dangerous situation."
         ]
       },
@@ -2065,9 +2065,9 @@
         correctAnswer: "Trap",
         cleanAnswer: "Trap",
         clues: [
-          "Elikku vekkunna keni. 🧀",
-          "Pinneel purathukadavatha keniyil peduthel. 🪤",
-          "Keni (Trap) aanu mone! 🕸️",
+          "The device set up to catch a mouse. 🧀",
+          "Getting caught in a snare with no way out. 🪤",
+          "It is a trap, my friend! 🕸️",
           "Device or enclosure designed to catch stray animals."
         ]
       },
@@ -2078,9 +2078,9 @@
         correctAnswer: "Escape",
         cleanAnswer: "Escape",
         clues: [
-          "Jail-il ninno keniyil ninno rakshappedunnathu. 🏃",
-          "Aapathil ninnum purathukaddakkunnathu. 🚪",
-          "Rakshappedal (Escape) aanu mone! 🔓",
+          "Breaking out from a jail or a snare. 🏃",
+          "Stepping out successfully from danger. 🚪",
+          "It is an escape, my friend! 🔓",
           "Break free from confinement or control."
         ]
       }
@@ -2091,7 +2091,7 @@
   {
     groupId: 16,
     groupName: "Communication Signals",
-    groupConnection: ["signals", "messages", "code", "സന്ദേശങ്ങളും അടയാളങ്ങളും"],
+    groupConnection: ["signals", "messages", "code", "communication"],
     riddles: [
       {
         id: 151,
@@ -2100,9 +2100,9 @@
         correctAnswer: "Signal",
         cleanAnswer: "Signal",
         clues: [
-          "Phone-il range kaanikkunna bar setup. 📶",
-          "Traffic light-il kaanunna instruction lights. 🚦",
-          "Soochana / Signal aanu mone! 📡",
+          "The bar setup on your phone showing network range. 📶",
+          "The instruction lights you see at traffic lights. 🚦",
+          "It is a signal, my friend! 📡",
           "Gesture, action, or sound conveying information."
         ]
       },
@@ -2113,9 +2113,9 @@
         correctAnswer: "Code",
         cleanAnswer: "Code",
         clues: [
-          "Software developer-maar ezhuthunna program lines. 💻",
-          "Rahashya aashayangalkk upayogikunno symbols. 🔣",
-          "Kodu (Code) aanu mone! 🔐",
+          "The program lines written by software developers. 💻",
+          "The symbols used for secret communications. 🔣",
+          "It is code, my friend! 🔐",
           "System of words, letters, or symbols used for secrecy."
         ]
       },
@@ -2126,9 +2126,9 @@
         correctAnswer: "Message",
         cleanAnswer: "Message",
         clues: [
-          "WhatsApp-il ayakkunna sandesham. 💬",
-          "Oraal mattoraalkku nalkunna Vivaram. 📲",
-          "Sandesham (Message) aanu mone! ✉️",
+          "The note you send on WhatsApp. 💬",
+          "Information given from one person to another. 📲",
+          "It is a message, my friend! ✉️",
           "Verbal, written, or recorded communication."
         ]
       },
@@ -2139,9 +2139,9 @@
         correctAnswer: "Hint",
         cleanAnswer: "Hint",
         clues: [
-          "Utharam kandethaan sahayikkunna chiriya soochana. 🧩",
-          "Game-il aavashyam varumbol nedunna clue. 🔍",
-          "Soochana (Hint) aanu mone! 💡",
+          "A small pointer that helps you find the answer. 🧩",
+          "The tip you earn in a game when you need help. 🔍",
+          "It is a hint, my friend! 💡",
           "Slight or indirect indication or suggestion."
         ]
       },
@@ -2152,9 +2152,9 @@
         correctAnswer: "Warning",
         cleanAnswer: "Warning",
         clues: [
-          "Apakadam sambhavikkam enna munariyippu. ⚠️",
-          "Teacher tharunna final warning. 📢",
-          "Munariyippu (Warning) aanu mone! 🛑",
+          "An alert that danger might happen. ⚠️",
+          "The final notice given by a teacher. 📢",
+          "It is a warning, my friend! 🛑",
           "Statement or event that indicates possible danger."
         ]
       },
@@ -2165,9 +2165,9 @@
         correctAnswer: "News",
         cleanAnswer: "News",
         clues: [
-          "Naattil sambhavicha puthiya karyangal TV-il parayunnathu. 📰",
-          "Vartha ennu vilikkunna media reports. 📺",
-          "Vartha (News) aanu mone! 🎙️",
+          "The recent local events told on TV. 📰",
+          "The media reports broadcasted worldwide. 📺",
+          "It is the news, my friend! 🎙️",
           "Information about recent events."
         ]
       },
@@ -2178,9 +2178,9 @@
         correctAnswer: "Rumor",
         cleanAnswer: "Rumor",
         clues: [
-          "Sathyam aano ennu urappillatha nattil parakkunna katha. 🗣️",
-          "Kaattu pole parakkunna kalla katha. 🍃",
-          "Vadanthi / Rumor aanu mone! 🤫",
+          "A story flying around town that might not even be true. 🗣️",
+          "A fake tale spreading as fast as the wind. 🍃",
+          "It is a rumor, my friend! 🤫",
           "Currently circulating story of uncertain truth."
         ]
       },
@@ -2191,9 +2191,9 @@
         correctAnswer: "Call",
         cleanAnswer: "Call",
         clues: [
-          "Phone-il samsarikkan vilikunnathu. 📞",
-          "Ringtone adichu varunna phone vili. 🔔",
-          "Vili / Call aanu mone! 📲",
+          "Dialing on a phone to speak with someone. 📞",
+          "When the phone arrives with a ringtone playing. 🔔",
+          "It is a call, my friend! 📲",
           "An instance of speaking to someone on the phone."
         ]
       },
@@ -2204,9 +2204,9 @@
         correctAnswer: "Transmission",
         cleanAnswer: "Transmission",
         clues: [
-          "Signal aakaashathukondu maattunnathu. 📡",
-          "Live telecast nadathunna technical process. 🌐",
-          "Prasaranam (Transmission) aanu mone! ⚡",
+          "Sending a signal through the sky. 📡",
+          "The technical process used for a live telecast. 🌐",
+          "It is transmission, my friend! ⚡",
           "Process of transmitting something via waves."
         ]
       },
@@ -2217,9 +2217,9 @@
         correctAnswer: "Gesture",
         cleanAnswer: "Gesture",
         clues: [
-          "Kai kondum thala kondum kaanikkunna aadayalam. 👋",
-          "Samsarikaathe sancharikkaab kaanikkunna signs. 🖐️",
-          "Aangyam / Gesture aanu mone! 🙋",
+          "A sign shown using your hands or head. 👋",
+          "The signs used to communicate without speaking. 🖐️",
+          "It is a gesture, my friend! 🙋",
           "Movement of body part to express an idea."
         ]
       }
@@ -2230,7 +2230,7 @@
   {
     groupId: 17,
     groupName: "Relationships & Bonds",
-    groupConnection: ["bonds", "relationships", "unity", "ബന്ധങ്ങളും ഐക്യവും"],
+    groupConnection: ["bonds", "relationships", "unity", "connections"],
     riddles: [
       {
         id: 161,
@@ -2239,9 +2239,9 @@
         correctAnswer: "Bond",
         cleanAnswer: "Bond",
         clues: [
-          "Aalkkal thammil uracha sneha bandham. 🔗",
-          "Potty povatha aathmartha bandham. 💖",
-          "Bandham (Bond) aanu mone! 🤝",
+          "The strong, loving attachment between people. 🔗",
+          "A sincere connection that does not easily break. 💖",
+          "It is a bond, my friend! 🤝",
           "A relationship between people based on shared feelings."
         ]
       },
@@ -2252,9 +2252,9 @@
         correctAnswer: "Rivalry",
         cleanAnswer: "Rivalry",
         clues: [
-          "Rendu teams thammil ulla valiya thakkeda kottu. 🥊",
-          "India vs Pakistan cricket matche pole ulla porattam. ⚔️",
-          "Vairam / Rivalry aanu mone! 🤼",
+          "A huge, ongoing conflict between two teams. 🥊",
+          "A competitive fight like an India vs Pakistan cricket match. ⚔️",
+          "It is a rivalry, my friend! 🤼",
           "Competition for superiority in a field."
         ]
       },
@@ -2265,9 +2265,9 @@
         correctAnswer: "Unity",
         cleanAnswer: "Unity",
         clues: [
-          "Ellavarum orumichu nirkkunna ottakettu. ✊",
-          "Otta manassayi pravarthikunna sthithi. 🤝",
-          "Aikyam (Unity) aanu mone! 👥",
+          "Everyone standing together as a solid block. ✊",
+          "Working collectively with a single mind. 🤝",
+          "It is unity, my friend! 👥",
           "State of being united or joined as a whole."
         ]
       },
@@ -2278,9 +2278,9 @@
         correctAnswer: "Separation",
         cleanAnswer: "Separation",
         clues: [
-          "Rendu per thammil agalunnathu. 💔",
-          "Orumichu undayirunnavar aliyunna sthithi. ✂️",
-          "Veyukal (Separation) aanu mone! 🚷",
+          "Two people drifting apart from each other. 💔",
+          "The state of breaking away from someone you were with. ✂️",
+          "It is separation, my friend! 🚷",
           "Action of moving or being moved apart."
         ]
       },
@@ -2291,9 +2291,9 @@
         correctAnswer: "Connection",
         cleanAnswer: "Connection",
         clues: [
-          "Rendu kaaryangalo aalkkalo thammil ulla aadaalam. 🔌",
-          "Wi-Fi join cheyyunnathu pole ulla bandham. 🌐",
-          "Bandham / Connection aanu mone! 🤝",
+          "The link between two things or people. 🔌",
+          "A link similar to joining a Wi-Fi network. 🌐",
+          "It is a connection, my friend! 🤝",
           "Relationship in which a thing is linked with something else."
         ]
       },
@@ -2304,9 +2304,9 @@
         correctAnswer: "Loyalty",
         cleanAnswer: "Loyalty",
         clues: [
-          "Naye pole vishwasthathayode nirkkunno guna. 🐕",
-          "Ennum oppam maathram nillkkunna vishwasam. 🛡️",
-          "Vishwasthatha (Loyalty) aanu mone! 👑",
+          "The trait of standing faithful just like a dog. 🐕",
+          "The steadfast trust of someone who always stays by your side. 🛡️",
+          "It is loyalty, my friend! 👑",
           "Quality of being loyal to someone or something."
         ]
       },
@@ -2317,9 +2317,9 @@
         correctAnswer: "Betrayal",
         cleanAnswer: "Betrayal",
         clues: [
-          "Chathichu muthugil kuthunno pravruthi. 🗡️",
-          "Vishwasikunnathavanal kittunna van chathikkal. 💔",
-          "Chathikkal (Betrayal) aanu mone! 🐍",
+          "The act of cheating and stabbing someone in the back. 🗡️",
+          "The massive deception you get from someone you trusted. 💔",
+          "It is betrayal, my friend! 🐍",
           "Action of betraying one's country, a group, or a person."
         ]
       },
@@ -2330,9 +2330,9 @@
         correctAnswer: "Kindness",
         cleanAnswer: "Kindness",
         clues: [
-          "Mattullavarkku snehatthode nalkunna dhaya. 🌸",
-          "Dhayayulla manassu. 🤲",
-          "Dhaya / Kindness aanu mone! 💖",
+          "The grace you give to others with love. 🌸",
+          "Having a very gentle, forgiving mind. 🤲",
+          "It is kindness, my friend! 💖",
           "Quality of being friendly, generous, and considerate."
         ]
       },
@@ -2343,9 +2343,9 @@
         correctAnswer: "Respect",
         cleanAnswer: "Respect",
         clues: [
-          "Muthiyorrkku nammal nalkunna bahumaanam. 🫡",
-          "Aalkkarude guna-ganangal kandu nalkunna aadharam. 👑",
-          "Bahumaanam (Respect) aanu mone! 🙇",
+          "The honor we give to our elders. 🫡",
+          "The admiration you show when seeing someone's great qualities. 👑",
+          "It is respect, my friend! 🙇",
           "Feeling of deep admiration for someone."
         ]
       },
@@ -2356,9 +2356,9 @@
         correctAnswer: "Gratitude",
         cleanAnswer: "Gratitude",
         clues: [
-          "Sahayam kittiyaal ullil varunna nandhi. 🙏",
-          "Manassariju tharunno Thanks feeling. 💖",
-          "Nandhi (Gratitude) aanu mone! 📜",
+          "The thankfulness you feel inside when you receive help. 🙏",
+          "Giving a heartfelt feeling of thanks. 💖",
+          "It is gratitude, my friend! 📜",
           "Quality of being thankful."
         ]
       }
@@ -2369,7 +2369,7 @@
   {
     groupId: 18,
     groupName: "Eras & Cycles",
-    groupConnection: ["era", "cycles", "rhythm", "കാലചക്രം"],
+    groupConnection: ["era", "cycles", "rhythm", "epochs"],
     riddles: [
       {
         id: 171,
@@ -2378,9 +2378,9 @@
         correctAnswer: "Past",
         cleanAnswer: "Past",
         clues: [
-          "Kazhinjupoya samayam. ⏳",
-          "Iniyum thirichu varatha pazhaya kaalam. 📜",
-          "Bhoothakaalam (Past) aanu mone! 🏛️",
+          "The time that has already gone by. ⏳",
+          "The old times that will never return. 📜",
+          "It is the past, my friend! 🏛️",
           "Gone by in time and no longer existing."
         ]
       },
@@ -2391,9 +2391,9 @@
         correctAnswer: "Present",
         cleanAnswer: "Present",
         clues: [
-          "Ippol nadannukondirikkunna samayam. ⏱️",
-          "Jeevitham namukku nalkiya sabhaagya gift. 🎁",
-          "Varthamanakaalam (Present) aanu mone! 📍",
+          "The time that is happening right now. ⏱️",
+          "The beautiful gift that life has given us. 🎁",
+          "It is the present, my friend! 📍",
           "Period of time now occurring."
         ]
       },
@@ -2404,9 +2404,9 @@
         correctAnswer: "Deadline",
         cleanAnswer: "Deadline",
         clues: [
-          "Work submit cheyyan ulla avasana samayam. ⏰",
-          "Athinu thazhe poyaal pani paalum. 🛑",
-          "Deadline aanu mone! 📅",
+          "The final time allowed to submit your work. ⏰",
+          "If you cross this limit, you are in big trouble. 🛑",
+          "It is a deadline, my friend! 📅",
           "Latest time or date by which something should be completed."
         ]
       },
@@ -2417,9 +2417,9 @@
         correctAnswer: "Schedule",
         cleanAnswer: "Schedule",
         clues: [
-          "Divasathile jolikal ezhuthi vechitulla samaya kramam. 📝",
-          "Time table ennu vilikunna plan. 🗓️",
-          "Samayakramam (Schedule) aanu mone! ⏰",
+          "The written order of tasks for your day. 📝",
+          "The plan that is often called a time table. 🗓️",
+          "It is a schedule, my friend! ⏰",
           "Plan for carrying out a process or procedure."
         ]
       },
@@ -2430,9 +2430,9 @@
         correctAnswer: "Era",
         cleanAnswer: "Era",
         clues: [
-          "Dinosaur kaalam pole ulla mahanaya kaalagattom. 🦖",
-          "Charithrathile ninaakkalulla period. 🏛️",
-          "Yugam / Era aanu mone! ⏳",
+          "A vast period of time, like the age of dinosaurs. 🦖",
+          "A distinct period noted in history. 🏛️",
+          "It is an era, my friend! ⏳",
           "Long and distinct period of history."
         ]
       },
@@ -2443,9 +2443,9 @@
         correctAnswer: "Cycle",
         cleanAnswer: "Cycle",
         clues: [
-          "Aavarthichu thirichu varunna kaala chakram. 🔄",
-          "Raavum pakalum maari maari varunno pattern. 🌙",
-          "Kaalachakram (Cycle) aanu mone! ☀️",
+          "The wheel of time that keeps repeating itself. 🔄",
+          "The alternating pattern of day and night. 🌙",
+          "It is a cycle, my friend! ☀️",
           "Series of events that are regularly repeated in same order."
         ]
       },
@@ -2456,9 +2456,9 @@
         correctAnswer: "Phase",
         cleanAnswer: "Phase",
         clues: [
-          "Chandrante roopam marunna vibhaagangal. 🌕",
-          "Jeevithathile maari varunna gattangal. 🌒",
-          "Gattam (Phase) aanu mone! 🌑",
+          "The different changing sections of the moon's shape. 🌕",
+          "The shifting stages in our life. 🌒",
+          "It is a phase, my friend! 🌑",
           "Distinct stage in a series of events or process."
         ]
       },
@@ -2469,9 +2469,9 @@
         correctAnswer: "Tempo",
         cleanAnswer: "Tempo",
         clues: [
-          "Paattinte vegatha alavu. 🎼",
-          "Fast song-il kooduthal ulla speed measure. 🥁",
-          "Paattu vegatha / Tempo aanu mone! ⏱️",
+          "The speed measurement of a song. 🎼",
+          "The speed measure that is higher in a fast song. 🥁",
+          "It is tempo, my friend! ⏱️",
           "Speed of the rhythm of a piece of music."
         ]
       },
@@ -2482,9 +2482,9 @@
         correctAnswer: "Daytime",
         cleanAnswer: "Daytime",
         clues: [
-          "Suryan aakaashathil ulla samayam. ☀️",
-          "Velicham ulla prabhadhakaalam. 🌄",
-          "Pagal (Daytime) aanu mone! 🌇",
+          "The time when the sun is up in the sky. ☀️",
+          "The period of morning filled with light. 🌄",
+          "It is daytime, my friend! 🌇",
           "Time between sunrise and sunset."
         ]
       },
@@ -2495,9 +2495,9 @@
         correctAnswer: "Nighttime",
         cleanAnswer: "Nighttime",
         clues: [
-          "Suryan marannu urangaan time aagunnathu. 🌃",
-          "Iruttaayal kaanunna samayam. 🌌",
-          "Raathri (Nighttime) aanu mone! 💤",
+          "When the sun sets and it is time to sleep. 🌃",
+          "The time you experience when it gets completely dark. 🌌",
+          "It is nighttime, my friend! 💤",
           "Time between sunset and sunrise."
         ]
       }
@@ -2508,7 +2508,7 @@
   {
     groupId: 19,
     groupName: "Natural Events",
-    groupConnection: ["weather", "events", "nature", "പ്രകൃതി പ്രതിഭാസങ്ങൾ"],
+    groupConnection: ["weather", "events", "nature", "phenomena"],
     riddles: [
       {
         id: 181,
@@ -2517,9 +2517,9 @@
         correctAnswer: "Drought",
         cleanAnswer: "Drought",
         clues: [
-          "Vellam kittaathe paadam varandu pokunnathu. 🌾",
-          "Mazha illathe varacha varunna avastha. ☀️",
-          "Dharidryam / Drought aanu mone! 🚫",
+          "When fields dry up from a severe lack of water. 🌾",
+          "The parched condition caused by absolutely no rain. ☀️",
+          "It is a drought, my friend! 🚫",
           "Prolonged period of abnormally low rainfall."
         ]
       },
@@ -2530,9 +2530,9 @@
         correctAnswer: "Flood",
         cleanAnswer: "Flood",
         clues: [
-          "Kure mazha peydhu nattil vellam kearunnathu. 🌧️",
-          "Kerala 2018-il kandathaaya vellapokkam. 🌊",
-          "Vellapokkam (Flood) aanu mone! 🏠",
+          "When heavy rains cause water to invade the land. 🌧️",
+          "The massive water overflow Kerala saw back in 2018. 🌊",
+          "It is a flood, my friend! 🏠",
           "Overflow of a large amount of water beyond normal limits."
         ]
       },
@@ -2543,9 +2543,9 @@
         correctAnswer: "Tremor",
         cleanAnswer: "Tremor",
         clues: [
-          "Bhoomi tharikkan thudangumbol ulla kulukkam. 🫨",
-          "Bhoomikulukkatthinte cheriya tharakam vibration. 💥",
-          "Bhoomi kulukkam / Tremor aanu mone! 🌋",
+          "The shaking you feel when the ground starts to vibrate. 🫨",
+          "A small vibration preceding a major earthquake. 💥",
+          "It is a tremor, my friend! 🌋",
           "Involuntary vibration or earth shaking movement."
         ]
       },
@@ -2556,9 +2556,9 @@
         correctAnswer: "Breeze",
         cleanAnswer: "Breeze",
         clues: [
-          "Kadalarikil ninnu thazhukunna cheru kaattu. 🍃",
-          "Manassinu sugham tharunna mendha maaruthan. 😌",
-          "Ilakaattu / Breeze aanu mone! 💨",
+          "The gentle wind that touches you near the beach. 🍃",
+          "The soft air that brings comfort to your mind. 😌",
+          "It is a breeze, my friend! 💨",
           "Gentle light wind."
         ]
       },
@@ -2569,9 +2569,9 @@
         correctAnswer: "Frost",
         cleanAnswer: "Frost",
         clues: [
-          "Munnar-il raavile pulleduthu kaanunna manjuthullikal. 🌿",
-          "Thaanppathil ഉറഞ്ഞു koodiya glass layer. 🧊",
-          "Manju urayal / Frost aanu mone! 🌅",
+          "The frozen layer seen on grass in Munnar mornings. 🌿",
+          "A glass-like layer formed in freezing cold. 🧊",
+          "It is frost, my friend! 🌅",
           "Small ice crystals formed on freezing surfaces."
         ]
       },
@@ -2582,9 +2582,9 @@
         correctAnswer: "Dew",
         cleanAnswer: "Dew",
         clues: [
-          "Raavile ilagaludey mukalil kaanunna vellathullikal. 🌿",
-          "Pularkalathil viriyunna prakrithi manju thulli. 🌅",
-          "Manjuthulli (Dew) aanu mone! 💧",
+          "The water drops seen on top of leaves early in the morning. 🌿",
+          "The natural moisture drops blooming at dawn. 🌅",
+          "It is dew, my friend! 💧",
           "Tiny drops of water formed on cool surfaces at night."
         ]
       },
@@ -2595,9 +2595,9 @@
         correctAnswer: "Glare",
         cleanAnswer: "Glare",
         clues: [
-          "Kangal kooshikkunna valiya velicham. ☀️",
-          "Kannaadiyil tatthi kannilekk adikkunna choodu light. 🪞",
-          "Kannukooshikkal / Glare aanu mone! 🙈",
+          "The massive light that blinds your eyes. ☀️",
+          "The hot light reflecting off a mirror straight into your eyes. 🪞",
+          "It is a glare, my friend! 🙈",
           "Strong and dazzling light."
         ]
       },
@@ -2608,9 +2608,9 @@
         correctAnswer: "Fog",
         cleanAnswer: "Fog",
         clues: [
-          "Road-il munnil ulla vandi kaanan pattatha tharathil ulla manju. ☁️",
-          "Wayanad-il raavile kaanunna kooriruttu manju. 🚗",
-          "Manju (Fog) aanu mone! 🌫️",
+          "The thick mist on the road hiding the vehicle ahead of you. ☁️",
+          "The dark mist seen in Wayanad mornings. 🚗",
+          "It is fog, my friend! 🌫️",
           "Thick cloud of tiny water droplets suspended in atmosphere."
         ]
       },
@@ -2621,9 +2621,9 @@
         correctAnswer: "Smoke",
         cleanAnswer: "Smoke",
         clues: [
-          "Thee kathumbol mukalilekk uyarnnu pokunna puka. 🔥",
-          "Chura churappu ulla karutha aavahasa layer. 🌫️",
-          "Puka (Smoke) aanu mone! 💨",
+          "What rises into the air when a fire is burning. 🔥",
+          "A dark, choking layer of air. 🌫️",
+          "It is smoke, my friend! 💨",
           "Visible suspension of carbon particles in air."
         ]
       },
@@ -2634,9 +2634,9 @@
         correctAnswer: "Ash",
         cleanAnswer: "Ash",
         clues: [
-          "Kattedutha viraku kathithernnal baakki varunna podi. 🪵",
-          "Vellutha allel karutha nirathil ulla podi. 🔥",
-          "Chaambal (Ash) aanu mone! 🌫️",
+          "The powder left behind after firewood completely burns out. 🪵",
+          "The white or black colored residue from a fire. 🔥",
+          "It is ash, my friend! 🌫️",
           "Powdery residue left after burning a substance."
         ]
       }
@@ -2647,7 +2647,7 @@
   {
     groupId: 20,
     groupName: "Philosophy of Being",
-    groupConnection: ["philosophy", "existence", "soul", "തത്ത്വചിന്തയും നിലനിൽപ്പും"],
+    groupConnection: ["philosophy", "existence", "soul", "being"],
     riddles: [
       {
         id: 191,
@@ -2656,9 +2656,9 @@
         correctAnswer: "Purpose",
         cleanAnswer: "Purpose",
         clues: [
-          "Nammal enthinu jeevikunnu enna lakshyam. 🎯",
-          "Jeevithathinu artham nalkunna uddhesham. ✨",
-          "Lakshyam / Purpose aanu mone! 🗺️",
+          "The ultimate goal of why we are living. 🎯",
+          "The intention that gives meaning to our life. ✨",
+          "It is purpose, my friend! 🗺️",
           "Reason for which something is done or created."
         ]
       },
@@ -2669,114 +2669,114 @@
         correctAnswer: "Meaning",
         cleanAnswer: "Meaning",
         clues: [
-          "Oru vaakkinteyo jeevithathinteyo thadassangal illatha artham. 📖",
-          "Ullil thodunna aazhamulla artham. 💡",
-          "Artham (Meaning) aanu mone! 💖",
-          "What is meant by a word, text, concept, or action."
+          "The deep, uninterrupted significance of a word or life. 📖",
+          "The profound sense that touches your inner core. 💡",
+          "It is meaning, my friend! 💖",
+          "What is intended to be, or actually is, expressed or indicated."
         ]
       },
       {
         id: 193,
-        question: "✨ + 👤 + 👻 = ?",
-        options: ["Soul", "Life", "Mind", "Spirit"],
+        question: "👻 + ✨ + 🕊️ = ?",
+        options: ["Soul", "Mind", "Heart", "Ghost"],
         correctAnswer: "Soul",
         cleanAnswer: "Soul",
         clues: [
-          "Shariram illathaayaalum marikkaatha athmaavu. ✨",
-          "Sharirathinu ullekku urjjam tharunna chitham. 👻",
-          "Aathmaavu (Soul) aanu mone! 👤",
-          "Spiritual or immaterial part of a human being."
+          "The spiritual or immaterial part of a human being. 👻",
+          "It is said to live on after we are gone. ✨",
+          "It is the soul, my friend! 🕊️",
+          "The essence of a living being."
         ]
       },
       {
         id: 194,
-        question: "🌍 + 👤 + ⏳ = ?",
-        options: ["Existence", "Life", "World", "Being"],
-        correctAnswer: "Existence",
-        cleanAnswer: "Existence",
+        question: "🔮 + 🛤️ + 🌌 = ?",
+        options: ["Destiny", "Fate", "Path", "Luck"],
+        correctAnswer: "Destiny",
+        cleanAnswer: "Destiny",
         clues: [
-          "Nammal bhoomiyil jeevichirikkunna avastha. 🌍",
-          "Ulla sthithi (State of being alive/real). ⏳",
-          "Nilanillppu (Existence) aanu mone! 👤",
-          "Fact or state of living or having objective reality."
+          "The hidden path your life is meant to take. 🛤️",
+          "Events that will necessarily happen to you in the future. 🔮",
+          "It is destiny, my friend! 🌌",
+          "Your ultimate, predetermined fate."
         ]
       },
       {
         id: 195,
-        question: "🆔 + 👤 + 🏷️ = ?",
-        options: ["Identity", "Name", "Face", "Self"],
-        correctAnswer: "Identity",
-        cleanAnswer: "Identity",
+        question: "🔄 + ⚖️ + 🧘 = ?",
+        options: ["Karma", "Revenge", "Action", "Peace"],
+        correctAnswer: "Karma",
+        cleanAnswer: "Karma",
         clues: [
-          "Nee aaraanu ennu thirichariyikunno vyakthithwam. 🆔",
-          "Ninne mattullavaril ninnum vyathyasthanaakkunnathu. 🏷️",
-          "Vyakthithwam (Identity) aanu mone! 👤",
-          "Fact of being who or what a person or thing is."
+          "What goes around, comes around. 🔄",
+          "The result of your actions catching up to you in life. ⚖️",
+          "It is karma, my friend! 🧘",
+          "Action and its subsequent reaction."
         ]
       },
       {
         id: 196,
-        question: "🧠 + 💭 + 🌌 = ?",
-        options: ["Mind", "Brain", "Thought", "Soul"],
-        correctAnswer: "Mind",
-        cleanAnswer: "Mind",
+        question: "🎶 + ⚖️ + 🕊️ = ?",
+        options: ["Harmony", "Balance", "Peace", "Music"],
+        correctAnswer: "Harmony",
+        cleanAnswer: "Harmony",
         clues: [
-          "Vikaaragalum chinthagalum udikkunna manassu. 🧠",
-          "Unseen mental space inside human. 🌌",
-          "Manassu (Mind) aanu mone! 💭",
-          "Element of a person that enables them to be aware."
+          "When everything works together perfectly and peacefully. 🎶",
+          "A state of peaceful balance in society or nature. ⚖️",
+          "It is harmony, my friend! 🕊️",
+          "Agreement in action or feeling."
         ]
       },
       {
         id: 197,
-        question: "🏋️ + 🧠 + ⚡ = ?",
-        options: ["Willpower", "Courage", "Power", "Focus"],
-        correctAnswer: "Willpower",
-        cleanAnswer: "Willpower",
+        question: "🙏 + 💭 + ✨ = ?",
+        options: ["Belief", "Thought", "Dream", "Faith"],
+        correctAnswer: "Belief",
+        cleanAnswer: "Belief",
         clues: [
-          "Venam ennu urappichaal maattaan pattatha manodhyryam. 🏋️",
-          "Thadayukale tharakam cheyyan thonnikkunna mano shakthi. ⚡",
-          "Manoshakthi (Willpower) aanu mone! 🧠",
-          "Control exerted to do something or restrain impulses."
+          "An acceptance that something exists or is absolutely true. 🙏",
+          "A firm opinion held deeply in your mind. 💭",
+          "It is a belief, my friend! ✨",
+          "Trust, faith, or confidence in someone or something."
         ]
       },
       {
         id: 198,
-        question: "👁️ + 🧠 + 💡 = ?",
-        options: ["Consciousness", "Mind", "Awareness", "Thought"],
-        correctAnswer: "Consciousness",
-        cleanAnswer: "Consciousness",
+        question: "🧠 + ⚙️ + 📐 = ?",
+        options: ["Logic", "Math", "Smart", "Rule"],
+        correctAnswer: "Logic",
+        cleanAnswer: "Logic",
         clues: [
-          "Booham illathirikkathirikkunna Bodham. 👁️",
-          "Chuttum nadakkunnathine kurichu ulla bodham. 💡",
-          "Bodham (Consciousness) aanu mone! 🧠",
-          "State of being awake and aware of one's surroundings."
+          "Thinking with strict rules of reasoning. 🧠",
+          "Making decisions based on clear facts, not messy feelings. ⚙️",
+          "It is logic, my friend! 📐",
+          "A proper or reasonable way of thinking."
         ]
       },
       {
         id: 199,
-        question: "🔮 + 🌌 + 👑 = ?",
-        options: ["Destiny", "Fate", "Future", "Life"],
-        correctAnswer: "Destiny",
-        cleanAnswer: "Destiny",
+        question: "👑 + 🦚 + 👤 = ?",
+        options: ["Ego", "Pride", "Self", "Power"],
+        correctAnswer: "Ego",
+        cleanAnswer: "Ego",
         clues: [
-          "Nee ethiyan vendi kaathirikkunna bhabhi destination. 🔮",
-          "Jeevitham ninakkayi orukkiyithekkunno mahathaya lakshyam. 👑",
-          "Niyogom / Destiny aanu mone! 🌌",
-          "Events that will necessarily happen to a person."
+          "Your internal sense of self-esteem or self-importance. 👤",
+          "When this gets too big, it pushes your friends away. 👑",
+          "It is the ego, my friend! 🦚",
+          "The part of the mind mediating between conscious and unconscious."
         ]
       },
       {
         id: 200,
-        question: "🏛️ + 📜 + ✨ = ?",
-        options: ["Legacy", "History", "Story", "Honor"],
-        correctAnswer: "Legacy",
-        cleanAnswer: "Legacy",
+        question: "🌍 + 👁️ + 🧱 = ?",
+        options: ["Reality", "Life", "Earth", "Truth"],
+        correctAnswer: "Reality",
+        cleanAnswer: "Reality",
         clues: [
-          "Nee poyaalum nattukaru orkkunna ninne kurichulla nalla karyangal. 📜",
-          "Kaalam thorum nilanilkkunna swathu / smarana. 🏛️",
-          "Smarana / Legacy aanu mone! ✨",
-          "Amount of money or historic memory left behind."
+          "The state of things exactly as they actually exist. 🌍",
+          "Definitely not a dream or an illusion. 👁️",
+          "It is reality, my friend! 🧱",
+          "The true situation that exists."
         ]
       }
     ]
